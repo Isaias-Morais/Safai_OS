@@ -1,0 +1,13 @@
+# SafaiOS Dataset v10k — Official Benchmark Training Dataset Configuration
+path: c:/Users/Vicky Patel/Desktop/1st Year/Safai/data/safaios_dataset_v10k
+train: training/images
+val: validation/images
+test: test_locked_v2/images
+
+nc: 5
+names:
+  0: plastic_bottle
+  1: plastic_wrapper_bag
+  2: paper_cardboard
+  3: glass_bottle_container
+  4: metal_can

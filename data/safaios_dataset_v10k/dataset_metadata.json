@@ -1,0 +1,25 @@
+{
+  "dataset_name": "safaios_dataset_v10k",
+  "created_date": "2026-10-09",
+  "total_images": 12100,
+  "total_bboxes": 29519,
+  "splits": {
+    "training": {
+      "images": 10000,
+      "bboxes": 24197
+    },
+    "validation": {
+      "images": 1000,
+      "bboxes": 2463
+    },
+    "test_locked_v2": {
+      "images": 1000,
+      "bboxes": 2590
+    },
+    "india_real_world": {
+      "images": 100,
+      "bboxes": 269
+    }
+  },
+  "status": "DATASET_V10K_TRAINING_SCALE_COMPLETE"
+}
