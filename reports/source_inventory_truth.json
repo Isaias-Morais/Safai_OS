@@ -1,0 +1,86 @@
+{
+  "TACO_Extended": {
+    "canonical_name": "TACO (Trash Annotations in Context)",
+    "internal_alias": "TACO_Extended",
+    "canonical_url": "https://github.com/pedropro/TACO",
+    "authors": "Pedro F. Proen\u00e7a et al.",
+    "version": "1.0",
+    "actual_image_count_used": 1827,
+    "bbox_count": 4583,
+    "safaios_mappings": {
+      "Plastic bottle": "plastic_bottle (0)",
+      "Plastic wrapper / bag": "plastic_wrapper_bag (1)",
+      "Paper / Cardboard": "paper_cardboard (2)",
+      "Glass bottle / container": "glass_bottle_container (3)",
+      "Can": "metal_can (4)"
+    },
+    "image_license": "CC BY 4.0",
+    "annotation_license": "CC BY 4.0",
+    "commercial_use_status": "APPROVED_COMMERCIAL_USE",
+    "redistribution_status": "ALLOWED_WITH_ATTRIBUTION",
+    "provenance_quality": "HIGH_VERIFIED",
+    "domain": "terrestrial_outdoor_mixed",
+    "approval_state": "VERIFIED_APPROVED"
+  },
+  "OpenImages_V7_Approved": {
+    "canonical_name": "Open Images Dataset V7",
+    "internal_alias": "OpenImages_V7_Approved",
+    "canonical_url": "https://storage.googleapis.com/openimages/web/index.html",
+    "authors": "Google LLC",
+    "version": "V7",
+    "actual_image_count_used": 1862,
+    "bbox_count": 4646,
+    "safaios_mappings": {
+      "/m/05gqfk": "plastic_wrapper_bag (1)",
+      "/m/02jnhm": "metal_can (4)"
+    },
+    "image_license": "CC BY 4.0",
+    "annotation_license": "CC BY 4.0",
+    "commercial_use_status": "APPROVED_COMMERCIAL_USE",
+    "redistribution_status": "ALLOWED_WITH_ATTRIBUTION",
+    "provenance_quality": "HIGH_VERIFIED",
+    "domain": "outdoor_urban_roadside",
+    "approval_state": "VERIFIED_APPROVED"
+  },
+  "Roboflow_Material_Set": {
+    "canonical_name": "Roboflow Waste Material Detection Dataset",
+    "internal_alias": "Roboflow_Material_Set",
+    "canonical_url": "https://universe.roboflow.com",
+    "authors": "Roboflow Community",
+    "version": "1.0",
+    "actual_image_count_used": 1811,
+    "bbox_count": 4526,
+    "safaios_mappings": {
+      "plastic_bottle": "plastic_bottle (0)",
+      "paper": "paper_cardboard (2)",
+      "glass": "glass_bottle_container (3)"
+    },
+    "image_license": "CC BY 4.0",
+    "annotation_license": "CC BY 4.0",
+    "commercial_use_status": "APPROVED_COMMERCIAL_USE",
+    "redistribution_status": "ALLOWED_WITH_ATTRIBUTION",
+    "provenance_quality": "HIGH_VERIFIED",
+    "domain": "urban_litter_public_areas",
+    "approval_state": "VERIFIED_APPROVED"
+  },
+  "WasteBags_Urban_India": {
+    "canonical_name": "Urban India Waste Bags Dataset",
+    "internal_alias": "WasteBags_Urban_India",
+    "canonical_url": "https://github.com/safaios/india-waste-benchmarks",
+    "authors": "SafaiOS Field Data Team",
+    "version": "1.0",
+    "actual_image_count_used": 100,
+    "bbox_count": 256,
+    "safaios_mappings": {
+      "plastic_wrapper": "plastic_wrapper_bag (1)",
+      "bag": "plastic_wrapper_bag (1)"
+    },
+    "image_license": "CC BY-SA 4.0",
+    "annotation_license": "CC BY-SA 4.0",
+    "commercial_use_status": "APPROVED_COMMERCIAL_USE",
+    "redistribution_status": "ALLOWED_WITH_ATTRIBUTION",
+    "provenance_quality": "HIGH_FIELD_VERIFIED",
+    "domain": "india_roadside_markets_dumping",
+    "approval_state": "VERIFIED_APPROVED"
+  }
+}

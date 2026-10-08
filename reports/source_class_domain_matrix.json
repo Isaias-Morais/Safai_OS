@@ -1,0 +1,53 @@
+{
+  "TACO_Extended": {
+    "plastic_bottle": {
+      "roadside": 150,
+      "market": 140,
+      "street": 132
+    },
+    "plastic_wrapper_bag": {
+      "roadside": 145,
+      "dumping_area": 134,
+      "market": 130
+    },
+    "paper_cardboard": {
+      "household": 148,
+      "sorting_facility": 140,
+      "street": 140
+    },
+    "glass_bottle_container": {
+      "park": 155,
+      "household": 150,
+      "public_area": 148
+    },
+    "metal_can": {
+      "street": 130,
+      "market": 121,
+      "landfill": 120
+    }
+  },
+  "OpenImages_V7_Approved": {
+    "plastic_wrapper_bag": {
+      "roadside": 530,
+      "market": 531
+    },
+    "metal_can": {
+      "street": 540,
+      "public_area": 545
+    }
+  },
+  "Roboflow_Material_Set": {
+    "plastic_bottle": {
+      "park": 333,
+      "street": 333
+    },
+    "paper_cardboard": {
+      "household": 332,
+      "sorting_facility": 332
+    },
+    "glass_bottle_container": {
+      "public_area": 348,
+      "roadside": 348
+    }
+  }
+}

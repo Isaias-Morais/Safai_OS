@@ -1,0 +1,30 @@
+{
+  "TACO_Extended": {
+    "train_candidates": 1421,
+    "validation_candidates": 334,
+    "test_candidates": 333,
+    "india_benchmark": 0,
+    "total": 2088
+  },
+  "OpenImages_V7_Approved": {
+    "train_candidates": 1250,
+    "validation_candidates": 333,
+    "test_candidates": 333,
+    "india_benchmark": 0,
+    "total": 1916
+  },
+  "Roboflow_Material_Set": {
+    "train_candidates": 1250,
+    "validation_candidates": 333,
+    "test_candidates": 334,
+    "india_benchmark": 0,
+    "total": 1917
+  },
+  "WasteBags_Urban_India": {
+    "train_candidates": 0,
+    "validation_candidates": 0,
+    "test_candidates": 0,
+    "india_benchmark": 100,
+    "total": 100
+  }
+}
