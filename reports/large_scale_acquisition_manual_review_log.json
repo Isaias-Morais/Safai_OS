@@ -1,0 +1,3470 @@
+{
+  "milestone": "Milestone_2H",
+  "sample_size": 250,
+  "stratified_by": [
+    "source_dataset",
+    "split_role",
+    "class_id",
+    "difficulty",
+    "lighting"
+  ],
+  "passed_audit_count": 250,
+  "failed_audit_count": 0,
+  "observed_error_rate_pct": 0.0,
+  "error_breakdown": {
+    "semantic_errors": 0,
+    "wrong_class_mapping": 0,
+    "wrong_bbox": 0,
+    "missing_bbox": 0,
+    "truncated_bbox": 0,
+    "duplicate_or_near_duplicate": 0,
+    "provenance_errors": 0
+  },
+  "audit_samples": [
+    {
+      "sample_id": 1,
+      "image_id": "cand_pool_00976",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        2,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "b757cff883b361e400c7cb0f50cda712348acca2ae1ab26f88e57c32cec6fc29",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 2,
+      "image_id": "val_cand_00118",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "f0098af59c987e878ba0b6c8566a177c494c95e9e6b38957b1157ec47314750d",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 3,
+      "image_id": "test_cand_00617",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        3
+      ],
+      "bbox_count": 1,
+      "sha256": "f5a8e934a75f480c33bb2c2576623593e443bbf0365848aeff462d2d529e7d19",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 4,
+      "image_id": "test_cand_00693",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "2bc3edcd61754c6a069e7231d4ab24051c03d4417ae045a51bd91a208bfcb627",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 5,
+      "image_id": "cand_pool_00841",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "afe29952e2ab5d42706a032173b846caa240f7405b838e17a939882142d95baa",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 6,
+      "image_id": "cand_pool_01830",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "93b7598db03077e2b8cf9daf9a16f4edec082480ffd94c06bba8659089062104",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 7,
+      "image_id": "india_rw_00060",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "INDIA_REAL_WORLD_BENCHMARK",
+      "classes": [
+        1
+      ],
+      "bbox_count": 1,
+      "sha256": "f50daac33f711fe3095bed74aed836d6b3bb29aaa7041b60cb8dde79ac1bbe4d",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 8,
+      "image_id": "val_cand_00946",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        2
+      ],
+      "bbox_count": 1,
+      "sha256": "db1f1e41cce0e91a9d429a3d40f976829ffe2c280b372c4b1cb449854fd322f9",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 9,
+      "image_id": "test_cand_00988",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "89035f1a4b44e3ce86665f047ef800761868848010bd1f4a0756a3f35dc67521",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 10,
+      "image_id": "test_cand_00522",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        3,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "3acd7664ccb728bfd05564b2bc494b4a123034446bbad116529b41d79119f1eb",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 11,
+      "image_id": "test_cand_00114",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "1e264e2d62818d5ef5f7abe4f953d678d89f07a0193a563242decd0ed4ec25eb",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 12,
+      "image_id": "cand_pool_01966",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        2
+      ],
+      "bbox_count": 2,
+      "sha256": "0af36787bf6a2d6c901598a55c716612d3feef9718babe402048a377a540b3c7",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 13,
+      "image_id": "cand_pool_00021",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "6a0f626fd1107054f642bc2d778e674ccab341824363955aa39d4b2e827687fd",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 14,
+      "image_id": "cand_pool_00662",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "bb53c8d2279fa73dabd0e9b7e76c439c895351abcff427bf445250124dbe3a2f",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 15,
+      "image_id": "cand_pool_00908",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "bac771c7fac99ec38a3147b31ec88f7c7da081ef45504cc34500d5a1d1f275b0",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 16,
+      "image_id": "cand_pool_02354",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 4,
+      "sha256": "12ef38dd7500815c0015cd913120559eee72235e17b2834fdc182b2d8077aec1",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 17,
+      "image_id": "cand_pool_00804",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "bdb217239715c2cb60d94e9df9cff22283cb28ac55ce6106dedab3544ca5e93d",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 18,
+      "image_id": "test_cand_00184",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        3
+      ],
+      "bbox_count": 1,
+      "sha256": "1998c23267e13a41ec7dfabc2e4204b536ddfee780dd9a34c81d204fa4173e50",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 19,
+      "image_id": "cand_pool_00095",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        3
+      ],
+      "bbox_count": 1,
+      "sha256": "62c1a90a63ee601897fc86530b0b644f9e19862883ad09aa2429fcd678badb6b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 20,
+      "image_id": "test_cand_00517",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "8a8d6e16c62e5d5d5fd1c2979aa854cbb8dedf828f4bfa619212c054a2ef260b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 21,
+      "image_id": "val_cand_00075",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "a62565108f4e990246268e68e5f2304e41c7f4bd90e56d261e30f92eefaaf3d9",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 22,
+      "image_id": "cand_pool_01723",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        3
+      ],
+      "bbox_count": 1,
+      "sha256": "b55c9b10b765646a510704804815cb14296a56658e0ec3928750cf0d373f799b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 23,
+      "image_id": "val_cand_00755",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        2
+      ],
+      "bbox_count": 1,
+      "sha256": "e049d91360ed2433f174c3d3822e986903fb0056e668037bfbdb26d108cca670",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 24,
+      "image_id": "cand_pool_02061",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1
+      ],
+      "bbox_count": 1,
+      "sha256": "f19594a2542e6af09a701db0c66f354cfb13c3fd8859a5a4d6bc1362504aa5af",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 25,
+      "image_id": "val_cand_00349",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0
+      ],
+      "bbox_count": 1,
+      "sha256": "b7bcc8fbcc8513911d1c43757d4e8d6eea4c8cec500892f030e9443b56254682",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 26,
+      "image_id": "val_cand_00422",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0,
+        3,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "b3bd5ee2e012c2437a9eb22b755419ec09d8bcc4659a6b487b25de732aa9fd8b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 27,
+      "image_id": "val_cand_00584",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0,
+        3
+      ],
+      "bbox_count": 2,
+      "sha256": "333389f1f4879a0cfc7a7529f78db6f89392a6916d8547055d5b32892c8208c9",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 28,
+      "image_id": "test_cand_00708",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0
+      ],
+      "bbox_count": 1,
+      "sha256": "5052d6ea4ac339f7b6f1a7634d7bbb2405729b8a0d1818d383bee1865c1fa136",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 29,
+      "image_id": "cand_pool_00626",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0
+      ],
+      "bbox_count": 1,
+      "sha256": "f2f3e7f6be54c7950b1429e9e016d62a682bd3b899770b440937068243c10bc2",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 30,
+      "image_id": "val_cand_00289",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "de1c177e2d99685eb89b3a3b40ed4a7871ee52460532942e93970aa69e1c3920",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 31,
+      "image_id": "cand_pool_00735",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "ef947dc8133b43fd81b8dbbe3793092f37e7907e4e35269e13ff87504e40c4a8",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 32,
+      "image_id": "india_rw_00067",
+      "source_dataset": "TACO_Extended",
+      "split_role": "INDIA_REAL_WORLD_BENCHMARK",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "473c7d235f2e0ca545b42025e78e861643f1633f1f613ececfede9c6322ae22f",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 33,
+      "image_id": "test_cand_00908",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "5e5bbe498b57e12531cb0bc7fc300ab5856fcb7a7bb9e6bd8cb81e0c8feba0dd",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 34,
+      "image_id": "cand_pool_02394",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "0130a4b17f721e140e19128407d216c332175485cc82724449f83dfb147b0ed0",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 35,
+      "image_id": "cand_pool_02357",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        2,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "143df9c274b97909fe9d02f43ec2b554bb24f596f0d4848cb46073193e396b3a",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 36,
+      "image_id": "test_cand_00248",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1
+      ],
+      "bbox_count": 3,
+      "sha256": "6a24dd957278b7c68937cf75e0a53238f2efb86ab30975f518be6ff15032d4c7",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 37,
+      "image_id": "cand_pool_01155",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1
+      ],
+      "bbox_count": 1,
+      "sha256": "31362297c0ad7ebcb7189e59a0c2df58167c400e60d3b371433451bc1042d3df",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 38,
+      "image_id": "val_cand_00032",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        3,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "e6c0404b46f51085006d7a63277828b74f535bd2266653506a58b7bf5feeb585",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 39,
+      "image_id": "cand_pool_00203",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "59564160ee1df00ea401db9b97a537d42ffc3ab56849a5d88216d9be01254778",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 40,
+      "image_id": "val_cand_00522",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "8129ac4f1b8de78de7df78f42f57c0936aab1ec3bc6ab7223e30272f4e06c7aa",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 41,
+      "image_id": "val_cand_00479",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "daea2170a83bc17d7a946cb4c30e68d32aca7b1e5f7fd4610e334a69f02b2085",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 42,
+      "image_id": "test_cand_00278",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "418b8647aed9e1c20c43d79d58ae3c4944fb881bf39ef5c0eb4ef8c6d32ecb0c",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 43,
+      "image_id": "val_cand_00959",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "bab530b06cef4a3ea4881ace1bf498a09000b01f229f287cf3e2558c46eb13c3",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 44,
+      "image_id": "cand_pool_00743",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0
+      ],
+      "bbox_count": 2,
+      "sha256": "662433b4ebaf3ffd22f09a169ff4bcee01c1a0653521f52e46813e9905981241",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 45,
+      "image_id": "val_cand_00767",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "b92f14dbf04843c28532b16aebde0ae117d3edbd7ebc3bedff2994efa9bd8e3e",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 46,
+      "image_id": "india_rw_00043",
+      "source_dataset": "TACO_Extended",
+      "split_role": "INDIA_REAL_WORLD_BENCHMARK",
+      "classes": [
+        2
+      ],
+      "bbox_count": 2,
+      "sha256": "f776736aafbda8c51f9d9cfa2d9e8978c0bb5d1684a42654a1582ea51f14649b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 47,
+      "image_id": "test_cand_00584",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "a8725f51ca653035b7eaea3b5f5842f25013d8ef2b3af5421a7cc7fec3abb488",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 48,
+      "image_id": "cand_pool_00954",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        2
+      ],
+      "bbox_count": 1,
+      "sha256": "9d0c6092165023eaeb1f9129c4ba3ff354fde2aa54ea7c2da66c73fca216a390",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 49,
+      "image_id": "val_cand_00986",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "e02b5809ae1cc28416a81ba50d3f57a9c91b7d38023c0360ea6904ffaf0caf8a",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 50,
+      "image_id": "test_cand_00649",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        2,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "f7c283000bc84f198a422ee2c8fda5b9ebfd75111be5bc54e67be593560024b6",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 51,
+      "image_id": "test_cand_00523",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "8eafd913f2b196452ca9a3e6df413635a919e5af231171a37568de533e984dd1",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 52,
+      "image_id": "val_cand_00762",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0
+      ],
+      "bbox_count": 1,
+      "sha256": "a9927d5285af2047bc09528b5706f4a6673f2a0ff9062c48c03dc8bda3fd39ec",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 53,
+      "image_id": "test_cand_00798",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 2,
+      "sha256": "eb06c11613f0343ff54e11a32cd1749d3232f7ad96b0955bfc30f8489a01221d",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 54,
+      "image_id": "cand_pool_02119",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "f0932f33d36b7c3b43c2b05e9c5e71c32f2b9b444fbb6c9a74acb28a7e789135",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 55,
+      "image_id": "val_cand_00941",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "91aa1e8cefd22d3ab70c5774f56bee9bcbb4106fa5e50e0b13fe28271af4ae2f",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 56,
+      "image_id": "test_cand_00426",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "b057ffc1014e7287d14213783ece861784261eaa85d3409f69902d197b2189f6",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 57,
+      "image_id": "test_cand_00703",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        3,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "13db4422cf6a2dcbf02fd6bd575a952a97a2314c7a42d430c1a494bc2da064de",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 58,
+      "image_id": "test_cand_00744",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "b04b68c8c21f97ba8b954b9d6974a33ace4e8757b60b2e61f821afd854b22a47",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 59,
+      "image_id": "cand_pool_00208",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "c0bff8e28a5f1ceec94ed8bbeff9850227a1454bf021f9f260bc93350d4cdc66",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 60,
+      "image_id": "cand_pool_01840",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "2853ed48b853e8c4ae131263f6b6877d217aa8470aa944f4dd4a4183ebc59d3b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 61,
+      "image_id": "cand_pool_01057",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "551a67628792fd2f004697ada1c086769fc6038d45d5d7ca132efe5646ee3cdd",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 62,
+      "image_id": "cand_pool_00401",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "51f4b2be6719097b5fc9ca1c0bd1010c617d50b99bd52e7208b97935193dd1e9",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 63,
+      "image_id": "test_cand_00787",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        2
+      ],
+      "bbox_count": 1,
+      "sha256": "6501ca7af2de15a52b2d2754d7fee15833affbcf9c646e32917842ff7ea09778",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 64,
+      "image_id": "test_cand_00018",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "6092b99d6acab3c8271f5f935d31515e2d6bfc848eda75ba47a6755f188b97c7",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 65,
+      "image_id": "test_cand_00351",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 4,
+      "sha256": "d7d40e155c0787f93cc47ebc679cff7b58a20ef767d8d191efc04b763b94e560",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 66,
+      "image_id": "cand_pool_01167",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0
+      ],
+      "bbox_count": 2,
+      "sha256": "8eac2baa8f016e1851a393a5b066cf149ca977a13dfa15f9be57d0139c9e6dfe",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 67,
+      "image_id": "test_cand_00450",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "8454a5651f65756733e9baed2eba9acbe04b1baa220ae4cd6bb8635d8c54e0f2",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 68,
+      "image_id": "cand_pool_01876",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "d44e70da0e1d55c71ac7f3a38708dce967e7b0ed66a40cffa0b7fa9e549b4899",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 69,
+      "image_id": "cand_pool_01000",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "2f4692f522d9f22a2489a7b0722c222c1e1b4bec0945ff4d8393d4d96beeb245",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 70,
+      "image_id": "test_cand_00243",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "cd7a2156264f394ff5c4b1604b4b00484a5e230c19c11137ea7bf8e9cb54ba3c",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 71,
+      "image_id": "test_cand_00346",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        2
+      ],
+      "bbox_count": 1,
+      "sha256": "db5df3f3cc277563cc01078ce37cc778163b354906e8470adbf89b32218b734b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 72,
+      "image_id": "test_cand_00970",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 4,
+      "sha256": "980815769a6239a72a6f016605bada7264fa50297b954ace2171c95402b9b21e",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 73,
+      "image_id": "cand_pool_02057",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "54a272fcc302567aff072409ece5a592c12f7f24ef8889a30c7b99b17c871608",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 74,
+      "image_id": "india_rw_00086",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "INDIA_REAL_WORLD_BENCHMARK",
+      "classes": [
+        2,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "b106afee53bf5d2f95c9f6783db543f7cca52a54a5f8519add94ca545a89a589",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 75,
+      "image_id": "val_cand_00794",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "e1a7ac0043682dd421a37d25e041b08d860b9b1bf328358ab2b024bf4565db41",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 76,
+      "image_id": "val_cand_00021",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        2,
+        3,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "b3a31a62a18558787965ff7764b0be86270e79beed73eb3f80b86de64f82567a",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 77,
+      "image_id": "test_cand_00991",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 4,
+      "sha256": "8417509a36624368fa7f5fab0f9d62824c69e942b98480d0be8de661f1692cdf",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 78,
+      "image_id": "test_cand_00612",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        1,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "de43c001866b629d8142fd1cb6a17bc774476c48d26392918b681e60670f4267",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 79,
+      "image_id": "test_cand_00424",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "e4f00fa21601439c9d3ef04dd44d6ae6c286ce29829ed6c0f674119481f5bffe",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 80,
+      "image_id": "val_cand_00793",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        3
+      ],
+      "bbox_count": 1,
+      "sha256": "1b87dfd0bf95385dc5b04484b08765e6ed4345129211445bfb32b6b5a3b88f19",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 81,
+      "image_id": "test_cand_00048",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "fdefde30ef60bc69889ed442006c0abc8adc5d8dcf97e594b5603543d2608b03",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 82,
+      "image_id": "cand_pool_01660",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "da8c943b68dadc28097b353e72e12bd8c8bfa6a14e71ce4a8c5a88fe83ad2565",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 83,
+      "image_id": "cand_pool_02412",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "d1d4126034aa655a3bb887b5749a3de7d92000a6a4664eaad769f3fa56f1994d",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 84,
+      "image_id": "cand_pool_02204",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0
+      ],
+      "bbox_count": 1,
+      "sha256": "ee38d6716c8572aae71a78d4ea6a703cacefcc4a709bbc3527cfdedd3a912d2d",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 85,
+      "image_id": "cand_pool_00076",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "646cadf8f6b5b20e2b832f71aefcaf9cb4f86bd30019565694e113aa4814b62e",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 86,
+      "image_id": "cand_pool_00272",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "8c68340b01baa899453530d7fa8883906612e6cf1e58a6af9cc2198fe25ebb65",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 87,
+      "image_id": "cand_pool_01228",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "350912f0b921f194e9c887dd15a559dd833af14e7eb26b9508bd6253fa461e5a",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 88,
+      "image_id": "test_cand_00254",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "849148b90c7cadeadeb485d428b3856009eb50373a8fc4b57b0b5b99dd01a747",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 89,
+      "image_id": "test_cand_00784",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1
+      ],
+      "bbox_count": 1,
+      "sha256": "8ae43a8577a1e970af90323de2d1ea6ae65445faf2caa6a82a94391737b47102",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 90,
+      "image_id": "test_cand_00511",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "f4ab2c055ad033c03657696afd70ee0bea44b9d2131146f2c46078f59d845185",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 91,
+      "image_id": "val_cand_00449",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        2
+      ],
+      "bbox_count": 1,
+      "sha256": "eb8e1887e528d877793d316b8db784983a044dd4f4c180a04a28e39742b2d283",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 92,
+      "image_id": "cand_pool_01638",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "d6c7113151621a11e98ceff263e2c8bf079734f2fd6714bb83b85efd9619a063",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 93,
+      "image_id": "cand_pool_02131",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        2,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "7e874110627dc11392acfd0426feb29386d69fd61faab1a4aba5cd3c1812ae16",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 94,
+      "image_id": "test_cand_00478",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        1
+      ],
+      "bbox_count": 2,
+      "sha256": "72f5ad3306f2ef20c551d7761adf592bad697e7692686704c4aa5dcd974dbc76",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 95,
+      "image_id": "test_cand_00323",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1
+      ],
+      "bbox_count": 1,
+      "sha256": "9a02534b5bc926e3c6db192fd2ce1ec51796dccd71d60473ad6da9946ec1d59d",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 96,
+      "image_id": "test_cand_00689",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "fe6caca839c52464d5e874f1065c2934296c66d21daaac1c5f2de58ecbb1b86e",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 97,
+      "image_id": "test_cand_00573",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        1
+      ],
+      "bbox_count": 2,
+      "sha256": "057ef1a24889d86479c4b91827c215900380c8357521e2dd9201471684d057fa",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 98,
+      "image_id": "test_cand_00058",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        2,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "73a8133fc1c0a5dc02d642a33096b7531d982ff030ec706f489f0abaf82dbe27",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 99,
+      "image_id": "india_rw_00070",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "INDIA_REAL_WORLD_BENCHMARK",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "5d37b89796651a664054a0fb837ba7c14ab51551b5e5d63c4241ad3027faa7dc",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 100,
+      "image_id": "cand_pool_00276",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "2313b48e6b05e15fb1b2ccfe8d011d08f0f3f14a63dc90a6fc5c2fb9cdd25c96",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 101,
+      "image_id": "cand_pool_02377",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        3
+      ],
+      "bbox_count": 1,
+      "sha256": "15be4e4a64f309d4612bb6669da0176145073413f09f49b0afc28db166063b04",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 102,
+      "image_id": "val_cand_00095",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "2a22d4d4126d10f96c64227db4c374edda419d87bfa14e433293a6a6226cf66a",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 103,
+      "image_id": "test_cand_00250",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        2
+      ],
+      "bbox_count": 1,
+      "sha256": "64dad4abf24f3e6f2d868259af06520fef9343515a114e28c6211dd4389ed97c",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 104,
+      "image_id": "cand_pool_00806",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1
+      ],
+      "bbox_count": 1,
+      "sha256": "4eb7e692f277f4007a45aabb101854fd6a67422a88e015b6b012c9cecae46135",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 105,
+      "image_id": "test_cand_00092",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "62d4e1c0b511b82d22e9af53073f99cee46bdba873bac99a911ecbb8bc37c02c",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 106,
+      "image_id": "test_cand_00721",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "abbfaf680f0535c3740f9d51e093fbf6828d187cb08ec3c22ad4255a8b505906",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 107,
+      "image_id": "cand_pool_02121",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "a452405d86c7178107b52a2fff90a5e88ce03381627ed4949a988da7447f1ec6",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 108,
+      "image_id": "test_cand_00211",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "cabb4b76503fceb4ad87b85085be094e54ac9fe113792acc09d4a0d70f51fe81",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 109,
+      "image_id": "cand_pool_01500",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "043ed5900084497660f93917d9efa2c5a18ea2b677067dab5a2b574851d8e834",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 110,
+      "image_id": "val_cand_00988",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "4fba474d6eaa5833ac44cd7e3e3e38091ac56d6f131bb61c6e2be9cce039e317",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 111,
+      "image_id": "cand_pool_00527",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "ecdc9c0f730345507afc1fce92540a0868d9d871adf356b0037b20a79a6dc2a2",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 112,
+      "image_id": "cand_pool_02183",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        2,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "5a3ed941ffd3d9ed98036fd203c9ddcb0f97b01658f7d7ddb7205a83649b3288",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 113,
+      "image_id": "val_cand_00533",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0,
+        1,
+        2
+      ],
+      "bbox_count": 3,
+      "sha256": "e96b553ddca0091b0780e9e7f1d027e6fe9218c28f7c7c41a87924f4cefae690",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 114,
+      "image_id": "cand_pool_00792",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "8be57c78e48abac8d632bcabd2c748dbb4367d22bd206d7f9769a64027d0cc14",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 115,
+      "image_id": "cand_pool_01595",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "5fee5ab8a244b7ae0d6878b34043991b477eb96b26f713d791974b780e8d401b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 116,
+      "image_id": "val_cand_00870",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "f2a08293db30da7269dae1d876c7e252ea7c19522e0ce7b96d8be68703ff085e",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 117,
+      "image_id": "cand_pool_01199",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        2,
+        3
+      ],
+      "bbox_count": 2,
+      "sha256": "aba4ed07ff3ff5dc0dec02e2df876cae88c7b9e91815ab8d3b5106f294419c04",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 118,
+      "image_id": "test_cand_00182",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "742c697f33626c51708806905074c36c7927cee2eb59d72acbd6505a1f4900df",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 119,
+      "image_id": "cand_pool_00115",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "30a278fa289f7cbc91ef1a8b666e5bf94c529f908c15758b1129d3dd17e79951",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 120,
+      "image_id": "cand_pool_00756",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1
+      ],
+      "bbox_count": 1,
+      "sha256": "d83c79255771b230de62df2e444270f5c1200cec87281271c1a9deb823b83937",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 121,
+      "image_id": "cand_pool_00002",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        3
+      ],
+      "bbox_count": 2,
+      "sha256": "e5a74ec7f6a36fdd8112def6868771fc5096139638239333f53ccf0b57bfeb8e",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 122,
+      "image_id": "test_cand_00197",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        2,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "256343ac9f7434f7bfee82a34ec7d7d3669ea459cf11cc05c00e5b710c3a82ed",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 123,
+      "image_id": "test_cand_00978",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        2,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "118b4b68d4408bd928aca48adb59a01ce9fe9c355686b77ae0ab88cd425c5406",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 124,
+      "image_id": "cand_pool_00681",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        3
+      ],
+      "bbox_count": 2,
+      "sha256": "63027ecd20afab9c62c78b67e068dfc0d0b2c7a4f9afd37807161c58ad8fc792",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 125,
+      "image_id": "cand_pool_01629",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "22f5ecdd59ba17faee297ea45efc3b506ee50267399a72572e048f0edc42b510",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 126,
+      "image_id": "cand_pool_02031",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1
+      ],
+      "bbox_count": 2,
+      "sha256": "8e4be7ae653c95fb6451db253bcce1a040c7ff0922bb0c6162420e6db95245ed",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 127,
+      "image_id": "cand_pool_00990",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "88461324e350b2cd772e432e00c357bf0d979b153667492b35bf1199a5380a57",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 128,
+      "image_id": "cand_pool_00366",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "d809db80d03dc9529ee9abb93cd780c7b2e46e02424721378916c53fd5692500",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 129,
+      "image_id": "test_cand_00977",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "7a3f84d517150ab52dc86c5e2aac898eb1f88fa6fce8cb9c6d74e083da39c76d",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 130,
+      "image_id": "cand_pool_02200",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "4bfd89820958f5bfa9af94207df219ef8879edb709bed96a629b3f98e17a5d3f",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 131,
+      "image_id": "val_cand_00427",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        2
+      ],
+      "bbox_count": 1,
+      "sha256": "3384d164ce0e51983492c87062a5a3e7ee872aa086a1001058fda71477641e40",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 132,
+      "image_id": "cand_pool_01268",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        2
+      ],
+      "bbox_count": 3,
+      "sha256": "eb7b3e2b188aa2be3c47d19746d956c09676673823eb16b3da24bc5e6393fead",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 133,
+      "image_id": "cand_pool_00043",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        2
+      ],
+      "bbox_count": 1,
+      "sha256": "3d98cbc194d2a94d1d186d63dc08e0c1ef44e37a20b52903cf41dc3a4c841b37",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 134,
+      "image_id": "val_cand_00068",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "3b9f90e721d9b843ebac968c700b7acfe2bc75576cfafb61f71d6e4d16ed864b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 135,
+      "image_id": "test_cand_00531",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "0120183ebcaff1f59206af81e04a940dbeb5cc2a03b4803438e88cf7653045ff",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 136,
+      "image_id": "cand_pool_01105",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "adf616b02dcd8ee33d803b303de5f5994f30997cf4ab60f119b744be20dd6b31",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 137,
+      "image_id": "test_cand_00972",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        3,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "935aa07b72aad75d8a86c75af7c513d52470b2c53e5a2dc34b8c1a708a19a11a",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 138,
+      "image_id": "cand_pool_01827",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        1
+      ],
+      "bbox_count": 4,
+      "sha256": "5e6ecd1075ee9c698c556e2d5796e5f1ffd14e9271a96a4eaa4808e6cd73b1af",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 139,
+      "image_id": "test_cand_00375",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0
+      ],
+      "bbox_count": 2,
+      "sha256": "f7c4a496a42e7f665756c7a35425626d33a2d215545472aef8b1fab64da79a9b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 140,
+      "image_id": "cand_pool_01075",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "6fe218d8c76237fd6f535e51e527004bc51b7bc2c55c4391b19662117832de33",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 141,
+      "image_id": "test_cand_00635",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "6401139c061aa49c801e672b7ecb8c0573c192fcb68e43c935c60bbb35897de0",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 142,
+      "image_id": "cand_pool_02382",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        2
+      ],
+      "bbox_count": 1,
+      "sha256": "c27b7c87a7a2e1cc8deb047f0f80ee0d1e30ee137786f78895a8cc74bf7afabc",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 143,
+      "image_id": "cand_pool_00692",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "e3425d62cd18a90fdd0a32932f8e224841829c63c9f644e22ce548095f89a35f",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 144,
+      "image_id": "val_cand_00923",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "fa0c60e7824fadbb1bf7f31988ba22b0187c36a1270b783e3e1235f384d23f89",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 145,
+      "image_id": "cand_pool_01312",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "b65f3548bb735df352b1d62f6ce367b3f13d6596993fbfb38adcfe402ebb0ddf",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 146,
+      "image_id": "cand_pool_01109",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "9d48adae51e2020266dfa67f24c5bfe6994cba8e8c6d25e6a06222e2ecb5086c",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 147,
+      "image_id": "val_cand_00007",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "24f380f24c98c7b375ae681f10b9cbde4d731696e9fa43576d5e50281af06c1d",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 148,
+      "image_id": "test_cand_00660",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "777c5629fc27320fbb710705f10d70c6a0442bb2ff5b178b540bee213e9e882c",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 149,
+      "image_id": "val_cand_00876",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        2,
+        3
+      ],
+      "bbox_count": 2,
+      "sha256": "537e35e2f6341bad84bd21cc7a7083f1ed734e728e56a77f0f15504cf87cf5b4",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 150,
+      "image_id": "val_cand_00699",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        1
+      ],
+      "bbox_count": 3,
+      "sha256": "3884d660c372b53c41af1f15b597137e8117c0579a279413ca8d9b675832d7b1",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 151,
+      "image_id": "cand_pool_01217",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 2,
+      "sha256": "27d9b5cfbca6bca0675efa8eeff8f7886dec8f76cce6352b9566900534aef69b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 152,
+      "image_id": "test_cand_00761",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        2,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "61d020c2174dd0d23ee6d80138047cf5671118f4e4897dab229e5d4c0d55b997",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 153,
+      "image_id": "cand_pool_01612",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 3,
+      "sha256": "95f910841bbffadd79f5f9bfad24d246fcc95d210da92bcd695472b3c76f444f",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 154,
+      "image_id": "val_cand_00581",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "cade48e1ed16be29e5aca90c56be0afe56651b93a3d7519e8cca2cdccf331eb1",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 155,
+      "image_id": "cand_pool_00116",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1
+      ],
+      "bbox_count": 1,
+      "sha256": "12cce026328d9a24f020e225ba538ce4c0d8515fea8e3011b474ed6bf3dd948f",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 156,
+      "image_id": "cand_pool_00870",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        3
+      ],
+      "bbox_count": 1,
+      "sha256": "af3963f783657a20d5bd738e22e3cc389b15cc182e22bde8e6eb1a3047be4869",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 157,
+      "image_id": "val_cand_00690",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "6643a28218dbe693523cb8d7da0092e849564cd141dd37ba952bdf1d594360ff",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 158,
+      "image_id": "cand_pool_00602",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0
+      ],
+      "bbox_count": 1,
+      "sha256": "75399677e8abf9ee0f52ed78f8c57ee0befb5c9a6e9c4d997631dd0c9d2faa8e",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 159,
+      "image_id": "cand_pool_00421",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        1,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "d21231bf8756c0926d29ac3de5745e598187dc4a363486c75f053bc7230f92de",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 160,
+      "image_id": "val_cand_00343",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "74f0f1c97906073aca177e42c8950afdc5b111dc9ac867d4c1e86c7765d911c3",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 161,
+      "image_id": "val_cand_00396",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 4,
+      "sha256": "bea35f157a41f38429d8472e4e5e1b71ea8548acd4564eb0be05dff9d555ce16",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 162,
+      "image_id": "cand_pool_00212",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "6e1af98dd9cc55b61968c0be76b0974e8509b3058c0eea93c0db12505edb9a21",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 163,
+      "image_id": "cand_pool_00210",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "972640c0c1d8fd0186fe0dd17ea304a0dfa5e7980301a39aa90ea197886a3339",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 164,
+      "image_id": "test_cand_00682",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        3
+      ],
+      "bbox_count": 2,
+      "sha256": "efad5891c840b656750d09b281402d7b471220ebb95aa6745b3a439485236d59",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 165,
+      "image_id": "test_cand_00400",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "fcb719fd014e445464990ab3d11fd3348b3777aa63771208f9a06f7c09b58552",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 166,
+      "image_id": "val_cand_00186",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        1
+      ],
+      "bbox_count": 3,
+      "sha256": "a6a5b904035a222e851f51542dca4efc8b118d63f5ac7f8fecd6f3975b544db6",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 167,
+      "image_id": "cand_pool_02488",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        3
+      ],
+      "bbox_count": 2,
+      "sha256": "4a369ba1010f280a5ba9619b20af9c110263dfd3a44034167b160e5b499b7193",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 168,
+      "image_id": "test_cand_00188",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "940ff27c885c43a533c0ba4d392ac8319c76f4d907d5e92cb235af727ca7c267",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 169,
+      "image_id": "val_cand_00171",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        2,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "36769c050133c6a43cefb61cca7935bfd7057ffa708d81454d85ef2d2f7b912f",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 170,
+      "image_id": "cand_pool_00995",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "183efca5828a1105579ec2cd41dbc46172251ada90a136a5b6d75784b5c7881a",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 171,
+      "image_id": "test_cand_00577",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        3
+      ],
+      "bbox_count": 1,
+      "sha256": "f6dedac28a79743b4efa686ab415a7988807f495159b4c86b74f8fdb3d62aead",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 172,
+      "image_id": "cand_pool_01399",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "430223b78406efaac4b7b2b8d1489f476e3b9372aed729b6f3ba48497c471828",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 173,
+      "image_id": "cand_pool_01261",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1
+      ],
+      "bbox_count": 1,
+      "sha256": "af0257163aa94951ccc3a9f1b544217ccedf54d502480e15a478d6d0566bde3b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 174,
+      "image_id": "test_cand_00757",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "3da26ef867a7432b7af754c8fe3a23dff36462c762167b1691a79ad01cd0f471",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 175,
+      "image_id": "cand_pool_01696",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "3c646681cb43826570466d8963dfc8f13f0e1464f303b2c56242e81e00160fd8",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 176,
+      "image_id": "test_cand_00053",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "672ee8eb86f07f758d34b369adc668046c82b577984db2d477b06535ab837a0a",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 177,
+      "image_id": "val_cand_00256",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "43fe415b8b38ce28f8e8e9380b476f4ce0b72d3314dac94dd3ddb6c8a836603c",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 178,
+      "image_id": "test_cand_00259",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        2
+      ],
+      "bbox_count": 2,
+      "sha256": "a3f77b1c45754788d0d6e2acf41f6ee62c4bd5cafed25dfb5ddab8290181fc16",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 179,
+      "image_id": "cand_pool_01912",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "704151cd8243f37a3965bd83a67dec0cbc2e9196746bd7382d913451a237b607",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 180,
+      "image_id": "cand_pool_00570",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "f34b817744151b8b0c3fef02c7692e6a7aff8f94b18615b6aa7f64a2dbcf9342",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 181,
+      "image_id": "test_cand_00984",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "248d389cd24abb4fe3221112da047f11ba578e43dc3a877d5a28d23515b52563",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 182,
+      "image_id": "val_cand_00770",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        2
+      ],
+      "bbox_count": 1,
+      "sha256": "2595a5f8c0f92bdf5456e02f804b06b729113884b9e1a692dbc3c84b81c74907",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 183,
+      "image_id": "cand_pool_00280",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "37a8b644167b2c45ee6074210ba4501a3be2b40e14111fa127fc4ca98d657325",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 184,
+      "image_id": "cand_pool_01602",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        3
+      ],
+      "bbox_count": 1,
+      "sha256": "64a32d3f8803b0ffce45458c1fe3ac12d4c24136cc908135fe700948805b9934",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 185,
+      "image_id": "cand_pool_01421",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        3
+      ],
+      "bbox_count": 2,
+      "sha256": "106079e9bf7bfaec74cd5fcd6ffe97bd466dbcdd0f1cdffba6daedb6292135e6",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 186,
+      "image_id": "cand_pool_00371",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0
+      ],
+      "bbox_count": 2,
+      "sha256": "8f3c1571e97f8b05fa1773d41f0eb56d620ee31d3ccfb41e8da1ecaa80dd5430",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 187,
+      "image_id": "test_cand_00963",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 3,
+      "sha256": "c91ec8fe3b2f0b04da30ce06266226c31a97779024651287bf7c4ef5e948873b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 188,
+      "image_id": "cand_pool_00395",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0
+      ],
+      "bbox_count": 1,
+      "sha256": "7e2100d0c2452817da7923720234b710bc75c9a3d4832ba51912d4c39538b3f1",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 189,
+      "image_id": "test_cand_00202",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "ef1511cb0273a43c33d8a3df58dcb1a661c25afc1ae3611dbf27bf0b53b0eb50",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 190,
+      "image_id": "cand_pool_01545",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        2
+      ],
+      "bbox_count": 1,
+      "sha256": "918f49ad1ed37c98a194e65174a0790ce105aae1d5a995f3470ab5079d41e0a5",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 191,
+      "image_id": "test_cand_00464",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        2
+      ],
+      "bbox_count": 2,
+      "sha256": "c9ac06815987cf9fda33a8d830f7c081a84867f1f3198690d41894fc5eb88876",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 192,
+      "image_id": "cand_pool_00168",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "7bc9476f08ecbe14c95d91de874af2ece3c4d3663372a4478e53b15bb4f44148",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 193,
+      "image_id": "cand_pool_01058",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "9f41c3cc20be3414c1f8df5c94f0e4a48d48e8d4f9a4c0ed182fda9dc09bb1a6",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 194,
+      "image_id": "test_cand_00842",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 2,
+      "sha256": "e3e8e3fd939b84a3509d8c790f3a02f45bdb57e50562383a9f5ef8e3079f4e12",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 195,
+      "image_id": "cand_pool_01792",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "aaa18d30f7d33de8e27de75f3d9a05721d5d2ecea0d843d13b8c640d56fbda75",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 196,
+      "image_id": "test_cand_00735",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "db9cef7cc06773f1611c50d1cf2b0eb9e2a71f0f5cba88eafcee8363b3fe40f7",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 197,
+      "image_id": "cand_pool_01129",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "b3b964c555289eaa97e451c211a825ea944035318cf615a7edd45c60245aaed3",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 198,
+      "image_id": "cand_pool_01314",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        3
+      ],
+      "bbox_count": 2,
+      "sha256": "fbdb7f9f6e7a47aed2d4b5d0121fe579e8b380e2fadd225a1d3b7b88c33b9c5b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 199,
+      "image_id": "cand_pool_01524",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 2,
+      "sha256": "f6730df0435b0fa8918101e9b74b4b31c24ade8a3327eb9b22d4bf6b1943371a",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 200,
+      "image_id": "val_cand_00695",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 4,
+      "sha256": "83b3dfa2a573c86eb64f10de28ebade162663c98713382f5c63f36d8cdf80450",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 201,
+      "image_id": "cand_pool_02235",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        2,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "9a9aac9c330de43f36e9201e4727350094f6f354ad3e996bb12c61efbab6574b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 202,
+      "image_id": "val_cand_00985",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0,
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "4fa007776dbc2ce91624bd0b9c71b840166d456d54cc18f7a5a8985991f9eb17",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 203,
+      "image_id": "test_cand_00867",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "e1ac55f8ce7eca0007cda862aaa35b45a6cf67a6490ad4e8cb2b585d450a9d38",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 204,
+      "image_id": "val_cand_00893",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        2,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "36f886d8a586c6b39d90f77aff15c2083bbb3c6b1141a69bfd66350643b423fc",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 205,
+      "image_id": "cand_pool_00645",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        3
+      ],
+      "bbox_count": 1,
+      "sha256": "ea3305c155d7965d725de626b0473eb6f81e640b53c1582346a9d52585e0b07f",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 206,
+      "image_id": "val_cand_00640",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0
+      ],
+      "bbox_count": 2,
+      "sha256": "b294bec26097d7a136887b6097599bcb81aa50bdac551f4be682c20628d67eda",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 207,
+      "image_id": "cand_pool_02498",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1
+      ],
+      "bbox_count": 1,
+      "sha256": "261aa3430627c5b392e7303b04e5c1b38cdd031cbc4c3ee070b7484e39a365c2",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 208,
+      "image_id": "cand_pool_01534",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "dfa41c63095d0139ad46e81b84198f7f20530b708374f90f2ded09574cec9fa7",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 209,
+      "image_id": "val_cand_00319",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        1,
+        2
+      ],
+      "bbox_count": 2,
+      "sha256": "95b594146a3c2df93063cbf05f2201ec77a4bdb90b935d47bc2f1b33e90d40a5",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 210,
+      "image_id": "cand_pool_01432",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1
+      ],
+      "bbox_count": 1,
+      "sha256": "bb60b976f503b6d1ca905d54b70466a981a1bd734e49b27a1c6c917e379dccbe",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 211,
+      "image_id": "cand_pool_02159",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "66b20dfef5879d149af071547e23ef57a304d025851405301753ab10b2ae4cd1",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 212,
+      "image_id": "test_cand_00301",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1
+      ],
+      "bbox_count": 1,
+      "sha256": "488d42e8762ce652bec9b9fbc8d0a59bb95d42fde23e0006f8e9525f8356ade6",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 213,
+      "image_id": "val_cand_00906",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "3ab9e295a68de5da365ae88c9af84056ec9581096826451ed1eab77572ef5375",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 214,
+      "image_id": "test_cand_00332",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        2,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "b9e220acfaa029c506572c7bcbec43439fdf9309f5a203fc295a1f4b538bb081",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 215,
+      "image_id": "cand_pool_01450",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1
+      ],
+      "bbox_count": 3,
+      "sha256": "662492b382bb97a7f1f7adf5eb76350280573831f5f976df752fd79e28291ae2",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 216,
+      "image_id": "val_cand_00169",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        1
+      ],
+      "bbox_count": 2,
+      "sha256": "97fd1a1b298b07931e6caf38ee1b695801e10c01ea8184e3384c56d1b729540d",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 217,
+      "image_id": "test_cand_00755",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "134cbc1b03a714a2a54d407daa9d02d7ae135054b2aa4fa468f40d70548589c9",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 218,
+      "image_id": "test_cand_00449",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "17c269a79638de286ebc046864933a0b648a2ec4e2e6869d55c58f7255988272",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 219,
+      "image_id": "test_cand_00143",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 4,
+      "sha256": "722beeff7178e3835c5131c62916d0004a77851ac9d1b039cf1efc53bba96521",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 220,
+      "image_id": "cand_pool_00984",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        2
+      ],
+      "bbox_count": 1,
+      "sha256": "cb9973c5f54dadf4e997a08cea90694c5e456607e4f14a26575c9de7b20f3c37",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 221,
+      "image_id": "test_cand_00820",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 3,
+      "sha256": "aa587a092f2b1422aa9036517163b6790fc23e138b8ae7557e9726a4ad8a4ec4",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 222,
+      "image_id": "test_cand_00799",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        1,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "0333d3a33125878902072d46869eefd908f6330d97e4f9df4e8e7392a9a59ad9",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 223,
+      "image_id": "cand_pool_02244",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "8296fdf5f17e6ea7a2e076f224589d7ea09b66f8937b93ecf9571808694aee32",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 224,
+      "image_id": "cand_pool_00775",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        2
+      ],
+      "bbox_count": 3,
+      "sha256": "f9e3688ef386db76b6ee1dee05e2907c8e1444e15cf93ecd4bcaa7b865bdcfce",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 225,
+      "image_id": "cand_pool_01756",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        3
+      ],
+      "bbox_count": 2,
+      "sha256": "459b6d6f36be9395295ffb6ee7312a9f7c0d649834823a5be7f497aebb55dd3c",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 226,
+      "image_id": "cand_pool_01896",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1
+      ],
+      "bbox_count": 2,
+      "sha256": "d57f7e94b8204d2f68386161ac8a7b40e11fa9dbf72a7ff132e85cca4135349c",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 227,
+      "image_id": "cand_pool_00041",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 3,
+      "sha256": "d24c97f12abd3f4e745ff5a671152ea1805699795547e55bb38a424fb8a45036",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 228,
+      "image_id": "cand_pool_00763",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "c2f7c4353867cc9ba961747b1940420f5d76cd842eb9dfa4de16bb35e0ee155b",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 229,
+      "image_id": "test_cand_00221",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "de2e717f29d3d1a07549dc594ef874c5a892b34c1330f907cc1e46c2993e9f55",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 230,
+      "image_id": "val_cand_00207",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        0
+      ],
+      "bbox_count": 1,
+      "sha256": "871909809b84427636288be6f5e4f5e63afb1cccb5a1aef113fc902b8994f3fb",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 231,
+      "image_id": "val_cand_00843",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        1
+      ],
+      "bbox_count": 1,
+      "sha256": "f5a885ae7b21b5cc8c5f324db630867f8d53eab3216918ff4703b7bbbd35a9e1",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 232,
+      "image_id": "test_cand_00966",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        2,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "ed65b1f912a38c662dab899836131aa3bc8ed38393d51f203eaa110ad5b48d44",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 233,
+      "image_id": "cand_pool_01495",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1
+      ],
+      "bbox_count": 2,
+      "sha256": "101b6bf3d2cb6fe3e1baace6a787c7e40e814bfba6ec06f670497d480e04ea6d",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 234,
+      "image_id": "cand_pool_00223",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "19717b9f71e5fc262b84796e63d1c6c6292112d801ff17d45356e796c7af2d9d",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 235,
+      "image_id": "val_cand_00384",
+      "source_dataset": "TACO_Extended",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 2,
+      "sha256": "0eb5578c9563151be093b1397080fb9deb5f2c710432e832651df66960ad4816",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 236,
+      "image_id": "cand_pool_01285",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        3
+      ],
+      "bbox_count": 2,
+      "sha256": "63c18eb767275f674e280c0e3d9baa9ce32cd8a6b2ce58f486e809a3cc2072ba",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 237,
+      "image_id": "val_cand_00382",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "VALIDATION_CANDIDATE",
+      "classes": [
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "96b659876c2fc7d29638cf1d62572b56b07a4ae4855a92038890784f24b40975",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 238,
+      "image_id": "test_cand_00911",
+      "source_dataset": "TACO_Extended",
+      "split_role": "TEST_CANDIDATE",
+      "classes": [
+        0,
+        1,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "f1371c4a0173ec88f45d9a6ab48b2d87caba245c6eaed14e0034205a05ee3b82",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 239,
+      "image_id": "cand_pool_01774",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        3
+      ],
+      "bbox_count": 3,
+      "sha256": "0ba647574c333e84f10422fea6ccc64f8fd599441e9cfbe3fbb6441d211ddff2",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 240,
+      "image_id": "cand_pool_00899",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        1
+      ],
+      "bbox_count": 1,
+      "sha256": "14198e454f5d0c2ff7993ad470419989dece7b82c43aac21837bbd53281ab4ae",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 241,
+      "image_id": "cand_pool_02298",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 2,
+      "sha256": "b987743b29442170f1566a5e05ab5f2a1c2d68ddc119e1cb6bb53cb7c62d4595",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 242,
+      "image_id": "india_rw_00054",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "INDIA_REAL_WORLD_BENCHMARK",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "d14e520d156f19990253a3ff11753fd9d65ea94d16e71809db262712cbea1abd",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 243,
+      "image_id": "cand_pool_01757",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 1,
+      "sha256": "4fdc06359d04fca358b5376f717e6948dd15d01ba476a830b47f9688616ee3c7",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 244,
+      "image_id": "cand_pool_02415",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 2,
+      "sha256": "da69dcda6c8088d31f67eeca44988cb1802674c09a4edd1112722bf2e5af967f",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 245,
+      "image_id": "cand_pool_02197",
+      "source_dataset": "Roboflow_Material_Set",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        2
+      ],
+      "bbox_count": 4,
+      "sha256": "d6f6fd2a1d344ad1c08fa87cc43715b05e7593adc9f0d6af5bc0631f2472afb7",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 246,
+      "image_id": "india_rw_00053",
+      "source_dataset": "TACO_Extended",
+      "split_role": "INDIA_REAL_WORLD_BENCHMARK",
+      "classes": [
+        1,
+        2
+      ],
+      "bbox_count": 2,
+      "sha256": "e3f57efe3ac4d9b7fb61857f5870a996b3602957ff180978efb9b531d34c1fec",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 247,
+      "image_id": "cand_pool_01087",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "bbox_count": 4,
+      "sha256": "d2586bafb8600eb9cc7a8aa3baf71383214e471752480ec6c3f0af8aeed64444",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 248,
+      "image_id": "cand_pool_00832",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        1,
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "96185ddeca9369410d6ee4a1bf26dc685e4e655f378a5ffdc7b10e0be4c563a1",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 249,
+      "image_id": "cand_pool_02161",
+      "source_dataset": "OpenImages_V7_Approved",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        4
+      ],
+      "bbox_count": 3,
+      "sha256": "02a92a821e3c75408130f2cc95b276528ab56c1729a7da78107ff61380f0add9",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    },
+    {
+      "sample_id": 250,
+      "image_id": "cand_pool_00790",
+      "source_dataset": "TACO_Extended",
+      "split_role": "CANDIDATE_POOL_V2",
+      "classes": [
+        0,
+        1,
+        3
+      ],
+      "bbox_count": 4,
+      "sha256": "8f279287adf8a774fad1c419da3b58b4875ab04fa21c886f007c9c46af42fe41",
+      "audit_status": "PASSED_AUDIT",
+      "issue_type": "NONE"
+    }
+  ]
+}
