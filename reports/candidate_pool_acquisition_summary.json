@@ -1,0 +1,39 @@
+{
+  "pipeline": "SafaiOS Candidate Pool Acquisition Engine",
+  "candidate_pool_version": "v2_staged",
+  "staged_directory": "data/incoming/candidate_pool_v2",
+  "total_staged_images": 1421,
+  "rejected_candidates": 6079,
+  "exact_duplicates_rejected": 0,
+  "near_duplicates_rejected": 6079,
+  "free_disk_space_gb": 597.18,
+  "class_distribution_boxes": {
+    "paper_cardboard": 2984,
+    "glass_bottle_container": 3379,
+    "metal_can": 2621,
+    "plastic_wrapper_bag": 2603,
+    "plastic_bottle": 3381
+  },
+  "class_distribution_images": {
+    "glass_bottle_container": 701,
+    "metal_can": 610,
+    "paper_cardboard": 667,
+    "plastic_wrapper_bag": 590,
+    "plastic_bottle": 691
+  },
+  "domain_distribution": {
+    "roadside": 260,
+    "street": 260,
+    "park": 248,
+    "dumping_area": 224,
+    "market": 234,
+    "pedestrian_space": 195
+  },
+  "difficulty_distribution": {
+    "MEDIUM": 360,
+    "EASY": 350,
+    "UNKNOWN": 376,
+    "HARD": 335
+  },
+  "status": "APPROVED_CANDIDATE_POOL_STAGED"
+}
