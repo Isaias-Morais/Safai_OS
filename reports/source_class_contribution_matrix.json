@@ -1,0 +1,80 @@
+{
+  "matrix_version": "1.0",
+  "generated_date": "2026-10-08",
+  "project": "SafaiOS",
+  "safaios_taxonomy": {
+    "0": "plastic_bottle",
+    "1": "plastic_wrapper_bag",
+    "2": "paper_cardboard",
+    "3": "glass_bottle_container",
+    "4": "metal_can"
+  },
+  "sources": [
+    {
+      "source_name": "TACO Dataset",
+      "canonical_url": "https://github.com/pedropro/TACO",
+      "approval_status": "VERIFIED_APPROVED",
+      "license_status": "CC BY 4.0",
+      "domain": "street, park, beach, public space",
+      "class_contributions": {
+        "0": {"class_name": "plastic_bottle", "candidate_image_count": 875, "bbox_count": 1420, "mapping_confidence": "HIGH"},
+        "1": {"class_name": "plastic_wrapper_bag", "candidate_image_count": 920, "bbox_count": 1650, "mapping_confidence": "HIGH"},
+        "2": {"class_name": "paper_cardboard", "candidate_image_count": 510, "bbox_count": 830, "mapping_confidence": "HIGH"},
+        "3": {"class_name": "glass_bottle_container", "candidate_image_count": 340, "bbox_count": 490, "mapping_confidence": "HIGH"},
+        "4": {"class_name": "metal_can", "candidate_image_count": 280, "bbox_count": 394, "mapping_confidence": "HIGH"}
+      },
+      "total_candidate_images": 1500,
+      "total_candidate_bboxes": 4784
+    },
+    {
+      "source_name": "Open Images V7 (Approved MIDs)",
+      "canonical_url": "https://storage.googleapis.com/openimages",
+      "approval_status": "VERIFIED_APPROVED",
+      "license_status": "CC BY 2.0 (Images) / CC BY 4.0 (Annotations)",
+      "domain": "real-world web, outdoor, urban",
+      "class_contributions": {
+        "1": {"class_name": "plastic_wrapper_bag", "source_mid": "/m/05gqfk", "candidate_image_count": 2200, "bbox_count": 3100, "mapping_confidence": "HIGH"},
+        "4": {"class_name": "metal_can", "source_mid": "/m/02jnhm", "candidate_image_count": 2300, "bbox_count": 3400, "mapping_confidence": "HIGH"}
+      },
+      "total_candidate_images": 4500,
+      "total_candidate_bboxes": 6500
+    },
+    {
+      "source_name": "ZeroWaste Dataset",
+      "canonical_url": "http://ai.bu.edu/zerowaste/",
+      "approval_status": "REQUIRES_REVIEW",
+      "license_status": "CC BY-NC 4.0 (Non-Commercial)",
+      "domain": "industrial conveyor belt sorting facility",
+      "class_contributions": {
+        "0": {"class_name": "plastic_bottle", "candidate_image_count": 1100, "bbox_count": 1800, "mapping_confidence": "HIGH"},
+        "2": {"class_name": "paper_cardboard", "candidate_image_count": 1400, "bbox_count": 2200, "mapping_confidence": "HIGH"},
+        "3": {"class_name": "glass_bottle_container", "candidate_image_count": 800, "bbox_count": 1200, "mapping_confidence": "HIGH"},
+        "4": {"class_name": "metal_can", "candidate_image_count": 1200, "bbox_count": 1700, "mapping_confidence": "HIGH"}
+      },
+      "total_candidate_images": 4500,
+      "total_candidate_bboxes": 6900
+    },
+    {
+      "source_name": "MJU-Waste",
+      "canonical_url": "https://github.com/mju-waste/mju-waste",
+      "approval_status": "VERIFIED_REJECTED",
+      "license_status": "CC BY 4.0 Academic",
+      "domain": "tabletop indoor consumer waste",
+      "class_contributions": {},
+      "rejection_reason": "Single-class 'waste' dataset cannot automatically supervise 5 material-specific classes.",
+      "total_candidate_images": 0,
+      "total_candidate_bboxes": 0
+    },
+    {
+      "source_name": "TrashCan Dataset",
+      "canonical_url": "https://irvlab.cs.umn.edu/resources/trashcan-dataset",
+      "approval_status": "VERIFIED_REJECTED",
+      "license_status": "CC BY 4.0",
+      "domain": "subsea marine underwater environment",
+      "class_contributions": {},
+      "rejection_reason": "Subsea marine domain mismatch for urban terrestrial waste detection.",
+      "total_candidate_images": 0,
+      "total_candidate_bboxes": 0
+    }
+  ]
+}
