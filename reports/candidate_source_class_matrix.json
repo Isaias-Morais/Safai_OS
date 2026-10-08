@@ -2,30 +2,41 @@
   "matrix_version": "Milestone_2F_v1.0",
   "generated_date": "2026-10-08",
   "project": "SafaiOS",
-  "total_candidate_images": 1421,
-  "total_parsed_bounding_boxes": 2859,
+  "total_candidate_images": 2500,
+  "total_parsed_bounding_boxes": 6255,
   "discrepancy_reconciliation_note": "The 14,968 figure in Milestone 2D was an un-capped pre-staging target estimate. Physical ground truth on disk in data/incoming/candidate_pool_v2/labels/ contains exactly 3,909 bounding boxes across 1,421 images.",
   "sources": {
-    "TACO_Extended": {
-      "image_count": 680,
-      "total_boxes": 1379,
-      "class_boxes": {
-        "plastic_bottle": 251,
-        "plastic_wrapper_bag": 278,
-        "paper_cardboard": 264,
-        "glass_bottle_container": 296,
-        "metal_can": 290
-      }
-    },
     "OpenImages_V7_Approved": {
-      "image_count": 741,
-      "total_boxes": 1480,
+      "image_count": 862,
+      "total_boxes": 2146,
       "class_boxes": {
         "plastic_bottle": 0,
-        "plastic_wrapper_bag": 741,
+        "plastic_wrapper_bag": 1061,
         "paper_cardboard": 0,
         "glass_bottle_container": 0,
-        "metal_can": 739
+        "metal_can": 1085
+      }
+    },
+    "TACO_Extended": {
+      "image_count": 827,
+      "total_boxes": 2083,
+      "class_boxes": {
+        "plastic_bottle": 422,
+        "plastic_wrapper_bag": 409,
+        "paper_cardboard": 428,
+        "glass_bottle_container": 453,
+        "metal_can": 371
+      }
+    },
+    "Roboflow_Material_Set": {
+      "image_count": 811,
+      "total_boxes": 2026,
+      "class_boxes": {
+        "plastic_bottle": 666,
+        "plastic_wrapper_bag": 0,
+        "paper_cardboard": 664,
+        "glass_bottle_container": 696,
+        "metal_can": 0
       }
     }
   }
