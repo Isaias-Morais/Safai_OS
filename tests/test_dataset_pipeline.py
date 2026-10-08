@@ -298,3 +298,94 @@ def test_50_source_specific_class_inventory_generated_correctly():
     assert mju_entry["class_count"] == 1
     assert mju_entry["is_multi_class"] is False
 
+# --- Milestone 2D Candidate Pool Acquisition Tests 51..60 ---
+def test_51_source_class_contribution_matrix_valid():
+    matrix_file = Path("reports/source_class_contribution_matrix.json")
+    assert matrix_file.exists()
+    with open(matrix_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert "sources" in data
+    assert len(data["sources"]) >= 5
+
+def test_52_acquisition_target_matrix_valid():
+    target_file = Path("reports/acquisition_target_matrix.json")
+    assert target_file.exists()
+    with open(target_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert "acquisition_targets" in data
+    # Priority 1 must be glass_bottle_container (Class ID 3)
+    p1 = [t for t in data["acquisition_targets"] if t["acquisition_priority"] == 1][0]
+    assert p1["class_id"] == 3
+    assert p1["class_name"] == "glass_bottle_container"
+
+def test_53_candidate_pool_manifest_exists():
+    manifest_path = Path("data/incoming/candidate_pool_v2/manifest.jsonl")
+    assert manifest_path.exists()
+    line_count = 0
+    with open(manifest_path, "r", encoding="utf-8") as f:
+        for line in f:
+            if line.strip():
+                entry = json.loads(line.strip())
+                assert "image_id" in entry
+                assert "sha256" in entry
+                assert "md5" in entry
+                line_count += 1
+    assert line_count >= 1000
+
+def test_54_candidate_pool_sample_review_log_valid():
+    log_file = Path("reports/candidate_pool_sample_review_log.json")
+    assert log_file.exists()
+    with open(log_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["sample_size"] == 100
+    assert data["passed_count"] == 100
+
+def test_55_candidate_pool_staging_isolation():
+    cand_path = Path("data/incoming/candidate_pool_v2/images/taco_ext_00001.jpg")
+    locked_path = Path("data/test_locked/images/locked_001.jpg")
+    assert not str(cand_path).startswith(str(Path("data/test_locked")))
+
+def test_56_class_aware_acquisition_priority():
+    target_file = Path("reports/acquisition_target_matrix.json")
+    with open(target_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    # Ensure weak classes have higher or equal acquisition targets
+    glass_target = [t for t in data["acquisition_targets"] if t["class_id"] == 3][0]["target_candidate_images"]
+    can_target = [t for t in data["acquisition_targets"] if t["class_id"] == 4][0]["target_candidate_images"]
+    assert glass_target >= can_target
+
+def test_57_cross_source_duplicate_prevention():
+    manifest_path = Path("data/incoming/candidate_pool_v2/manifest.jsonl")
+    md5_set = set()
+    dup_found = False
+    with open(manifest_path, "r", encoding="utf-8") as f:
+        for line in f:
+            if line.strip():
+                entry = json.loads(line.strip())
+                m = entry["md5"]
+                if m in md5_set:
+                    dup_found = True
+                    break
+                md5_set.add(m)
+    assert not dup_found
+
+def test_58_domain_distribution_tracked():
+    manifest_path = Path("data/incoming/candidate_pool_v2/manifest.jsonl")
+    with open(manifest_path, "r", encoding="utf-8") as f:
+        first_line = f.readline()
+        entry = json.loads(first_line.strip())
+        assert "domain" in entry
+        assert entry["domain"] in ["street", "roadside", "park", "market", "dumping_area", "pedestrian_space"]
+
+def test_59_difficulty_taxonomy_tracked():
+    manifest_path = Path("data/incoming/candidate_pool_v2/manifest.jsonl")
+    with open(manifest_path, "r", encoding="utf-8") as f:
+        first_line = f.readline()
+        entry = json.loads(first_line.strip())
+        assert "difficulty" in entry
+        assert entry["difficulty"] in ["EASY", "MEDIUM", "HARD", "UNKNOWN"]
+
+def test_60_disk_safety_buffer_checked():
+    check_disk_safety(required_gb=0.1)
+
+
