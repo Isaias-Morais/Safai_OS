@@ -1,0 +1,191 @@
+{
+  "audit_version": "Milestone_2E_v1.0",
+  "generated_date": "2026-10-08",
+  "project": "SafaiOS",
+  "accounting_reconciliation": {
+    "baseline_production": {
+      "training_images": 975,
+      "validation_images": 89,
+      "locked_test_images": 174,
+      "total_baseline_images": 1238
+    },
+    "staging_candidates": {
+      "candidate_pool_v2": 1421,
+      "open_images_staging_pilot": 45,
+      "large_batch_staging": 149,
+      "total_staging_candidates": 1615
+    },
+    "total_managed_repository_images": 2853,
+    "reconciliation_notes": "All 2,853 physical image files across baseline and staging are 100% unique by SHA256 hash. The 194 candidate images (45 pilot + 149 large batch) are separate staging directories from candidate_pool_v2 (1,421 images)."
+  },
+  "source_breakdown": {
+    "TACO_Extended": {
+      "images": 680,
+      "bboxes": 1865,
+      "percentage_of_candidate_pool": 47.85,
+      "class_box_distribution": {
+        "plastic_bottle": 396,
+        "plastic_wrapper_bag": 341,
+        "paper_cardboard": 373,
+        "glass_bottle_container": 417,
+        "metal_can": 338
+      }
+    },
+    "OpenImages_V7_Approved": {
+      "images": 741,
+      "bboxes": 2044,
+      "percentage_of_candidate_pool": 52.15,
+      "class_box_distribution": {
+        "plastic_bottle": 448,
+        "plastic_wrapper_bag": 341,
+        "paper_cardboard": 423,
+        "glass_bottle_container": 437,
+        "metal_can": 395
+      }
+    }
+  },
+  "class_count_forensics": {
+    "glass_bottle_container": {
+      "class_id": 3,
+      "bbox_count": 854,
+      "unique_image_count": 701,
+      "avg_boxes_per_class_image": 1.22,
+      "percentage_of_total_bboxes": 21.85,
+      "percentage_of_total_images": 49.33
+    },
+    "metal_can": {
+      "class_id": 4,
+      "bbox_count": 733,
+      "unique_image_count": 610,
+      "avg_boxes_per_class_image": 1.2,
+      "percentage_of_total_bboxes": 18.75,
+      "percentage_of_total_images": 42.93
+    },
+    "paper_cardboard": {
+      "class_id": 2,
+      "bbox_count": 796,
+      "unique_image_count": 667,
+      "avg_boxes_per_class_image": 1.19,
+      "percentage_of_total_bboxes": 20.36,
+      "percentage_of_total_images": 46.94
+    },
+    "plastic_wrapper_bag": {
+      "class_id": 1,
+      "bbox_count": 682,
+      "unique_image_count": 590,
+      "avg_boxes_per_class_image": 1.16,
+      "percentage_of_total_bboxes": 17.45,
+      "percentage_of_total_images": 41.52
+    },
+    "plastic_bottle": {
+      "class_id": 0,
+      "bbox_count": 844,
+      "unique_image_count": 691,
+      "avg_boxes_per_class_image": 1.22,
+      "percentage_of_total_bboxes": 21.59,
+      "percentage_of_total_images": 48.63
+    }
+  },
+  "domain_forensics": {
+    "domain_by_source": {
+      "TACO_Extended": {
+        "roadside": 128,
+        "park": 119,
+        "dumping_area": 105,
+        "street": 124,
+        "market": 115,
+        "pedestrian_space": 89
+      },
+      "OpenImages_V7_Approved": {
+        "street": 136,
+        "roadside": 132,
+        "dumping_area": 119,
+        "park": 129,
+        "market": 119,
+        "pedestrian_space": 106
+      }
+    },
+    "domain_by_class": {
+      "glass_bottle_container": {
+        "roadside": 181,
+        "park": 144,
+        "dumping_area": 138,
+        "pedestrian_space": 102,
+        "market": 136,
+        "street": 153
+      },
+      "metal_can": {
+        "roadside": 125,
+        "street": 129,
+        "dumping_area": 136,
+        "park": 130,
+        "market": 111,
+        "pedestrian_space": 102
+      },
+      "paper_cardboard": {
+        "street": 163,
+        "roadside": 141,
+        "park": 151,
+        "dumping_area": 100,
+        "market": 141,
+        "pedestrian_space": 100
+      },
+      "plastic_wrapper_bag": {
+        "park": 115,
+        "roadside": 117,
+        "dumping_area": 108,
+        "market": 108,
+        "pedestrian_space": 108,
+        "street": 126
+      },
+      "plastic_bottle": {
+        "roadside": 161,
+        "dumping_area": 131,
+        "market": 132,
+        "street": 148,
+        "pedestrian_space": 123,
+        "park": 149
+      }
+    }
+  },
+  "difficulty_forensics": {
+    "MEDIUM": 360,
+    "EASY": 350,
+    "UNKNOWN": 376,
+    "HARD": 335
+  },
+  "lighting_forensics": {
+    "DAYLIGHT": 356,
+    "GLARE": 362,
+    "SHADOW": 348,
+    "LOW_LIGHT": 355
+  },
+  "provenance_missing_fields": {},
+  "near_duplicate_cluster_sample_count": 3,
+  "near_duplicate_clusters": [
+    {
+      "image_A": "data\\training\\images\\taco_000318.jpg",
+      "image_B": "data\\training\\images\\taco_000320.jpg",
+      "category_A": "baseline_train",
+      "category_B": "baseline_train",
+      "dhash_distance": 4,
+      "decision": "INTRA_POOL_NEAR_DUP_FLAGGED"
+    },
+    {
+      "image_A": "data\\training\\images\\taco_000318.jpg",
+      "image_B": "data\\training\\images\\taco_000322.jpg",
+      "category_A": "baseline_train",
+      "category_B": "baseline_train",
+      "dhash_distance": 5,
+      "decision": "INTRA_POOL_NEAR_DUP_FLAGGED"
+    },
+    {
+      "image_A": "data\\training\\images\\taco_000320.jpg",
+      "image_B": "data\\training\\images\\taco_000322.jpg",
+      "category_A": "baseline_train",
+      "category_B": "baseline_train",
+      "dhash_distance": 5,
+      "decision": "INTRA_POOL_NEAR_DUP_FLAGGED"
+    }
+  ]
+}
