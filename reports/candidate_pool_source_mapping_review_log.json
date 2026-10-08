@@ -1,0 +1,1634 @@
+{
+  "audit_name": "Milestone 2G Source-Mapping Truth 100-Sample Review Log",
+  "sample_size": 100,
+  "seed": 303,
+  "passed_count": 100,
+  "source_mapping_errors": 0,
+  "taxonomy_errors": 0,
+  "bbox_errors": 0,
+  "provenance_errors": 0,
+  "sample_reviews": [
+    {
+      "sample_index": 1,
+      "image_id": "taco_ext_00065",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0
+      ],
+      "class_names": [
+        "plastic_bottle"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 2,
+      "image_id": "taco_ext_00492",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3
+      ],
+      "class_names": [
+        "glass_bottle_container"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 3,
+      "image_id": "taco_ext_00400",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 4,
+      "image_id": "taco_ext_00189",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        2,
+        4
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 5,
+      "image_id": "openimages_app_00480",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 6,
+      "image_id": "openimages_app_00597",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        4
+      ],
+      "class_names": [
+        "metal_can"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 7,
+      "image_id": "taco_ext_00530",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        2
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 8,
+      "image_id": "openimages_app_00481",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 9,
+      "image_id": "openimages_app_00378",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 10,
+      "image_id": "openimages_app_00136",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 11,
+      "image_id": "taco_ext_00323",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 12,
+      "image_id": "openimages_app_00160",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        4
+      ],
+      "class_names": [
+        "metal_can"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 13,
+      "image_id": "openimages_app_00289",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        4
+      ],
+      "class_names": [
+        "metal_can"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 14,
+      "image_id": "openimages_app_00514",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 15,
+      "image_id": "taco_ext_00181",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        3
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 16,
+      "image_id": "taco_ext_00526",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        2,
+        3
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 17,
+      "image_id": "openimages_app_00403",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 18,
+      "image_id": "openimages_app_00434",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 19,
+      "image_id": "openimages_app_00725",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 20,
+      "image_id": "taco_ext_00066",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        2,
+        3
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 21,
+      "image_id": "openimages_app_00537",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 22,
+      "image_id": "taco_ext_00249",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        2,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 23,
+      "image_id": "openimages_app_00122",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 24,
+      "image_id": "taco_ext_00283",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 25,
+      "image_id": "openimages_app_00330",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 26,
+      "image_id": "taco_ext_00594",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 27,
+      "image_id": "taco_ext_00009",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0
+      ],
+      "class_names": [
+        "plastic_bottle"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 28,
+      "image_id": "openimages_app_00591",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 29,
+      "image_id": "openimages_app_00703",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        4
+      ],
+      "class_names": [
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 30,
+      "image_id": "openimages_app_00166",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 31,
+      "image_id": "taco_ext_00574",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        2
+      ],
+      "class_names": [
+        "paper_cardboard"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 32,
+      "image_id": "taco_ext_00079",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        2
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 33,
+      "image_id": "taco_ext_00470",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        2,
+        4
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 34,
+      "image_id": "taco_ext_00441",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3
+      ],
+      "class_names": [
+        "glass_bottle_container"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 35,
+      "image_id": "openimages_app_00012",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 36,
+      "image_id": "taco_ext_00305",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        2
+      ],
+      "class_names": [
+        "paper_cardboard"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 37,
+      "image_id": "taco_ext_00322",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        3,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 38,
+      "image_id": "taco_ext_00426",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 39,
+      "image_id": "openimages_app_00527",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 40,
+      "image_id": "taco_ext_00602",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        1
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 41,
+      "image_id": "taco_ext_00221",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3
+      ],
+      "class_names": [
+        "glass_bottle_container"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 42,
+      "image_id": "taco_ext_00510",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        1
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 43,
+      "image_id": "openimages_app_00393",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 44,
+      "image_id": "openimages_app_00658",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        4
+      ],
+      "class_names": [
+        "metal_can"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 45,
+      "image_id": "taco_ext_00516",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        1
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 46,
+      "image_id": "openimages_app_00397",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 47,
+      "image_id": "taco_ext_00511",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3
+      ],
+      "class_names": [
+        "glass_bottle_container"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 48,
+      "image_id": "taco_ext_00044",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        2,
+        4
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 49,
+      "image_id": "taco_ext_00558",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3
+      ],
+      "class_names": [
+        "glass_bottle_container"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 50,
+      "image_id": "taco_ext_00564",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        3,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 51,
+      "image_id": "openimages_app_00736",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 52,
+      "image_id": "openimages_app_00617",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 53,
+      "image_id": "taco_ext_00262",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 54,
+      "image_id": "openimages_app_00042",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 55,
+      "image_id": "taco_ext_00148",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3,
+        4
+      ],
+      "class_names": [
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 56,
+      "image_id": "openimages_app_00639",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        4
+      ],
+      "class_names": [
+        "metal_can"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 57,
+      "image_id": "openimages_app_00331",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 58,
+      "image_id": "taco_ext_00346",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        2
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 59,
+      "image_id": "taco_ext_00554",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 60,
+      "image_id": "openimages_app_00454",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        4
+      ],
+      "class_names": [
+        "metal_can"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 61,
+      "image_id": "taco_ext_00288",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 62,
+      "image_id": "taco_ext_00252",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        4
+      ],
+      "class_names": [
+        "metal_can"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 63,
+      "image_id": "openimages_app_00682",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 64,
+      "image_id": "openimages_app_00634",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 65,
+      "image_id": "taco_ext_00357",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        3,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 66,
+      "image_id": "openimages_app_00313",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 67,
+      "image_id": "taco_ext_00192",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3
+      ],
+      "class_names": [
+        "glass_bottle_container"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 68,
+      "image_id": "taco_ext_00375",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 69,
+      "image_id": "openimages_app_00089",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 70,
+      "image_id": "taco_ext_00661",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 71,
+      "image_id": "openimages_app_00499",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        4
+      ],
+      "class_names": [
+        "metal_can"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 72,
+      "image_id": "openimages_app_00630",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 73,
+      "image_id": "taco_ext_00484",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0
+      ],
+      "class_names": [
+        "plastic_bottle"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 74,
+      "image_id": "taco_ext_00340",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 75,
+      "image_id": "openimages_app_00602",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 76,
+      "image_id": "taco_ext_00149",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        4
+      ],
+      "class_names": [
+        "metal_can"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 77,
+      "image_id": "openimages_app_00203",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 78,
+      "image_id": "taco_ext_00005",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 79,
+      "image_id": "taco_ext_00219",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3
+      ],
+      "class_names": [
+        "glass_bottle_container"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 80,
+      "image_id": "taco_ext_00664",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 81,
+      "image_id": "taco_ext_00277",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 82,
+      "image_id": "taco_ext_00515",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        1
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 83,
+      "image_id": "taco_ext_00393",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3
+      ],
+      "class_names": [
+        "glass_bottle_container"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 84,
+      "image_id": "openimages_app_00657",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 85,
+      "image_id": "openimages_app_00720",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        4
+      ],
+      "class_names": [
+        "metal_can"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 86,
+      "image_id": "taco_ext_00056",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        2
+      ],
+      "class_names": [
+        "paper_cardboard"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 87,
+      "image_id": "openimages_app_00595",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 88,
+      "image_id": "openimages_app_00373",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 89,
+      "image_id": "openimages_app_00611",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        4
+      ],
+      "class_names": [
+        "metal_can"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 90,
+      "image_id": "openimages_app_00417",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 91,
+      "image_id": "taco_ext_00057",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        2,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 92,
+      "image_id": "taco_ext_00130",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 93,
+      "image_id": "taco_ext_00519",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3
+      ],
+      "class_names": [
+        "glass_bottle_container"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 94,
+      "image_id": "taco_ext_00396",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3
+      ],
+      "class_names": [
+        "glass_bottle_container"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 95,
+      "image_id": "openimages_app_00352",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 96,
+      "image_id": "openimages_app_00731",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        4
+      ],
+      "class_names": [
+        "metal_can"
+      ],
+      "bbox_count": 1,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 97,
+      "image_id": "openimages_app_00092",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 98,
+      "image_id": "taco_ext_00082",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 99,
+      "image_id": "openimages_app_00334",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 100,
+      "image_id": "openimages_app_00345",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 2,
+      "source_mapping_valid": true,
+      "bbox_valid": true,
+      "audit_status": "VERIFIED_CORRECT"
+    }
+  ]
+}
