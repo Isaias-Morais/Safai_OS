@@ -1,0 +1,21 @@
+# SafaiOS Waste Detection Dataset Configuration
+# Taxonomy & Paths Configuration
+
+path: ./data # dataset root dir
+train: train/images
+val: val/images
+test: test/images
+
+# Proposed SafaiOS Waste Taxonomy (10 Classes)
+# Grounded in detectable physical waste categories for urban/street scenes
+names:
+  0: plastic_bottle
+  1: plastic_wrapper_bag
+  2: paper_cardboard
+  3: glass_bottle_container
+  4: metal_can
+  5: organic_food_waste
+  6: sanitary_medical_waste
+  7: e_waste
+  8: textile_clothing
+  9: overflowing_litter_bin

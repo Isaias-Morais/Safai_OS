@@ -1,0 +1,40 @@
+# SafaiOS Training Hyperparameters & Strategy Configuration
+
+model:
+  variant: yolo11s.pt # Modern YOLO nano/small architecture (YOLOv8/11/26 series)
+  pretrained: true
+  input_size: 640
+
+training:
+  epochs: 100
+  patience: 20
+  batch_size: 16
+  workers: 8
+  seed: 42
+  device: 0 # 0 for CUDA GPU, cpu for CPU fallback
+
+optimizer:
+  name: Auto # SGD/AdamW auto selection
+  lr0: 0.01
+  lrf: 0.01
+  momentum: 0.937
+  weight_decay: 0.0005
+  warmup_epochs: 3.0
+
+augmentation:
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  degrees: 10.0
+  translate: 0.1
+  scale: 0.5
+  shear: 0.0
+  perspective: 0.0
+  flipud: 0.0
+  fliplr: 0.5
+  mosaic: 1.0
+  mixup: 0.1
+
+evaluation:
+  conf_threshold: 0.25
+  iou_threshold: 0.45
