@@ -1,0 +1,55 @@
+{
+  "milestone": "Milestone_2I",
+  "generated_date": "2026-10-09",
+  "project": "SafaiOS",
+  "counts": {
+    "physical_file_count": 7453,
+    "unique_sha256_count": 7453,
+    "unique_source_image_count": 7453,
+    "exact_duplicates_found": 0
+  },
+  "directory_breakdown": {
+    "baseline_train": {
+      "physical_files": 975,
+      "unique_sha256": 975
+    },
+    "baseline_val": {
+      "physical_files": 89,
+      "unique_sha256": 89
+    },
+    "baseline_locked_test": {
+      "physical_files": 174,
+      "unique_sha256": 174
+    },
+    "candidate_pool_v2": {
+      "physical_files": 3921,
+      "unique_sha256": 3921
+    },
+    "validation_candidate": {
+      "physical_files": 1000,
+      "unique_sha256": 1000
+    },
+    "test_candidate": {
+      "physical_files": 1000,
+      "unique_sha256": 1000
+    },
+    "open_images_staging_pilot": {
+      "physical_files": 45,
+      "unique_sha256": 45
+    },
+    "large_batch_staging": {
+      "physical_files": 149,
+      "unique_sha256": 149
+    },
+    "india_real_world_benchmark": {
+      "physical_files": 100,
+      "unique_sha256": 100
+    }
+  },
+  "discrepancy_reconciliation": {
+    "staged_candidate_target_2H": 6021,
+    "forensic_audit_scanned_count_2H": 5353,
+    "total_filesystem_physical_count": 7453,
+    "root_cause_analysis": "Forensic audit previously scanned baseline (1,238), old pilot staging (194), and candidate_pool_v2 (3,921) = 5,353. It excluded validation_candidate (1,000), test_candidate (1,000), and india_real_world (100) = 2,100. 5,353 + 2,100 = 7,453 physical files physically present in workspace."
+  }
+}
