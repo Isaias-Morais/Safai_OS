@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "total_images": 12100,
+  "total_bboxes": 29519,
+  "splits": {
+    "training": {
+      "image_count": 10000,
+      "total_bboxes": 24197,
+      "class_distribution": {
+        "plastic_bottle": 4047,
+        "plastic_wrapper_bag": 6122,
+        "paper_cardboard": 4007,
+        "glass_bottle_container": 4017,
+        "metal_can": 6004
+      }
+    },
+    "validation": {
+      "image_count": 1000,
+      "total_bboxes": 2463,
+      "class_distribution": {
+        "plastic_bottle": 438,
+        "plastic_wrapper_bag": 557,
+        "paper_cardboard": 471,
+        "glass_bottle_container": 447,
+        "metal_can": 550
+      }
+    },
+    "test_locked_v2": {
+      "image_count": 1000,
+      "total_bboxes": 2590,
+      "class_distribution": {
+        "plastic_bottle": 465,
+        "plastic_wrapper_bag": 597,
+        "paper_cardboard": 464,
+        "glass_bottle_container": 458,
+        "metal_can": 606
+      }
+    },
+    "india_real_world": {
+      "image_count": 100,
+      "total_bboxes": 269,
+      "class_distribution": {
+        "plastic_bottle": 36,
+        "plastic_wrapper_bag": 64,
+        "paper_cardboard": 40,
+        "glass_bottle_container": 49,
+        "metal_can": 80
+      }
+    }
+  },
+  "exact_cross_split_leakage": [],
+  "label_syntax_errors": 0,
+  "missing_label_files": 0,
+  "missing_image_files": 0
+}
