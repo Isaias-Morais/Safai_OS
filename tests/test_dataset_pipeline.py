@@ -693,6 +693,85 @@ def test_100_milestone_2h_hard_training_gate_blocked():
         assert "DATASET NOT READY FOR TRAINING" in content
         assert "DO NOT TRAIN YOLO" in content
 
+# --- Milestone 2I Dataset Inventory & Provenance Freeze Gate Tests 101..110 ---
+def test_101_complete_dataset_inventory_exists():
+    inv_file = Path("reports/complete_dataset_inventory.json")
+    assert inv_file.exists()
+    with open(inv_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["counts"]["physical_file_count"] == 7453
+    assert data["counts"]["unique_sha256_count"] == 7453
+
+def test_102_discrepancy_reconciliation_exact():
+    inv_file = Path("reports/complete_dataset_inventory.json")
+    with open(inv_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    rec = data["discrepancy_reconciliation"]
+    assert rec["staged_candidate_target_2H"] == 6021
+    assert rec["forensic_audit_scanned_count_2H"] == 5353
+    assert rec["total_filesystem_physical_count"] == 7453
+
+def test_103_canonical_source_inventory_truth_valid():
+    src_file = Path("reports/source_inventory_truth.json")
+    assert src_file.exists()
+    with open(src_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert "TACO_Extended" in data
+    assert data["TACO_Extended"]["canonical_name"] == "TACO (Trash Annotations in Context)"
+    assert data["TACO_Extended"]["approval_state"] == "VERIFIED_APPROVED"
+
+def test_104_source_split_matrix_isolated():
+    matrix_file = Path("reports/source_split_matrix.json")
+    assert matrix_file.exists()
+    with open(matrix_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["WasteBags_Urban_India"]["india_benchmark"] == 100
+    assert data["WasteBags_Urban_India"]["train_candidates"] == 0
+
+def test_105_source_class_domain_matrix_valid():
+    matrix_file = Path("reports/source_class_domain_matrix.json")
+    assert matrix_file.exists()
+    with open(matrix_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert "plastic_bottle" in data["TACO_Extended"]
+    assert "plastic_wrapper_bag" in data["OpenImages_V7_Approved"]
+
+def test_106_provenance_integrity_report_100_percent():
+    prov_file = Path("reports/provenance_integrity_report.json")
+    assert prov_file.exists()
+    with open(prov_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["provenance_integrity_score_pct"] == 100.0
+
+def test_107_india_benchmark_zero_leakage():
+    matrix_file = Path("reports/source_split_matrix.json")
+    with open(matrix_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["WasteBags_Urban_India"]["train_candidates"] == 0
+    assert data["WasteBags_Urban_India"]["validation_candidates"] == 0
+    assert data["WasteBags_Urban_India"]["test_candidates"] == 0
+
+def test_108_candidate_pool_frozen_spec_valid():
+    inv_file = Path("reports/complete_dataset_inventory.md")
+    assert inv_file.exists()
+    content = inv_file.read_text(encoding="utf-8")
+    assert "7,453" in content
+
+def test_109_scorecard_15_dimensions_verified():
+    scorecard_file = Path("reports/dataset_v2_readiness_scorecard.md")
+    assert scorecard_file.exists()
+    content = scorecard_file.read_text(encoding="utf-8")
+    assert "15-Dimension" in content
+    assert "DATASET NOT READY FOR TRAINING" in content
+
+def test_110_milestone_2i_hard_training_gate_blocked():
+    report_file = Path("reports/milestone2i_dataset_inventory_provenance_freeze.md")
+    if report_file.exists():
+        content = report_file.read_text(encoding="utf-8")
+        assert "DATASET NOT READY FOR TRAINING" in content
+        assert "DO NOT TRAIN YOLO" in content
+
+
 
 
 
