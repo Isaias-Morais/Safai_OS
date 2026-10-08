@@ -1,5 +1,5 @@
 {
-  "registry_version": "1.0",
+  "registry_version": "1.1",
   "last_updated": "2026-10-08",
   "project": "SafaiOS",
   "sources": [
@@ -11,6 +11,7 @@
       "task": "Object Detection & Instance Segmentation",
       "image_count": 1500,
       "annotation_type": "COCO Polygons & Bounding Boxes",
+      "code_license": "MIT",
       "image_license": "CC BY 4.0",
       "annotation_license": "CC BY 4.0",
       "access_restrictions": "NONE",
@@ -30,7 +31,7 @@
       "domain": "street/roadside, park, public area",
       "provenance_quality": "HIGH",
       "approval_status": "VERIFIED_APPROVED",
-      "notes": "Current baseline dataset (1,238 genuine images currently in safaios_dataset_v1.0)."
+      "notes": "Current baseline dataset (1,238 genuine images in safaios_dataset_v1.0)."
     },
     {
       "source_name": "Open Images V7",
@@ -40,6 +41,7 @@
       "task": "Object Detection",
       "image_count": 1900000,
       "annotation_type": "Bounding Boxes (XMin, XMax, YMin, YMax)",
+      "code_license": "Apache 2.0",
       "image_license": "CC BY 2.0",
       "annotation_license": "CC BY 4.0",
       "access_restrictions": "NONE",
@@ -51,15 +53,43 @@
       "safaios_mappings": [
         {"source": "/m/05gqfk (Plastic bag)", "target": "plastic_wrapper_bag", "confidence": "HIGH"},
         {"source": "/m/02jnhm (Tin can)", "target": "metal_can", "confidence": "HIGH"},
-        {"source": "/m/04dr76w (Bottle)", "target": "plastic_bottle / glass_bottle_container", "confidence": "LOW (REJECTED due to missing material tag)"},
-        {"source": "/m/025dyy (Box)", "target": "paper_cardboard", "confidence": "LOW (REJECTED due to missing material tag)"},
+        {"source": "/m/04dr76w (Bottle)", "target": "NOT SUPPORTED BY CURRENT OPEN IMAGES MAPPING", "confidence": "LOW (REJECTED)"},
+        {"source": "/m/025dyy (Box)", "target": "NOT SUPPORTED BY CURRENT OPEN IMAGES MAPPING", "confidence": "LOW (REJECTED)"},
         {"source": "/m/02pv19 (Stop sign)", "target": "paper_cardboard", "confidence": "REJECTED (Semantic error)"}
       ],
       "mapping_confidence": "HIGH (for approved MIDs only)",
-      "domain": "real-world web images, street, indoor/outdoor",
+      "domain": "real-world web images, street, outdoor",
       "provenance_quality": "HIGH",
       "approval_status": "VERIFIED_APPROVED",
       "notes": "Approved ONLY for /m/05gqfk and /m/02jnhm. Ambiguous material classes rejected."
+    },
+    {
+      "source_name": "MJU-Waste Dataset",
+      "canonical_url": "https://github.com/mju-waste/mju-waste",
+      "version": "1.0",
+      "organization": "Minjiang University (Tao Wang et al., Sensors 2020)",
+      "task": "Binary Waste Segmentation & Detection",
+      "image_count": 2475,
+      "annotation_type": "COCO & Pascal VOC Masks/Bounding Boxes (Single Class: waste)",
+      "code_license": "MIT",
+      "image_license": "CC BY 4.0 Academic",
+      "annotation_license": "CC BY 4.0 Academic",
+      "access_restrictions": "NONE",
+      "commercial_use": "PERMITTED (Academic/Research)",
+      "redistribution": "PERMITTED",
+      "derivative_use": "PERMITTED",
+      "citation_required": "YES",
+      "source_classes": ["waste (single class binary)"],
+      "safaios_mappings": [
+        {"source": "waste", "target": "glass_bottle_container", "confidence": "INVALID SOURCE CLAIM (Single-class waste cannot be mapped to material classes)"},
+        {"source": "waste", "target": "paper_cardboard", "confidence": "INVALID SOURCE CLAIM"},
+        {"source": "waste", "target": "plastic_bottle", "confidence": "INVALID SOURCE CLAIM"}
+      ],
+      "mapping_confidence": "REJECTED (No material-specific labels in canonical source)",
+      "domain": "tabletop, indoor consumer waste",
+      "provenance_quality": "HIGH",
+      "approval_status": "VERIFIED_REJECTED",
+      "notes": "FORENSIC AUDIT CONFIRMED: MJU-Waste is a single-class binary waste dataset (waste vs background). Material mappings (glass_bottle, paper_box, plastic_bottle) are INVALID. Rejected for 5-class SafaiOS training; research-useful only."
     },
     {
       "source_name": "ZeroWaste Dataset",
@@ -69,6 +99,7 @@
       "task": "Object Detection & Segmentation",
       "image_count": 4500,
       "annotation_type": "COCO Bounding Boxes & Masks",
+      "code_license": "MIT",
       "image_license": "CC BY-NC 4.0",
       "annotation_license": "CC BY-NC 4.0",
       "access_restrictions": "REGISTRATION_REQUIRED",
@@ -86,35 +117,7 @@
       "domain": "industrial sorting facility, conveyor belt",
       "provenance_quality": "HIGH",
       "approval_status": "REQUIRES_REVIEW",
-      "notes": "Non-commercial CC BY-NC 4.0 release. Restricted from production commercial ingestion without review."
-    },
-    {
-      "source_name": "MJU-Waste Dataset",
-      "canonical_url": "https://github.com/mju-waste/mju-waste",
-      "version": "1.0",
-      "organization": "Minjiang University",
-      "task": "Object Detection & Instance Segmentation",
-      "image_count": 2475,
-      "annotation_type": "Pascal VOC XML & COCO JSON Bounding Boxes",
-      "image_license": "CC BY 4.0 Academic",
-      "annotation_license": "CC BY 4.0",
-      "access_restrictions": "NONE",
-      "commercial_use": "PERMITTED (with attribution)",
-      "redistribution": "PERMITTED",
-      "derivative_use": "PERMITTED",
-      "citation_required": "YES",
-      "source_classes": ["paper_box", "glass_bottle", "plastic_bottle", "can"],
-      "safaios_mappings": [
-        {"source": "glass_bottle", "target": "glass_bottle_container", "confidence": "HIGH"},
-        {"source": "paper_box", "target": "paper_cardboard", "confidence": "HIGH"},
-        {"source": "plastic_bottle", "target": "plastic_bottle", "confidence": "HIGH"},
-        {"source": "can", "target": "metal_can", "confidence": "HIGH"}
-      ],
-      "mapping_confidence": "HIGH",
-      "domain": "tabletop, indoor consumer waste",
-      "provenance_quality": "HIGH",
-      "approval_status": "VERIFIED_APPROVED",
-      "notes": "Code is MIT licensed; image dataset is CC BY 4.0 Academic. High value for glass bottle acquisition."
+      "notes": "CC BY-NC 4.0 Non-Commercial release. Restricted from production commercial ingestion without explicit legal clearance."
     },
     {
       "source_name": "TrashCan Dataset",
@@ -124,6 +127,7 @@
       "task": "Object Detection & Instance Segmentation",
       "image_count": 7212,
       "annotation_type": "COCO Bounding Boxes",
+      "code_license": "MIT",
       "image_license": "CC BY 4.0",
       "annotation_license": "CC BY 4.0",
       "access_restrictions": "NONE",
@@ -133,10 +137,9 @@
       "citation_required": "YES",
       "source_classes": ["glass_bottle", "plastic_bottle", "drink_can", "trash_other"],
       "safaios_mappings": [
-        {"source": "glass_bottle", "target": "glass_bottle_container", "confidence": "HIGH"},
-        {"source": "drink_can", "target": "metal_can", "confidence": "HIGH"}
+        {"source": "glass_bottle", "target": "glass_bottle_container", "confidence": "MEDIUM (Subsea marine domain mismatch)"}
       ],
-      "mapping_confidence": "MEDIUM (Subsea marine domain mismatch)",
+      "mapping_confidence": "REJECTED (Domain mismatch)",
       "domain": "underwater, subsea marine debris",
       "provenance_quality": "HIGH",
       "approval_status": "VERIFIED_REJECTED",
