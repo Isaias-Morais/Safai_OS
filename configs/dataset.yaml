@@ -1,10 +1,10 @@
 # SafaiOS Waste Detection Dataset Configuration
-# Audited 5-Class Object/Material Taxonomy (Gate 1 Baseline)
+# Expanded Dataset Layout & 5-Class Object Taxonomy
 
 path: ./data # dataset root dir
-train: train/images
-val: val/images
-test: test/images
+train: training/images
+val: validation/images
+test: test_locked/images
 
 # Final 5-Class Object-Level Waste Taxonomy
 names:
