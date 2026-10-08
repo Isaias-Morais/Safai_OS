@@ -34,6 +34,16 @@ data/val/*
 !data/val/.gitkeep
 data/test/*
 !data/test/.gitkeep
+data/incoming/*
+!data/incoming/.gitkeep
+data/safaios_dataset_v2.0/*
+!data/safaios_dataset_v2.0/data.yaml
+!data/safaios_dataset_v2.0/dataset_metadata.json
+!data/safaios_dataset_v2.0/dataset_manifest.jsonl
+data/safaios_dataset_v10k/*
+!data/safaios_dataset_v10k/data.yaml
+!data/safaios_dataset_v10k/dataset_metadata.json
+!data/safaios_dataset_v10k/dataset_manifest.jsonl
 models/pretrained/*
 !models/pretrained/.gitkeep
 models/checkpoints/*

@@ -771,6 +771,63 @@ def test_110_milestone_2i_hard_training_gate_blocked():
         assert "DATASET NOT READY FOR TRAINING" in content
         assert "DO NOT TRAIN YOLO" in content
 
+def test_111_safaios_dataset_v10k_training_scale_satisfied():
+    train_dir = Path("data/safaios_dataset_v10k/training/images")
+    assert train_dir.exists()
+    assert len(list(train_dir.glob("*.jpg"))) >= 10000
+
+def test_112_safaios_dataset_v10k_validation_scale_satisfied():
+    val_dir = Path("data/safaios_dataset_v10k/validation/images")
+    assert val_dir.exists()
+    assert len(list(val_dir.glob("*.jpg"))) == 1000
+
+def test_113_safaios_dataset_v10k_locked_test_scale_satisfied():
+    test_dir = Path("data/safaios_dataset_v10k/test_locked_v2/images")
+    assert test_dir.exists()
+    assert len(list(test_dir.glob("*.jpg"))) == 1000
+
+def test_114_safaios_dataset_v10k_india_benchmark_satisfied():
+    india_dir = Path("data/safaios_dataset_v10k/india_real_world/images")
+    assert india_dir.exists()
+    assert len(list(india_dir.glob("*.jpg"))) == 100
+
+def test_115_safaios_dataset_v10k_total_image_count_satisfied():
+    manifest_file = Path("data/safaios_dataset_v10k/dataset_manifest.jsonl")
+    assert manifest_file.exists()
+    with open(manifest_file, "r", encoding="utf-8") as f:
+        lines = [l for l in f if l.strip()]
+    assert len(lines) == 12100
+
+def test_116_safaios_dataset_v10k_qa_report_pass():
+    qa_file = Path("reports/dataset_v10k_final_qa_report.json")
+    assert qa_file.exists()
+    with open(qa_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["status"] == "PASS"
+
+def test_117_safaios_dataset_v10k_zero_cross_split_leakage():
+    qa_file = Path("reports/dataset_v10k_final_qa_report.json")
+    with open(qa_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert len(data["exact_cross_split_leakage"]) == 0
+
+def test_118_safaios_dataset_v10k_zero_label_syntax_errors():
+    qa_file = Path("reports/dataset_v10k_final_qa_report.json")
+    with open(qa_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["label_syntax_errors"] == 0
+
+def test_119_locked_test_set_v2_unmodified():
+    orig_test = Path("data/safaios_dataset_v2.0/test_locked_v2/images")
+    assert orig_test.exists()
+    assert len(list(orig_test.glob("*.jpg"))) == 1000
+
+def test_120_no_yolo_training_rule_enforced():
+    # Enforce strict prohibition of YOLO model files or checkpoints in repo
+    assert not Path("runs").exists() or len(list(Path("runs").rglob("*.pt"))) == 0
+    assert not Path("weights").exists() or len(list(Path("weights").rglob("*.pt"))) == 0
+
+
 
 
 
