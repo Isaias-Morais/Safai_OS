@@ -10,155 +10,207 @@
       "total_baseline_images": 1238
     },
     "staging_candidates": {
-      "candidate_pool_v2": 1421,
+      "candidate_pool_v2": 3921,
       "open_images_staging_pilot": 45,
       "large_batch_staging": 149,
-      "total_staging_candidates": 1615
+      "total_staging_candidates": 4115
     },
-    "total_managed_repository_images": 2853,
+    "total_managed_repository_images": 5353,
     "reconciliation_notes": "All 2,853 physical image files across baseline and staging are 100% unique by SHA256 hash. The 194 candidate images (45 pilot + 149 large batch) are separate staging directories from candidate_pool_v2 (1,421 images)."
   },
   "source_breakdown": {
-    "TACO_Extended": {
-      "images": 680,
-      "bboxes": 1379,
-      "percentage_of_candidate_pool": 47.85,
-      "class_box_distribution": {
-        "plastic_bottle": 251,
-        "plastic_wrapper_bag": 278,
-        "paper_cardboard": 264,
-        "glass_bottle_container": 296,
-        "metal_can": 290
-      }
-    },
     "OpenImages_V7_Approved": {
-      "images": 741,
-      "bboxes": 1480,
-      "percentage_of_candidate_pool": 52.15,
+      "images": 862,
+      "bboxes": 2146,
+      "percentage_of_candidate_pool": 34.48,
       "class_box_distribution": {
         "plastic_bottle": 0,
-        "plastic_wrapper_bag": 741,
+        "plastic_wrapper_bag": 1061,
         "paper_cardboard": 0,
         "glass_bottle_container": 0,
-        "metal_can": 739
+        "metal_can": 1085
+      }
+    },
+    "TACO_Extended": {
+      "images": 827,
+      "bboxes": 2083,
+      "percentage_of_candidate_pool": 33.08,
+      "class_box_distribution": {
+        "plastic_bottle": 422,
+        "plastic_wrapper_bag": 409,
+        "paper_cardboard": 428,
+        "glass_bottle_container": 453,
+        "metal_can": 371
+      }
+    },
+    "Roboflow_Material_Set": {
+      "images": 811,
+      "bboxes": 2026,
+      "percentage_of_candidate_pool": 32.44,
+      "class_box_distribution": {
+        "plastic_bottle": 666,
+        "plastic_wrapper_bag": 0,
+        "paper_cardboard": 664,
+        "glass_bottle_container": 696,
+        "metal_can": 0
       }
     }
   },
   "class_count_forensics": {
-    "plastic_bottle": {
-      "class_id": 0,
-      "bbox_count": 251,
-      "unique_image_count": 226,
-      "avg_boxes_per_class_image": 1.11,
-      "percentage_of_total_bboxes": 8.78,
-      "percentage_of_total_images": 15.9
-    },
-    "glass_bottle_container": {
-      "class_id": 3,
-      "bbox_count": 296,
-      "unique_image_count": 256,
-      "avg_boxes_per_class_image": 1.16,
-      "percentage_of_total_bboxes": 10.35,
-      "percentage_of_total_images": 18.02
-    },
     "metal_can": {
       "class_id": 4,
-      "bbox_count": 1029,
-      "unique_image_count": 780,
-      "avg_boxes_per_class_image": 1.32,
-      "percentage_of_total_bboxes": 35.99,
-      "percentage_of_total_images": 54.89
+      "bbox_count": 1456,
+      "unique_image_count": 963,
+      "avg_boxes_per_class_image": 1.51,
+      "percentage_of_total_bboxes": 23.28,
+      "percentage_of_total_images": 38.52
     },
     "plastic_wrapper_bag": {
       "class_id": 1,
-      "bbox_count": 1019,
-      "unique_image_count": 765,
+      "bbox_count": 1470,
+      "unique_image_count": 983,
+      "avg_boxes_per_class_image": 1.5,
+      "percentage_of_total_bboxes": 23.5,
+      "percentage_of_total_images": 39.32
+    },
+    "glass_bottle_container": {
+      "class_id": 3,
+      "bbox_count": 1149,
+      "unique_image_count": 864,
       "avg_boxes_per_class_image": 1.33,
-      "percentage_of_total_bboxes": 35.64,
-      "percentage_of_total_images": 53.84
+      "percentage_of_total_bboxes": 18.37,
+      "percentage_of_total_images": 34.56
     },
     "paper_cardboard": {
       "class_id": 2,
-      "bbox_count": 264,
-      "unique_image_count": 229,
-      "avg_boxes_per_class_image": 1.15,
-      "percentage_of_total_bboxes": 9.23,
-      "percentage_of_total_images": 16.12
+      "bbox_count": 1092,
+      "unique_image_count": 818,
+      "avg_boxes_per_class_image": 1.33,
+      "percentage_of_total_bboxes": 17.46,
+      "percentage_of_total_images": 32.72
+    },
+    "plastic_bottle": {
+      "class_id": 0,
+      "bbox_count": 1088,
+      "unique_image_count": 831,
+      "avg_boxes_per_class_image": 1.31,
+      "percentage_of_total_bboxes": 17.39,
+      "percentage_of_total_images": 33.24
     }
   },
   "domain_forensics": {
     "domain_by_source": {
-      "TACO_Extended": {
-        "pedestrian_space": 125,
-        "street": 129,
-        "park": 118,
-        "roadside": 96,
-        "dumping_area": 102,
-        "market": 110
-      },
       "OpenImages_V7_Approved": {
-        "street": 112,
-        "park": 121,
-        "roadside": 131,
-        "market": 121,
-        "dumping_area": 127,
-        "pedestrian_space": 129
+        "market": 87,
+        "sorting_facility": 86,
+        "household": 84,
+        "pedestrian_space": 85,
+        "landfill": 94,
+        "park": 95,
+        "public_area": 86,
+        "dumping_area": 70,
+        "street": 84,
+        "roadside": 91
+      },
+      "TACO_Extended": {
+        "public_area": 81,
+        "street": 77,
+        "dumping_area": 76,
+        "household": 86,
+        "sorting_facility": 97,
+        "pedestrian_space": 87,
+        "landfill": 85,
+        "roadside": 78,
+        "park": 77,
+        "market": 83
+      },
+      "Roboflow_Material_Set": {
+        "street": 70,
+        "dumping_area": 85,
+        "pedestrian_space": 76,
+        "public_area": 84,
+        "park": 86,
+        "landfill": 86,
+        "roadside": 79,
+        "market": 72,
+        "household": 88,
+        "sorting_facility": 85
       }
     },
     "domain_by_class": {
-      "plastic_bottle": {
-        "pedestrian_space": 40,
-        "street": 49,
-        "park": 54,
-        "dumping_area": 35,
-        "market": 43,
-        "roadside": 30
-      },
-      "glass_bottle_container": {
-        "street": 54,
-        "park": 51,
-        "market": 50,
-        "roadside": 39,
-        "dumping_area": 43,
-        "pedestrian_space": 59
-      },
       "metal_can": {
-        "park": 162,
-        "roadside": 175,
-        "street": 172,
-        "dumping_area": 171,
-        "pedestrian_space": 182,
-        "market": 167
+        "market": 141,
+        "sorting_facility": 138,
+        "street": 151,
+        "household": 154,
+        "landfill": 155,
+        "pedestrian_space": 148,
+        "park": 151,
+        "public_area": 145,
+        "dumping_area": 115,
+        "roadside": 158
       },
       "plastic_wrapper_bag": {
-        "roadside": 159,
-        "dumping_area": 184,
-        "street": 165,
-        "market": 161,
-        "pedestrian_space": 178,
-        "park": 172
+        "market": 147,
+        "public_area": 151,
+        "sorting_facility": 166,
+        "dumping_area": 135,
+        "household": 141,
+        "pedestrian_space": 124,
+        "street": 130,
+        "landfill": 175,
+        "roadside": 143,
+        "park": 158
+      },
+      "glass_bottle_container": {
+        "public_area": 110,
+        "street": 95,
+        "dumping_area": 123,
+        "pedestrian_space": 106,
+        "household": 153,
+        "park": 122,
+        "sorting_facility": 120,
+        "landfill": 114,
+        "roadside": 111,
+        "market": 95
       },
       "paper_cardboard": {
-        "dumping_area": 43,
-        "market": 36,
-        "pedestrian_space": 48,
-        "park": 46,
-        "roadside": 43,
-        "street": 48
+        "street": 105,
+        "dumping_area": 97,
+        "pedestrian_space": 116,
+        "household": 93,
+        "public_area": 101,
+        "landfill": 110,
+        "roadside": 107,
+        "park": 111,
+        "market": 126,
+        "sorting_facility": 126
+      },
+      "plastic_bottle": {
+        "street": 109,
+        "pedestrian_space": 129,
+        "park": 103,
+        "landfill": 96,
+        "sorting_facility": 127,
+        "roadside": 112,
+        "market": 92,
+        "household": 115,
+        "dumping_area": 95,
+        "public_area": 110
       }
     }
   },
   "difficulty_forensics": {
-    "EASY": 348,
-    "HARD": 352,
-    "MEDIUM": 348,
-    "UNKNOWN": 373
+    "EASY": 691,
+    "UNKNOWN": 618,
+    "MEDIUM": 600,
+    "HARD": 591
   },
   "lighting_forensics": {
-    "DAYLIGHT": 376,
-    "SHADOW": 363,
-    "LOW_LIGHT": 329,
-    "GLARE": 353
+    "GLARE": 588,
+    "SHADOW": 637,
+    "DAYLIGHT": 626,
+    "LOW_LIGHT": 649
   },
   "provenance_missing_fields": {},
   "near_duplicate_cluster_sample_count": 3,
