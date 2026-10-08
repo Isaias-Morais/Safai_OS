@@ -1,10 +1,11 @@
 # SafaiOS Training Hyperparameters & Strategy Configuration
-# Finalized Single Model Architecture: YOLO11s (yolo11s.pt)
+# Initial Baseline Detector: YOLO11s (yolo11s.pt)
 
 model:
   name: YOLO11s
   checkpoint: yolo11s.pt # Official Ultralytics PyTorch Checkpoint (9.4M params, 21.5 GFLOPs)
   input_size: 640
+  target_fps_estimate: 75 # Estimated target, measured FPS: NOT YET MEASURED
 
 training:
   epochs: 100

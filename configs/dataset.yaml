@@ -1,16 +1,15 @@
 # SafaiOS Waste Detection Dataset Configuration
-# Audited 6-Class Data-Grounded Taxonomy (Gate 1 Finalized)
+# Audited 5-Class Object/Material Taxonomy (Gate 1 Baseline)
 
 path: ./data # dataset root dir
 train: train/images
 val: val/images
 test: test/images
 
-# Final Audited SafaiOS Waste Taxonomy (6 Classes)
+# Final 5-Class Object-Level Waste Taxonomy
 names:
   0: plastic_bottle
   1: plastic_wrapper_bag
   2: paper_cardboard
   3: glass_bottle_container
   4: metal_can
-  5: overflowing_bin
