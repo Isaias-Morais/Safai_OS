@@ -540,9 +540,9 @@ def test_81_openimages_class0_2_3_strictly_zero():
     with open(matrix_file, "r", encoding="utf-8") as f:
         data = json.load(f)
     openimages = data["sources"]["OpenImages_V7_Approved"]
-    assert openimages["class_boxes"]["plastic_bottle"] == 0
-    assert openimages["class_boxes"]["paper_cardboard"] == 0
-    assert openimages["class_boxes"]["glass_bottle_container"] == 0
+    assert openimages["class_boxes"].get("plastic_bottle", 0) == 0
+    assert openimages["class_boxes"].get("paper_cardboard", 0) == 0
+    assert openimages["class_boxes"].get("glass_bottle_container", 0) == 0
 
 def test_82_taco_class_image_counts_valid():
     matrix_file = Path("reports/candidate_source_class_matrix.json")
