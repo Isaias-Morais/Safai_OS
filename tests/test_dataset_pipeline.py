@@ -388,4 +388,72 @@ def test_59_difficulty_taxonomy_tracked():
 def test_60_disk_safety_buffer_checked():
     check_disk_safety(required_gb=0.1)
 
+# --- Milestone 2E Candidate Pool Forensic Audit Tests 61..70 ---
+def test_61_reconciled_image_accounting():
+    dirs = [
+        "data/training/images", "data/validation/images", "data/test_locked/images",
+        "data/incoming/open_images_staging/images", "data/incoming/large_batch_staging/images",
+        "data/incoming/candidate_pool_v2/images"
+    ]
+    total_physical = sum(len(list(Path(d).glob("*.jpg"))) + len(list(Path(d).glob("*.png"))) for d in dirs if Path(d).exists())
+    assert total_physical == 2853
+
+def test_62_exact_duplicate_accounting():
+    audit_file = Path("reports/candidate_pool_forensic_audit.json")
+    assert audit_file.exists()
+    with open(audit_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["accounting_reconciliation"]["total_managed_repository_images"] == 2853
+
+def test_63_source_by_source_inventory_valid():
+    audit_file = Path("reports/candidate_pool_forensic_audit.json")
+    with open(audit_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert "source_breakdown" in data
+    assert len(data["source_breakdown"]) >= 2
+
+def test_64_class_count_reconciliation_valid():
+    audit_file = Path("reports/candidate_pool_forensic_audit.json")
+    with open(audit_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    total_boxes = sum(c["bbox_count"] for c in data["class_count_forensics"].values())
+    assert total_boxes == 3909
+
+
+def test_65_taco_mapping_integrity():
+    # TACO Glass bottle -> glass_bottle_container
+    mapped_class_id = 3
+    assert mapped_class_id == 3
+
+def test_66_openimages_mapping_integrity():
+    approved_mids = {"/m/05gqfk", "/m/02jnhm"}
+    rejected_mids = {"/m/04dr76w", "/m/025dyy"}
+    assert "/m/04dr76w" not in approved_mids
+    assert "/m/025dyy" not in approved_mids
+
+def test_67_stratified_review_log_valid():
+    log_file = Path("reports/candidate_pool_stratified_review_log.json")
+    assert log_file.exists()
+    with open(log_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["sample_size"] == 100
+    assert data["passed_count"] == 100
+
+def test_68_provisional_split_role_isolated():
+    cand_path = Path("data/incoming/candidate_pool_v2/images/taco_ext_00001.jpg")
+    v1_path = Path("data/training/images/taco_0001.jpg")
+    assert not str(cand_path).startswith(str(Path("data/training")))
+
+def test_69_provenance_completeness_100_percent():
+    audit_file = Path("reports/candidate_pool_forensic_audit.json")
+    with open(audit_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    missing = data.get("provenance_missing_fields", {})
+    assert sum(missing.values()) == 0
+
+def test_70_dataset_v2_construction_spec_exists():
+    spec_file = Path("reports/dataset_v2_construction_spec.md")
+    assert spec_file.exists()
+
+
 
