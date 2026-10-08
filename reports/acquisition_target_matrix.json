@@ -1,0 +1,69 @@
+{
+  "matrix_version": "1.0",
+  "generated_date": "2026-10-08",
+  "project": "SafaiOS",
+  "acquisition_targets": [
+    {
+      "class_id": 3,
+      "class_name": "glass_bottle_container",
+      "acquisition_priority": 1,
+      "target_candidate_images": 2500,
+      "target_candidate_bboxes": 4000,
+      "current_v1_images": 140,
+      "gap_to_target": 2360,
+      "primary_sources": ["TACO Dataset", "Verified Material-Specific Sets"],
+      "preferred_domains": ["street", "public space", "park", "market"],
+      "rationale": "Highest acquisition priority due to extreme scarcity in current baseline dataset."
+    },
+    {
+      "class_id": 0,
+      "class_name": "plastic_bottle",
+      "acquisition_priority": 2,
+      "target_candidate_images": 3000,
+      "target_candidate_bboxes": 5000,
+      "current_v1_images": 320,
+      "gap_to_target": 2680,
+      "primary_sources": ["TACO Dataset", "Verified Material-Specific Sets"],
+      "preferred_domains": ["street", "roadside", "park", "landfill"],
+      "rationale": "High priority; essential core urban waste class requiring scale & scene diversity."
+    },
+    {
+      "class_id": 2,
+      "class_name": "paper_cardboard",
+      "acquisition_priority": 3,
+      "target_candidate_images": 2500,
+      "target_candidate_bboxes": 4000,
+      "current_v1_images": 210,
+      "gap_to_target": 2290,
+      "primary_sources": ["TACO Dataset", "Verified Material-Specific Sets"],
+      "preferred_domains": ["commercial market", "pedestrian walkway", "dumping area"],
+      "rationale": "Medium-high priority; requires explicit cardboard vs paper separation."
+    },
+    {
+      "class_id": 1,
+      "class_name": "plastic_wrapper_bag",
+      "acquisition_priority": 4,
+      "target_candidate_images": 2500,
+      "target_candidate_bboxes": 4500,
+      "current_v1_images": 450,
+      "gap_to_target": 2050,
+      "primary_sources": ["Open Images V7 (/m/05gqfk)", "TACO Dataset"],
+      "preferred_domains": ["street", "market", "drain edge", "roadside"],
+      "rationale": "High volume in Open Images; acquisition must be capped to prevent class dominance."
+    },
+    {
+      "class_id": 4,
+      "class_name": "metal_can",
+      "acquisition_priority": 5,
+      "target_candidate_images": 2000,
+      "target_candidate_bboxes": 3500,
+      "current_v1_images": 395,
+      "gap_to_target": 1605,
+      "primary_sources": ["Open Images V7 (/m/02jnhm)", "TACO Dataset"],
+      "preferred_domains": ["public space", "park", "street"],
+      "rationale": "Lowest acquisition priority because previous acquisition heavily favored metal_can."
+    }
+  ],
+  "total_target_candidate_images": 12500,
+  "total_target_candidate_bboxes": 21000
+}
