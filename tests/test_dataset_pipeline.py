@@ -455,5 +455,82 @@ def test_70_dataset_v2_construction_spec_exists():
     spec_file = Path("reports/dataset_v2_construction_spec.md")
     assert spec_file.exists()
 
+# --- Milestone 2F Dataset Provenance & Annotation Reconciliation Tests 71..80 ---
+def test_71_bbox_count_reconciliation_exact():
+    matrix_file = Path("reports/candidate_source_class_matrix.json")
+    assert matrix_file.exists()
+    with open(matrix_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["total_parsed_bounding_boxes"] == 3909
+    assert data["total_candidate_images"] == 1421
+
+def test_72_candidate_source_class_matrix_exists():
+    matrix_file = Path("reports/candidate_source_class_matrix.json")
+    with open(matrix_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert "TACO_Extended" in data["sources"]
+    assert "OpenImages_V7_Approved" in data["sources"]
+
+def test_73_openimages_source_restriction_verified():
+    matrix_file = Path("reports/candidate_source_class_matrix.json")
+    with open(matrix_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    openimages = data["sources"]["OpenImages_V7_Approved"]
+    assert openimages["class_boxes"]["plastic_wrapper_bag"] > 0
+    assert openimages["class_boxes"]["metal_can"] > 0
+
+def test_74_taco_mapping_forensics_verified():
+    matrix_file = Path("reports/candidate_source_class_matrix.json")
+    with open(matrix_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    taco = data["sources"]["TACO_Extended"]
+    assert taco["class_boxes"]["glass_bottle_container"] > 0
+    assert taco["class_boxes"]["plastic_bottle"] > 0
+
+def test_75_image_provenance_reconciliation_complete():
+    manifest_path = Path("data/incoming/candidate_pool_v2/manifest.jsonl")
+    with open(manifest_path, "r", encoding="utf-8") as f:
+        first_line = f.readline()
+        entry = json.loads(first_line.strip())
+        for req in ["image_id", "sha256", "md5", "source_dataset", "license", "width", "height", "class_ids"]:
+            assert req in entry
+
+def test_76_license_reconciliation_separated():
+    forensics_file = Path("reports/source_annotation_forensics.json")
+    with open(forensics_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    for src in data["audited_sources"]:
+        assert "code_license" in src
+        assert "dataset_license" in src
+
+def test_77_duplicate_forensics_zero_collisions():
+    audit_file = Path("reports/candidate_pool_forensic_audit.json")
+    with open(audit_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["accounting_reconciliation"]["total_managed_repository_images"] == 2853
+
+def test_78_domain_class_matrix_balanced():
+    audit_file = Path("reports/candidate_pool_forensic_audit.json")
+    with open(audit_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    domain_cls = data["domain_forensics"]["domain_by_class"]
+    assert len(domain_cls) == 5
+
+def test_79_mapping_risk_review_log_valid():
+    log_file = Path("reports/candidate_pool_mapping_risk_review_log.json")
+    assert log_file.exists()
+    with open(log_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["sample_size"] == 100
+    assert data["passed_count"] == 100
+
+def test_80_acquisition_go_decision_verified():
+    scorecard_file = Path("reports/dataset_v2_readiness_scorecard.md")
+    assert scorecard_file.exists()
+    content = scorecard_file.read_text(encoding="utf-8")
+    assert "GO" in content
+    assert "DO NOT TRAIN YOLO" in content
+
+
 
 
