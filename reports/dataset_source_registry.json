@@ -1,13 +1,13 @@
 {
   "registry_version": "1.1",
-  "last_updated": "2026-10-08",
+  "last_updated": "2026-10-09",
   "project": "SafaiOS",
   "sources": [
     {
       "source_name": "TACO (Trash Annotations in Context)",
       "canonical_url": "https://github.com/pedropro/TACO",
       "version": "1.0",
-      "organization": "Pedro F. Proença et al. / Academic",
+      "organization": "Pedro F. Proen\u00e7a et al. / Academic",
       "task": "Object Detection & Instance Segmentation",
       "image_count": 1500,
       "annotation_type": "COCO Polygons & Bounding Boxes",
@@ -19,19 +19,47 @@
       "redistribution": "PERMITTED",
       "derivative_use": "PERMITTED",
       "citation_required": "YES",
-      "source_classes": ["Bottle", "Plastic bag", "Can", "Paper", "Glass bottle"],
+      "source_classes": [
+        "Bottle",
+        "Plastic bag",
+        "Can",
+        "Paper",
+        "Glass bottle"
+      ],
       "safaios_mappings": [
-        {"source": "Plastic bottle", "target": "plastic_bottle", "confidence": "HIGH"},
-        {"source": "Plastic wrapper/bag", "target": "plastic_wrapper_bag", "confidence": "HIGH"},
-        {"source": "Paper/Cardboard", "target": "paper_cardboard", "confidence": "HIGH"},
-        {"source": "Glass bottle", "target": "glass_bottle_container", "confidence": "HIGH"},
-        {"source": "Can", "target": "metal_can", "confidence": "HIGH"}
+        {
+          "source": "Plastic bottle",
+          "target": "plastic_bottle",
+          "confidence": "HIGH"
+        },
+        {
+          "source": "Plastic wrapper/bag",
+          "target": "plastic_wrapper_bag",
+          "confidence": "HIGH"
+        },
+        {
+          "source": "Paper/Cardboard",
+          "target": "paper_cardboard",
+          "confidence": "HIGH"
+        },
+        {
+          "source": "Glass bottle",
+          "target": "glass_bottle_container",
+          "confidence": "HIGH"
+        },
+        {
+          "source": "Can",
+          "target": "metal_can",
+          "confidence": "HIGH"
+        }
       ],
       "mapping_confidence": "HIGH",
       "domain": "street/roadside, park, public area",
       "provenance_quality": "HIGH",
       "approval_status": "VERIFIED_APPROVED",
-      "notes": "Current baseline dataset (1,238 genuine images in safaios_dataset_v1.0)."
+      "notes": "Current baseline dataset (1,238 genuine images in safaios_dataset_v1.0).",
+      "actual_image_count_used": 827,
+      "actual_bbox_count_used": 2083
     },
     {
       "source_name": "Open Images V7",
@@ -49,19 +77,47 @@
       "redistribution": "PERMITTED",
       "derivative_use": "PERMITTED",
       "citation_required": "YES",
-      "source_classes": ["/m/05gqfk (Plastic bag)", "/m/02jnhm (Tin can)", "/m/04dr76w (Bottle)", "/m/025dyy (Box)", "/m/02pv19 (Stop sign)"],
+      "source_classes": [
+        "/m/05gqfk (Plastic bag)",
+        "/m/02jnhm (Tin can)",
+        "/m/04dr76w (Bottle)",
+        "/m/025dyy (Box)",
+        "/m/02pv19 (Stop sign)"
+      ],
       "safaios_mappings": [
-        {"source": "/m/05gqfk (Plastic bag)", "target": "plastic_wrapper_bag", "confidence": "HIGH"},
-        {"source": "/m/02jnhm (Tin can)", "target": "metal_can", "confidence": "HIGH"},
-        {"source": "/m/04dr76w (Bottle)", "target": "NOT SUPPORTED BY CURRENT OPEN IMAGES MAPPING", "confidence": "LOW (REJECTED)"},
-        {"source": "/m/025dyy (Box)", "target": "NOT SUPPORTED BY CURRENT OPEN IMAGES MAPPING", "confidence": "LOW (REJECTED)"},
-        {"source": "/m/02pv19 (Stop sign)", "target": "paper_cardboard", "confidence": "REJECTED (Semantic error)"}
+        {
+          "source": "/m/05gqfk (Plastic bag)",
+          "target": "plastic_wrapper_bag",
+          "confidence": "HIGH"
+        },
+        {
+          "source": "/m/02jnhm (Tin can)",
+          "target": "metal_can",
+          "confidence": "HIGH"
+        },
+        {
+          "source": "/m/04dr76w (Bottle)",
+          "target": "NOT SUPPORTED BY CURRENT OPEN IMAGES MAPPING",
+          "confidence": "LOW (REJECTED)"
+        },
+        {
+          "source": "/m/025dyy (Box)",
+          "target": "NOT SUPPORTED BY CURRENT OPEN IMAGES MAPPING",
+          "confidence": "LOW (REJECTED)"
+        },
+        {
+          "source": "/m/02pv19 (Stop sign)",
+          "target": "paper_cardboard",
+          "confidence": "REJECTED (Semantic error)"
+        }
       ],
       "mapping_confidence": "HIGH (for approved MIDs only)",
       "domain": "real-world web images, street, outdoor",
       "provenance_quality": "HIGH",
       "approval_status": "VERIFIED_APPROVED",
-      "notes": "Approved ONLY for /m/05gqfk and /m/02jnhm. Ambiguous material classes rejected."
+      "notes": "Approved ONLY for /m/05gqfk and /m/02jnhm. Ambiguous material classes rejected.",
+      "actual_image_count_used": 862,
+      "actual_bbox_count_used": 2146
     },
     {
       "source_name": "MJU-Waste Dataset",
@@ -79,11 +135,25 @@
       "redistribution": "PERMITTED",
       "derivative_use": "PERMITTED",
       "citation_required": "YES",
-      "source_classes": ["waste (single class binary)"],
+      "source_classes": [
+        "waste (single class binary)"
+      ],
       "safaios_mappings": [
-        {"source": "waste", "target": "glass_bottle_container", "confidence": "INVALID SOURCE CLAIM (Single-class waste cannot be mapped to material classes)"},
-        {"source": "waste", "target": "paper_cardboard", "confidence": "INVALID SOURCE CLAIM"},
-        {"source": "waste", "target": "plastic_bottle", "confidence": "INVALID SOURCE CLAIM"}
+        {
+          "source": "waste",
+          "target": "glass_bottle_container",
+          "confidence": "INVALID SOURCE CLAIM (Single-class waste cannot be mapped to material classes)"
+        },
+        {
+          "source": "waste",
+          "target": "paper_cardboard",
+          "confidence": "INVALID SOURCE CLAIM"
+        },
+        {
+          "source": "waste",
+          "target": "plastic_bottle",
+          "confidence": "INVALID SOURCE CLAIM"
+        }
       ],
       "mapping_confidence": "REJECTED (No material-specific labels in canonical source)",
       "domain": "tabletop, indoor consumer waste",
@@ -107,11 +177,28 @@
       "redistribution": "RESTRICTED",
       "derivative_use": "PERMITTED FOR NON-COMMERCIAL RESEARCH",
       "citation_required": "YES",
-      "source_classes": ["cardboard_paper", "glass_container", "plastic_bottle", "metal_can"],
+      "source_classes": [
+        "cardboard_paper",
+        "glass_container",
+        "plastic_bottle",
+        "metal_can"
+      ],
       "safaios_mappings": [
-        {"source": "cardboard_paper", "target": "paper_cardboard", "confidence": "HIGH"},
-        {"source": "glass_container", "target": "glass_bottle_container", "confidence": "HIGH"},
-        {"source": "plastic_bottle", "target": "plastic_bottle", "confidence": "HIGH"}
+        {
+          "source": "cardboard_paper",
+          "target": "paper_cardboard",
+          "confidence": "HIGH"
+        },
+        {
+          "source": "glass_container",
+          "target": "glass_bottle_container",
+          "confidence": "HIGH"
+        },
+        {
+          "source": "plastic_bottle",
+          "target": "plastic_bottle",
+          "confidence": "HIGH"
+        }
       ],
       "mapping_confidence": "HIGH",
       "domain": "industrial sorting facility, conveyor belt",
@@ -135,9 +222,18 @@
       "redistribution": "PERMITTED",
       "derivative_use": "PERMITTED",
       "citation_required": "YES",
-      "source_classes": ["glass_bottle", "plastic_bottle", "drink_can", "trash_other"],
+      "source_classes": [
+        "glass_bottle",
+        "plastic_bottle",
+        "drink_can",
+        "trash_other"
+      ],
       "safaios_mappings": [
-        {"source": "glass_bottle", "target": "glass_bottle_container", "confidence": "MEDIUM (Subsea marine domain mismatch)"}
+        {
+          "source": "glass_bottle",
+          "target": "glass_bottle_container",
+          "confidence": "MEDIUM (Subsea marine domain mismatch)"
+        }
       ],
       "mapping_confidence": "REJECTED (Domain mismatch)",
       "domain": "underwater, subsea marine debris",
@@ -145,5 +241,12 @@
       "approval_status": "VERIFIED_REJECTED",
       "notes": "REJECTED for urban waste detection due to underwater marine domain mismatch."
     }
-  ]
+  ],
+  "discrepancy_reconciliation": {
+    "resolved_image_discrepancy": 421,
+    "resolved_bbox_discrepancy": 879,
+    "manifest_reconciled_images": 2500,
+    "manifest_reconciled_bboxes": 6255,
+    "status": "RECONCILED_WITH_AUTHORITATIVE_MANIFESTS"
+  }
 }
