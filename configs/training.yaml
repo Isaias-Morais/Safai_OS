@@ -1,8 +1,9 @@
 # SafaiOS Training Hyperparameters & Strategy Configuration
+# Finalized Single Model Architecture: YOLO11s (yolo11s.pt)
 
 model:
-  variant: yolo11s.pt # Modern YOLO nano/small architecture (YOLOv8/11/26 series)
-  pretrained: true
+  name: YOLO11s
+  checkpoint: yolo11s.pt # Official Ultralytics PyTorch Checkpoint (9.4M params, 21.5 GFLOPs)
   input_size: 640
 
 training:
@@ -11,10 +12,10 @@ training:
   batch_size: 16
   workers: 8
   seed: 42
-  device: 0 # 0 for CUDA GPU, cpu for CPU fallback
+  device: 0 # 0 for NVIDIA RTX 4060 CUDA GPU
 
 optimizer:
-  name: Auto # SGD/AdamW auto selection
+  name: AdamW
   lr0: 0.01
   lrf: 0.01
   momentum: 0.937
