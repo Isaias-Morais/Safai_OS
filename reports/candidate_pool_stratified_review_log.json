@@ -1,0 +1,2692 @@
+{
+  "audit_name": "Milestone 2E Stratified 100-Sample Review Log",
+  "sample_size": 100,
+  "sampling_strategy": "STRATIFIED_BY_CLASS_SOURCE_DOMAIN_DIFFICULTY",
+  "seed": 101,
+  "passed_count": 100,
+  "semantic_errors": 0,
+  "bbox_errors": 0,
+  "mapping_errors": 0,
+  "missing_annotations": 0,
+  "other_errors": 0,
+  "sample_reviews": [
+    {
+      "sample_index": 1,
+      "image_id": "openimages_app_00002",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00002.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        2,
+        4
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "street",
+      "difficulty": "EASY",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 2,
+      "image_id": "taco_ext_00020",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00020.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0
+      ],
+      "class_names": [
+        "plastic_bottle"
+      ],
+      "bbox_count": 1,
+      "domain": "market",
+      "difficulty": "MEDIUM",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 3,
+      "image_id": "openimages_app_00027",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00027.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        2,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "UNKNOWN",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 4,
+      "image_id": "taco_ext_00030",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00030.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3,
+        4
+      ],
+      "class_names": [
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "domain": "dumping_area",
+      "difficulty": "EASY",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 5,
+      "image_id": "taco_ext_00080",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00080.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "domain": "roadside",
+      "difficulty": "UNKNOWN",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 6,
+      "image_id": "taco_ext_00084",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00084.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        1,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "market",
+      "difficulty": "HARD",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 7,
+      "image_id": "taco_ext_00085",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00085.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        1
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 3,
+      "domain": "pedestrian_space",
+      "difficulty": "MEDIUM",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 8,
+      "image_id": "openimages_app_00088",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00088.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "MEDIUM",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 9,
+      "image_id": "taco_ext_00094",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00094.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        2,
+        3
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 2,
+      "domain": "market",
+      "difficulty": "EASY",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 10,
+      "image_id": "taco_ext_00101",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00101.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "HARD",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 11,
+      "image_id": "taco_ext_00141",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00141.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        3,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "market",
+      "difficulty": "UNKNOWN",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 12,
+      "image_id": "taco_ext_00171",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00171.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 2,
+      "domain": "market",
+      "difficulty": "MEDIUM",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 13,
+      "image_id": "openimages_app_00174",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00174.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        3,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "EASY",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 14,
+      "image_id": "openimages_app_00189",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00189.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        3,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "pedestrian_space",
+      "difficulty": "HARD",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 15,
+      "image_id": "taco_ext_00205",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00205.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        2,
+        3
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 2,
+      "domain": "park",
+      "difficulty": "UNKNOWN",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 16,
+      "image_id": "openimages_app_00206",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00206.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        2,
+        3
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "market",
+      "difficulty": "HARD",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 17,
+      "image_id": "openimages_app_00207",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00207.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "domain": "market",
+      "difficulty": "UNKNOWN",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 18,
+      "image_id": "openimages_app_00215",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00215.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 2,
+      "domain": "market",
+      "difficulty": "EASY",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 19,
+      "image_id": "taco_ext_00218",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00218.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "UNKNOWN",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 20,
+      "image_id": "taco_ext_00228",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00228.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        1,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "UNKNOWN",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 21,
+      "image_id": "taco_ext_00262",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00262.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        1,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "street",
+      "difficulty": "EASY",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 22,
+      "image_id": "taco_ext_00265",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00265.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "UNKNOWN",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 23,
+      "image_id": "openimages_app_00269",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00269.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        2,
+        3
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "pedestrian_space",
+      "difficulty": "HARD",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 24,
+      "image_id": "openimages_app_00274",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00274.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        2,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "dumping_area",
+      "difficulty": "MEDIUM",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 25,
+      "image_id": "taco_ext_00278",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00278.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        2
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "EASY",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 26,
+      "image_id": "openimages_app_00280",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00280.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "domain": "pedestrian_space",
+      "difficulty": "UNKNOWN",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 27,
+      "image_id": "openimages_app_00281",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00281.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        2,
+        3
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "EASY",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 28,
+      "image_id": "openimages_app_00288",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00288.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        2,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "MEDIUM",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 29,
+      "image_id": "taco_ext_00327",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00327.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        2,
+        3
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "MEDIUM",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 30,
+      "image_id": "taco_ext_00370",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00370.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "street",
+      "difficulty": "EASY",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 31,
+      "image_id": "openimages_app_00373",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00373.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0
+      ],
+      "class_names": [
+        "plastic_bottle"
+      ],
+      "bbox_count": 2,
+      "domain": "pedestrian_space",
+      "difficulty": "MEDIUM",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 32,
+      "image_id": "taco_ext_00376",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00376.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        2,
+        3
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "dumping_area",
+      "difficulty": "EASY",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 33,
+      "image_id": "openimages_app_00390",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00390.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        3,
+        4
+      ],
+      "class_names": [
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "dumping_area",
+      "difficulty": "UNKNOWN",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 34,
+      "image_id": "taco_ext_00432",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00432.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        3,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "MEDIUM",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 35,
+      "image_id": "taco_ext_00443",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00443.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        2,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "street",
+      "difficulty": "UNKNOWN",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 36,
+      "image_id": "openimages_app_00482",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00482.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        3,
+        4
+      ],
+      "class_names": [
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "UNKNOWN",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 37,
+      "image_id": "taco_ext_00538",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00538.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3,
+        4
+      ],
+      "class_names": [
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "dumping_area",
+      "difficulty": "HARD",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 38,
+      "image_id": "openimages_app_00539",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00539.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        2
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "MEDIUM",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 39,
+      "image_id": "taco_ext_00576",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00576.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3,
+        4
+      ],
+      "class_names": [
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "domain": "roadside",
+      "difficulty": "UNKNOWN",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 40,
+      "image_id": "taco_ext_00577",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00577.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "MEDIUM",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 41,
+      "image_id": "openimages_app_00621",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00621.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        2,
+        3,
+        4
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "MEDIUM",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 42,
+      "image_id": "openimages_app_00632",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00632.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "market",
+      "difficulty": "EASY",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 43,
+      "image_id": "taco_ext_00636",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00636.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        3,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "UNKNOWN",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 44,
+      "image_id": "openimages_app_00655",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00655.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        1,
+        2
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag",
+        "paper_cardboard"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "UNKNOWN",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 45,
+      "image_id": "taco_ext_00661",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00661.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3
+      ],
+      "class_names": [
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "EASY",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 46,
+      "image_id": "taco_ext_00683",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00683.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        2
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard"
+      ],
+      "bbox_count": 3,
+      "domain": "street",
+      "difficulty": "EASY",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 47,
+      "image_id": "openimages_app_00689",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00689.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        1,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "pedestrian_space",
+      "difficulty": "HARD",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 48,
+      "image_id": "openimages_app_00705",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00705.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        2,
+        3,
+        4
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "HARD",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 49,
+      "image_id": "openimages_app_00712",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00712.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        2,
+        4
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "domain": "pedestrian_space",
+      "difficulty": "EASY",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 50,
+      "image_id": "openimages_app_00733",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00733.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        2,
+        4
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "MEDIUM",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 51,
+      "image_id": "taco_ext_00743",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00743.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "market",
+      "difficulty": "EASY",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 52,
+      "image_id": "taco_ext_00750",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00750.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3,
+        4
+      ],
+      "class_names": [
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "street",
+      "difficulty": "UNKNOWN",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 53,
+      "image_id": "taco_ext_00758",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00758.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        1,
+        2
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag",
+        "paper_cardboard"
+      ],
+      "bbox_count": 3,
+      "domain": "market",
+      "difficulty": "EASY",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 54,
+      "image_id": "taco_ext_00814",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00814.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3
+      ],
+      "class_names": [
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "HARD",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 55,
+      "image_id": "openimages_app_00831",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00831.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        3,
+        4
+      ],
+      "class_names": [
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "EASY",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 56,
+      "image_id": "openimages_app_00837",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00837.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        2,
+        4
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "street",
+      "difficulty": "UNKNOWN",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 57,
+      "image_id": "taco_ext_00838",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00838.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        2
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard"
+      ],
+      "bbox_count": 2,
+      "domain": "park",
+      "difficulty": "HARD",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 58,
+      "image_id": "taco_ext_00839",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00839.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        2
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "UNKNOWN",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 59,
+      "image_id": "openimages_app_00880",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00880.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        2,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "street",
+      "difficulty": "EASY",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 60,
+      "image_id": "taco_ext_00886",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00886.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        1,
+        2
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag",
+        "paper_cardboard"
+      ],
+      "bbox_count": 3,
+      "domain": "street",
+      "difficulty": "HARD",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 61,
+      "image_id": "taco_ext_00927",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00927.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        2
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "EASY",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 62,
+      "image_id": "taco_ext_00932",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_00932.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        1,
+        2
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag",
+        "paper_cardboard"
+      ],
+      "bbox_count": 3,
+      "domain": "dumping_area",
+      "difficulty": "UNKNOWN",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 63,
+      "image_id": "openimages_app_00944",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00944.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        1,
+        2
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag",
+        "paper_cardboard"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "MEDIUM",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 64,
+      "image_id": "openimages_app_00972",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_00972.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "pedestrian_space",
+      "difficulty": "MEDIUM",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 65,
+      "image_id": "taco_ext_01009",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01009.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        3,
+        4
+      ],
+      "class_names": [
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "market",
+      "difficulty": "UNKNOWN",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 66,
+      "image_id": "openimages_app_01013",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01013.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        2,
+        4
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "pedestrian_space",
+      "difficulty": "MEDIUM",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 67,
+      "image_id": "openimages_app_01027",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01027.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        1,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "dumping_area",
+      "difficulty": "MEDIUM",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 68,
+      "image_id": "openimages_app_01036",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01036.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "HARD",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 69,
+      "image_id": "taco_ext_01037",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01037.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "dumping_area",
+      "difficulty": "UNKNOWN",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 70,
+      "image_id": "taco_ext_01055",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01055.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "MEDIUM",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 71,
+      "image_id": "taco_ext_01066",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01066.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "dumping_area",
+      "difficulty": "HARD",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 72,
+      "image_id": "taco_ext_01067",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01067.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "EASY",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 73,
+      "image_id": "openimages_app_01071",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01071.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        2,
+        4
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "domain": "market",
+      "difficulty": "HARD",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 74,
+      "image_id": "openimages_app_01082",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01082.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        3,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "pedestrian_space",
+      "difficulty": "UNKNOWN",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 75,
+      "image_id": "taco_ext_01085",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01085.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "street",
+      "difficulty": "EASY",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 76,
+      "image_id": "openimages_app_01105",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01105.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        1,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "MEDIUM",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 77,
+      "image_id": "openimages_app_01112",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01112.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        2,
+        3
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "pedestrian_space",
+      "difficulty": "UNKNOWN",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 78,
+      "image_id": "openimages_app_01140",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01140.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        1,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "street",
+      "difficulty": "UNKNOWN",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 79,
+      "image_id": "taco_ext_01146",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01146.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        1
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 3,
+      "domain": "pedestrian_space",
+      "difficulty": "EASY",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 80,
+      "image_id": "openimages_app_01148",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01148.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        2,
+        4
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "domain": "pedestrian_space",
+      "difficulty": "HARD",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 81,
+      "image_id": "taco_ext_01162",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01162.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        1,
+        3
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "EASY",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 82,
+      "image_id": "taco_ext_01168",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01168.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        2,
+        3
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "pedestrian_space",
+      "difficulty": "MEDIUM",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 83,
+      "image_id": "openimages_app_01171",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01171.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "EASY",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 84,
+      "image_id": "taco_ext_01177",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01177.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        2
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard"
+      ],
+      "bbox_count": 3,
+      "domain": "dumping_area",
+      "difficulty": "HARD",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 85,
+      "image_id": "openimages_app_01184",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01184.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        2,
+        3,
+        4
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "pedestrian_space",
+      "difficulty": "HARD",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 86,
+      "image_id": "taco_ext_01191",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01191.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        4
+      ],
+      "class_names": [
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "domain": "park",
+      "difficulty": "MEDIUM",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 87,
+      "image_id": "taco_ext_01192",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01192.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        2
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard"
+      ],
+      "bbox_count": 3,
+      "domain": "park",
+      "difficulty": "MEDIUM",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 88,
+      "image_id": "openimages_app_01193",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01193.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        2
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard"
+      ],
+      "bbox_count": 3,
+      "domain": "market",
+      "difficulty": "MEDIUM",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 89,
+      "image_id": "taco_ext_01217",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01217.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        2,
+        4
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "pedestrian_space",
+      "difficulty": "HARD",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 90,
+      "image_id": "taco_ext_01227",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01227.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1,
+        3,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "glass_bottle_container",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "dumping_area",
+      "difficulty": "MEDIUM",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 91,
+      "image_id": "openimages_app_01231",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01231.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "market",
+      "difficulty": "MEDIUM",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 92,
+      "image_id": "taco_ext_01263",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01263.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        2,
+        4
+      ],
+      "class_names": [
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "street",
+      "difficulty": "MEDIUM",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 93,
+      "image_id": "openimages_app_01271",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01271.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        1
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 3,
+      "domain": "street",
+      "difficulty": "HARD",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 94,
+      "image_id": "taco_ext_01272",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01272.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        2
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard"
+      ],
+      "bbox_count": 2,
+      "domain": "market",
+      "difficulty": "UNKNOWN",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 95,
+      "image_id": "taco_ext_01294",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01294.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        0,
+        1
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 3,
+      "domain": "roadside",
+      "difficulty": "HARD",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 96,
+      "image_id": "openimages_app_01305",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01305.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        2,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "paper_cardboard",
+        "metal_can"
+      ],
+      "bbox_count": 3,
+      "domain": "dumping_area",
+      "difficulty": "MEDIUM",
+      "lighting": "LOW_LIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 97,
+      "image_id": "openimages_app_01337",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01337.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        1,
+        3
+      ],
+      "class_names": [
+        "plastic_wrapper_bag",
+        "glass_bottle_container"
+      ],
+      "bbox_count": 3,
+      "domain": "street",
+      "difficulty": "EASY",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 98,
+      "image_id": "taco_ext_01390",
+      "filename": "data/incoming/candidate_pool_v2/images/taco_ext_01390.jpg",
+      "source_dataset": "TACO_Extended",
+      "class_ids": [
+        1
+      ],
+      "class_names": [
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 2,
+      "domain": "pedestrian_space",
+      "difficulty": "UNKNOWN",
+      "lighting": "GLARE",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 99,
+      "image_id": "openimages_app_01393",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01393.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        1
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "plastic_wrapper_bag"
+      ],
+      "bbox_count": 3,
+      "domain": "street",
+      "difficulty": "UNKNOWN",
+      "lighting": "DAYLIGHT",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    },
+    {
+      "sample_index": 100,
+      "image_id": "openimages_app_01409",
+      "filename": "data/incoming/candidate_pool_v2/images/openimages_app_01409.jpg",
+      "source_dataset": "OpenImages_V7_Approved",
+      "class_ids": [
+        0,
+        4
+      ],
+      "class_names": [
+        "plastic_bottle",
+        "metal_can"
+      ],
+      "bbox_count": 2,
+      "domain": "pedestrian_space",
+      "difficulty": "UNKNOWN",
+      "lighting": "SHADOW",
+      "aspect_ratio": 1.33,
+      "resolution": "640x480",
+      "semantic_errors": 0,
+      "bbox_errors": 0,
+      "mapping_errors": 0,
+      "missing_annotations": 0,
+      "other_errors": 0,
+      "audit_status": "VERIFIED_CORRECT"
+    }
+  ]
+}
