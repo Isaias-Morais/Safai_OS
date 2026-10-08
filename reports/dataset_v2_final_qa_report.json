@@ -1,0 +1,21 @@
+{
+  "dataset_name": "safaios_dataset_v2.0",
+  "qa_date": "2026-10-09",
+  "audit_metrics": {
+    "total_physical_images": 6100,
+    "total_parsed_bboxes": 14576,
+    "corrupt_images_found": 0,
+    "malformed_labels_found": 0,
+    "out_of_bounds_bboxes_found": 0,
+    "test_locked_v2_leakage": 0,
+    "india_real_world_leakage": 0
+  },
+  "class_box_distribution": {
+    "plastic_bottle (0)": 2278,
+    "plastic_wrapper_bag (1)": 3766,
+    "paper_cardboard (2)": 2331,
+    "glass_bottle_container (3)": 2399,
+    "metal_can (4)": 3802
+  },
+  "qa_status": "PASSED_100_PERCENT_VERIFIED"
+}
