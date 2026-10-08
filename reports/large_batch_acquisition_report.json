@@ -1,0 +1,22 @@
+{
+  "pipeline": "SafaiOS Large Batch Ingestor",
+  "dry_run": false,
+  "candidate_count": 150,
+  "accepted_count": 149,
+  "rejection_count": 1,
+  "acceptance_percentage": 99.33333333333333,
+  "rejection_percentage": 0.6666666666666667,
+  "rejection_reasons": {
+    "near_duplicate": 1
+  },
+  "class_distribution_boxes": {
+    "4": 175,
+    "1": 91
+  },
+  "class_distribution_images": {
+    "4": 98,
+    "1": 52
+  },
+  "staging_location": "data\\incoming\\large_batch_staging",
+  "status": "APPROVED_BATCH_STAGED"
+}
