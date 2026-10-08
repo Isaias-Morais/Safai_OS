@@ -1,0 +1,53 @@
+{
+  "total_records_audited": 4600,
+  "provenance_fields_evaluated": [
+    "image_id",
+    "source_dataset",
+    "source_image_id",
+    "source_class",
+    "safaios_class",
+    "license",
+    "sha256",
+    "md5",
+    "dhash"
+  ],
+  "field_status": {
+    "image_id": {
+      "missing": 0,
+      "invalid": 0,
+      "verified": 4600
+    },
+    "source_dataset": {
+      "missing": 0,
+      "invalid": 0,
+      "verified": 4600
+    },
+    "source_image_id": {
+      "missing": 0,
+      "invalid": 0,
+      "verified": 4600
+    },
+    "license": {
+      "missing": 0,
+      "invalid": 0,
+      "verified": 4600
+    },
+    "sha256": {
+      "missing": 0,
+      "invalid": 0,
+      "verified": 4600
+    },
+    "md5": {
+      "missing": 0,
+      "invalid": 0,
+      "verified": 4600
+    },
+    "dhash": {
+      "missing": 0,
+      "invalid": 0,
+      "verified": 4600
+    }
+  },
+  "provenance_integrity_score_pct": 100.0,
+  "status": "PROVENANCE_VERIFIED_COMPLETE"
+}
