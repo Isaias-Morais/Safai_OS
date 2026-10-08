@@ -1,0 +1,42 @@
+{
+  "pipeline": "SafaiOS Open Images V7 Ingestor",
+  "dry_run": true,
+  "approved_classes": {
+    "/m/05gqfk": {
+      "name": "Plastic bag",
+      "safaios_class_id": 1,
+      "safaios_class_name": "plastic_wrapper_bag",
+      "confidence": "HIGH"
+    },
+    "/m/02jnhm": {
+      "name": "Tin can",
+      "safaios_class_id": 4,
+      "safaios_class_name": "metal_can",
+      "confidence": "HIGH"
+    }
+  },
+  "rejected_or_ambiguous_classes": {
+    "/m/04dr76w": {
+      "name": "Bottle",
+      "reason": "Ambiguous material (contains plastic, glass, metal without material tags)"
+    },
+    "/m/025dyy": {
+      "name": "Box",
+      "reason": "Ambiguous material (contains cardboard, plastic, wood)"
+    },
+    "/m/02pv19": {
+      "name": "Stop sign",
+      "reason": "REJECTED - Not paper/cardboard, completely wrong semantic object"
+    },
+    "/m/09tvcd": {
+      "name": "Wine glass",
+      "reason": "Stemware rather than glass bottle/container"
+    }
+  },
+  "simulated_candidate_boxes": {
+    "plastic_wrapper_bag": 250,
+    "metal_can": 250
+  },
+  "target_staging_directory": "data\\incoming\\open_images_staging",
+  "status": "READY_FOR_STAGING"
+}

@@ -1,0 +1,21 @@
+{
+  "dataset_version": "safaios_dataset_v1.0",
+  "parent_version": "none",
+  "creation_timestamp": "2026-10-08T21:00:00Z",
+  "source_inventory": {
+    "TACO": 1238
+  },
+  "total_genuine_images": 1238,
+  "total_bounding_boxes": 2697,
+  "image_manifest_hash": "aa3cffa65cd0388c64ae0c50ad2460e1f4b7444b4d0a077d6b2c3009c299300e",
+  "taxonomy_version": "5_class_v1",
+  "taxonomy": {
+    "0": "plastic_bottle",
+    "1": "plastic_wrapper_bag",
+    "2": "paper_cardboard",
+    "3": "glass_bottle_container",
+    "4": "metal_can"
+  },
+  "preprocessing_version": "yolo_normalized_v1",
+  "dataset_builder_version": "process_incoming_v1.1"
+}
