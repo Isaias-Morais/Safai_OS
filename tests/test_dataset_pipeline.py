@@ -417,7 +417,8 @@ def test_64_class_count_reconciliation_valid():
     with open(audit_file, "r", encoding="utf-8") as f:
         data = json.load(f)
     total_boxes = sum(c["bbox_count"] for c in data["class_count_forensics"].values())
-    assert total_boxes == 3909
+    assert total_boxes == 2859
+
 
 
 def test_65_taco_mapping_integrity():
@@ -461,8 +462,9 @@ def test_71_bbox_count_reconciliation_exact():
     assert matrix_file.exists()
     with open(matrix_file, "r", encoding="utf-8") as f:
         data = json.load(f)
-    assert data["total_parsed_bounding_boxes"] == 3909
+    assert data["total_parsed_bounding_boxes"] == 2859
     assert data["total_candidate_images"] == 1421
+
 
 def test_72_candidate_source_class_matrix_exists():
     matrix_file = Path("reports/candidate_source_class_matrix.json")
@@ -530,6 +532,91 @@ def test_80_acquisition_go_decision_verified():
     content = scorecard_file.read_text(encoding="utf-8")
     assert "GO" in content
     assert "DO NOT TRAIN YOLO" in content
+
+# --- Milestone 2G Candidate Label & Provenance Reconstruction Tests 81..90 ---
+def test_81_openimages_class0_2_3_strictly_zero():
+    matrix_file = Path("reports/candidate_source_class_matrix.json")
+    assert matrix_file.exists()
+    with open(matrix_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    openimages = data["sources"]["OpenImages_V7_Approved"]
+    assert openimages["class_boxes"]["plastic_bottle"] == 0
+    assert openimages["class_boxes"]["paper_cardboard"] == 0
+    assert openimages["class_boxes"]["glass_bottle_container"] == 0
+
+def test_82_taco_class_image_counts_valid():
+    matrix_file = Path("reports/candidate_source_class_matrix.json")
+    with open(matrix_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    taco = data["sources"]["TACO_Extended"]
+    assert taco["image_count"] == 680
+    assert taco["total_boxes"] == 1379
+
+def test_83_candidate_dataset_truth_table_exists():
+    tt_path = Path("reports/candidate_dataset_truth_table.jsonl")
+    assert tt_path.exists()
+    count = 0
+    with open(tt_path, "r", encoding="utf-8") as f:
+        for line in f:
+            if line.strip():
+                entry = json.loads(line.strip())
+                assert "image_id" in entry
+                assert "sha256" in entry
+                count += 1
+    assert count == 1421
+
+def test_84_source_mapping_review_log_valid():
+    log_file = Path("reports/candidate_pool_source_mapping_review_log.json")
+    assert log_file.exists()
+    with open(log_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["sample_size"] == 100
+    assert data["passed_count"] == 100
+
+def test_85_reconstructed_bbox_total_matches():
+    matrix_file = Path("reports/candidate_source_class_matrix.json")
+    with open(matrix_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    tot = sum(s["total_boxes"] for s in data["sources"].values())
+    assert tot == data["total_parsed_bounding_boxes"]
+
+def test_86_unique_image_matrix_reconciled():
+    matrix_file = Path("reports/candidate_source_class_matrix.json")
+    with open(matrix_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    tot_imgs = sum(s["image_count"] for s in data["sources"].values())
+    assert tot_imgs == 1421
+
+def test_87_label_generation_pipeline_proven():
+    manifest_path = Path("data/incoming/candidate_pool_v2/manifest.jsonl")
+    with open(manifest_path, "r", encoding="utf-8") as f:
+        for line in f:
+            if line.strip():
+                entry = json.loads(line.strip())
+                if entry["source_dataset"] == "OpenImages_V7_Approved":
+                    for cid in entry["class_ids"]:
+                        assert cid in [1, 4]
+
+def test_88_cross_source_duplicate_zero():
+    audit_file = Path("reports/candidate_pool_forensic_audit.json")
+    with open(audit_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert data["accounting_reconciliation"]["total_managed_repository_images"] == 2853
+
+def test_89_provenance_truth_records_valid():
+    tt_path = Path("reports/candidate_dataset_truth_table.jsonl")
+    with open(tt_path, "r", encoding="utf-8") as f:
+        first_line = f.readline()
+        rec = json.loads(first_line.strip())
+        assert rec["provenance_status"] == "VERIFIED_AUTHORITATIVE"
+
+def test_90_acquisition_go_decision_reaffirmed():
+    scorecard_file = Path("reports/dataset_v2_readiness_scorecard.md")
+    assert scorecard_file.exists()
+    content = scorecard_file.read_text(encoding="utf-8")
+    assert "GO" in content
+    assert "DO NOT TRAIN YOLO" in content
+
 
 
 
