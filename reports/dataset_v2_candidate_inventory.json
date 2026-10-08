@@ -1,0 +1,25 @@
+{
+  "milestone": "Milestone_2H",
+  "generated_date": "2026-10-08",
+  "candidate_inventory": {
+    "candidate_pool_v2": {
+      "images": 2500,
+      "bboxes": 6255
+    },
+    "validation_candidate_pool": {
+      "images": 1000,
+      "bboxes": 2463
+    },
+    "test_candidate_pool": {
+      "images": 1000,
+      "bboxes": 2590
+    },
+    "india_real_world_benchmark": {
+      "images": 100,
+      "bboxes": 269
+    }
+  },
+  "total_new_candidate_images": 4600,
+  "total_new_candidate_bboxes": 11577,
+  "status": "LARGE_SCALE_ACQUISITION_STAGED"
+}
