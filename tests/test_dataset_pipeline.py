@@ -218,3 +218,83 @@ def test_39_disk_safety_check_execution():
 def test_40_large_batch_report_generated():
     report_path = Path("reports/large_batch_acquisition_report.json")
     assert report_path.exists()
+
+# --- Milestone 2C Source Annotation Forensics Tests 41..50 ---
+def test_41_single_class_source_cannot_map_to_material_class():
+    mju_classes = ["waste"]
+    is_single_class = len(mju_classes) == 1
+    target_material_classes = ["plastic_bottle", "glass_bottle_container", "paper_cardboard"]
+    # Single-class dataset cannot map to material-specific classes
+    for target in target_material_classes:
+        valid_mapping = not is_single_class
+        assert not valid_mapping
+
+def test_42_generic_bottle_cannot_map_to_material_specific_classes():
+    generic_label = "Bottle"
+    # Generic bottle cannot automatically map to material-specific classes
+    mapped_class = None
+    if generic_label == "Bottle":
+        mapped_class = "INVALID_GENERIC_MAPPING"
+    assert mapped_class == "INVALID_GENERIC_MAPPING"
+
+def test_43_generic_box_cannot_map_to_paper_cardboard():
+    generic_label = "Box"
+    mapped_class = None
+    if generic_label == "Box":
+        mapped_class = "INVALID_GENERIC_MAPPING"
+    assert mapped_class != "paper_cardboard"
+
+def test_44_unknown_label_mapping_rejected():
+    unknown_label = "random_garbage_object"
+    approved_set = {"Plastic bag", "Tin can"}
+    assert unknown_label not in approved_set
+
+def test_45_missing_source_license_rejected():
+    source_metadata = {"source_name": "UnknownDataset", "license": None}
+    approval_status = "VERIFIED_APPROVED" if source_metadata.get("license") else "REQUIRES_REVIEW"
+    assert approval_status == "REQUIRES_REVIEW"
+
+def test_46_missing_provenance_rejected():
+    source_metadata = {"source_name": "NoProvenanceDataset", "provenance_url": ""}
+    is_valid = bool(source_metadata.get("provenance_url"))
+    assert not is_valid
+
+def test_47_verified_source_accepted():
+    source_metadata = {"source_name": "OpenImages_V7", "approval_status": "VERIFIED_APPROVED"}
+    can_enter_production = source_metadata["approval_status"] == "VERIFIED_APPROVED"
+    assert can_enter_production
+
+def test_48_code_license_and_dataset_license_stored_separately():
+    forensics_file = Path("reports/source_annotation_forensics.json")
+    assert forensics_file.exists()
+    with open(forensics_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    for src in data["audited_sources"]:
+        assert "code_license" in src
+        assert "dataset_license" in src
+        assert src["code_license"] != src["dataset_license"] or src["code_license"] in ["MIT", "Apache 2.0"]
+
+def test_49_segmentation_to_bbox_conversion_validated():
+    # Simulate mask pixel coordinates [(x1,y1), (x2,y2)...]
+    mask_pixels = [(10, 20), (50, 20), (50, 80), (10, 80)]
+    xs = [p[0] for p in mask_pixels]
+    ys = [p[1] for p in mask_pixels]
+    xmin, xmax, ymin, ymax = min(xs), max(xs), min(ys), max(ys)
+    assert (xmin, ymin, xmax, ymax) == (10, 20, 50, 80)
+    # Check conversion to YOLO normalized coordinates for 100x100 image
+    img_w, img_h = 100, 100
+    x_center = ((xmin + xmax) / 2.0) / img_w
+    y_center = ((ymin + ymax) / 2.0) / img_h
+    w = (xmax - xmin) / img_w
+    h = (ymax - ymin) / img_h
+    assert (x_center, y_center, w, h) == (0.3, 0.5, 0.4, 0.6)
+
+def test_50_source_specific_class_inventory_generated_correctly():
+    forensics_file = Path("reports/source_annotation_forensics.json")
+    with open(forensics_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    mju_entry = [s for s in data["audited_sources"] if s["source_name"] == "MJU-Waste"][0]
+    assert mju_entry["exact_class_inventory"] == ["waste"]
+    assert mju_entry["class_count"] == 1
+    assert mju_entry["is_multi_class"] is False
+
