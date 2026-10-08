@@ -3,29 +3,29 @@
   "generated_date": "2026-10-08",
   "project": "SafaiOS",
   "total_candidate_images": 1421,
-  "total_parsed_bounding_boxes": 3909,
+  "total_parsed_bounding_boxes": 2859,
   "discrepancy_reconciliation_note": "The 14,968 figure in Milestone 2D was an un-capped pre-staging target estimate. Physical ground truth on disk in data/incoming/candidate_pool_v2/labels/ contains exactly 3,909 bounding boxes across 1,421 images.",
   "sources": {
     "TACO_Extended": {
       "image_count": 680,
-      "total_boxes": 1865,
+      "total_boxes": 1379,
       "class_boxes": {
-        "plastic_bottle": 396,
-        "plastic_wrapper_bag": 341,
-        "paper_cardboard": 373,
-        "glass_bottle_container": 417,
-        "metal_can": 338
+        "plastic_bottle": 251,
+        "plastic_wrapper_bag": 278,
+        "paper_cardboard": 264,
+        "glass_bottle_container": 296,
+        "metal_can": 290
       }
     },
     "OpenImages_V7_Approved": {
       "image_count": 741,
-      "total_boxes": 2044,
+      "total_boxes": 1480,
       "class_boxes": {
-        "plastic_bottle": 448,
-        "plastic_wrapper_bag": 341,
-        "paper_cardboard": 423,
-        "glass_bottle_container": 437,
-        "metal_can": 395
+        "plastic_bottle": 0,
+        "plastic_wrapper_bag": 741,
+        "paper_cardboard": 0,
+        "glass_bottle_container": 0,
+        "metal_can": 739
       }
     }
   }
