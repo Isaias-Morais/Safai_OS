@@ -1,0 +1,59 @@
+{
+  "source_name": "OpenImages_V7",
+  "source_version": "V7",
+  "source_url": "https://storage.googleapis.com/openimages/web/index.html",
+  "source_license": "CC BY 2.0",
+  "annotation_license": "CC BY 4.0",
+  "retrieval_date": "2026-10-08",
+  "dry_run": false,
+  "approved_mappings": {
+    "/m/05gqfk": {
+      "name": "Plastic bag",
+      "safaios_class_id": 1,
+      "safaios_class_name": "plastic_wrapper_bag",
+      "confidence": "HIGH"
+    },
+    "/m/02jnhm": {
+      "name": "Tin can",
+      "safaios_class_id": 4,
+      "safaios_class_name": "metal_can",
+      "confidence": "HIGH"
+    }
+  },
+  "rejected_mappings": {
+    "/m/04dr76w": {
+      "name": "Bottle",
+      "reason": "Ambiguous material (contains plastic, glass, metal without material tags)"
+    },
+    "/m/025dyy": {
+      "name": "Box",
+      "reason": "Ambiguous material (contains cardboard, plastic, wood)"
+    },
+    "/m/02pv19": {
+      "name": "Stop sign",
+      "reason": "REJECTED - Not paper/cardboard, completely wrong semantic object"
+    },
+    "/m/09tvcd": {
+      "name": "Wine glass",
+      "reason": "Stemware rather than glass bottle/container"
+    }
+  },
+  "candidate_count": 45,
+  "accepted_count": 45,
+  "rejection_count": 0,
+  "acceptance_percentage": 100.0,
+  "rejection_percentage": 0.0,
+  "rejection_reasons": {},
+  "duplicate_count": 0,
+  "near_duplicate_count": 0,
+  "class_distribution_boxes": {
+    "4": 72,
+    "1": 9
+  },
+  "class_distribution_images": {
+    "4": 36,
+    "1": 9
+  },
+  "staging_location": "data\\incoming\\open_images_staging",
+  "status": "APPROVED_PILOT_STAGED"
+}

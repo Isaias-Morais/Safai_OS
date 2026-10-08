@@ -1,0 +1,1291 @@
+{
+  "inspection_task": "Milestone 2A Manual Representative Sample Inspection",
+  "sample_count": 25,
+  "total_staged_pool": 45,
+  "sampling_method": "Deterministic Seed (42) Stratified Random Selection",
+  "overall_verification_status": "PASSED_VISUAL_QUALITY_GATES",
+  "sampled_records": [
+    {
+      "sample_index": 1,
+      "filename": "openimages_f2502da756e59e5f.jpg",
+      "resolution": "1024x1024",
+      "bbox_count": 1,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.465704,
+            0.50722,
+            0.519856,
+            0.98556
+          ],
+          "pixel_coords": [
+            210.71462400000001,
+            14.786560000000009,
+            532.332544,
+            1009.21344
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 2,
+      "filename": "openimages_1f39eebfe743a820.jpg",
+      "resolution": "1024x842",
+      "bbox_count": 1,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.348609,
+            0.458167,
+            0.297872,
+            0.896414
+          ],
+          "pixel_coords": [
+            204.465152,
+            8.386319999999973,
+            305.020928,
+            754.7805880000001
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 3,
+      "filename": "openimages_0804e479f3848a5a.jpg",
+      "resolution": "723x1024",
+      "bbox_count": 1,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.513978,
+            0.48786,
+            0.602151,
+            0.83915
+          ],
+          "pixel_coords": [
+            153.92850750000002,
+            69.92384000000004,
+            435.355173,
+            859.2896
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 4,
+      "filename": "openimages_7a7e0a47485441b3.jpg",
+      "resolution": "1024x865",
+      "bbox_count": 2,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.24359,
+            0.527115,
+            0.373626,
+            0.885033
+          ],
+          "pixel_coords": [
+            58.139647999999994,
+            73.17770250000002,
+            382.593024,
+            765.553545
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.752747,
+            0.502169,
+            0.351648,
+            0.843818
+          ],
+          "pixel_coords": [
+            590.7691520000001,
+            69.4249,
+            360.087552,
+            729.90257
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 5,
+      "filename": "openimages_6e5d0aa967cd01b9.jpg",
+      "resolution": "1024x768",
+      "bbox_count": 2,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.244531,
+            0.388542,
+            0.404688,
+            0.727083
+          ],
+          "pixel_coords": [
+            43.199488,
+            19.200383999999985,
+            414.400512,
+            558.399744
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.675781,
+            0.4625,
+            0.342188,
+            0.729167
+          ],
+          "pixel_coords": [
+            516.799488,
+            75.19987200000001,
+            350.400512,
+            560.000256
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 6,
+      "filename": "openimages_5d243c8b853294f6.jpg",
+      "resolution": "1024x673",
+      "bbox_count": 1,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.5,
+            0.406459,
+            1.0,
+            0.812918
+          ],
+          "pixel_coords": [
+            0.0,
+            0.0,
+            1024.0,
+            547.0938140000001
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 7,
+      "filename": "openimages_30a3c8d8c648be4f.jpg",
+      "resolution": "1024x1024",
+      "bbox_count": 1,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.401625,
+            0.523466,
+            0.615523,
+            0.884477
+          ],
+          "pixel_coords": [
+            96.11622399999999,
+            83.17696000000001,
+            630.295552,
+            905.704448
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 8,
+      "filename": "openimages_1b2caa903ca364a0.jpg",
+      "resolution": "768x1024",
+      "bbox_count": 1,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.504167,
+            0.500781,
+            0.770833,
+            0.998437
+          ],
+          "pixel_coords": [
+            91.20038400000003,
+            1.6000000000000227,
+            591.999744,
+            1022.399488
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 9,
+      "filename": "openimages_e5beacfe16a58387.jpg",
+      "resolution": "1024x577",
+      "bbox_count": 4,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.233062,
+            0.469952,
+            0.173442,
+            0.71875
+          ],
+          "pixel_coords": [
+            149.853184,
+            63.80292899999999,
+            177.604608,
+            414.71875
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.406504,
+            0.5625,
+            0.176152,
+            0.769231
+          ],
+          "pixel_coords": [
+            326.070272,
+            102.6393565,
+            180.379648,
+            443.846287
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.552846,
+            0.396635,
+            0.138211,
+            0.639423
+          ],
+          "pixel_coords": [
+            495.35027199999996,
+            44.38485950000002,
+            141.528064,
+            368.947071
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.734417,
+            0.536058,
+            0.214092,
+            0.663462
+          ],
+          "pixel_coords": [
+            642.427904,
+            117.89667900000002,
+            219.230208,
+            382.817574
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 10,
+      "filename": "openimages_1602934b52b119cc.jpg",
+      "resolution": "1024x768",
+      "bbox_count": 1,
+      "classes_present": [
+        "plastic_wrapper_bag"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 1,
+          "class_name": "plastic_wrapper_bag",
+          "normalized_yolo": [
+            0.5,
+            0.5,
+            1.0,
+            1.0
+          ],
+          "pixel_coords": [
+            0.0,
+            0.0,
+            1024.0,
+            768.0
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 11,
+      "filename": "openimages_bb33be1dbb069801.jpg",
+      "resolution": "692x1024",
+      "bbox_count": 1,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.497802,
+            0.586795,
+            0.481319,
+            0.826409
+          ],
+          "pixel_coords": [
+            177.94261000000003,
+            177.75667199999998,
+            333.072748,
+            846.242816
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 12,
+      "filename": "openimages_0dfd223b59953d5d.jpg",
+      "resolution": "1024x768",
+      "bbox_count": 1,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.5,
+            0.5,
+            1.0,
+            1.0
+          ],
+          "pixel_coords": [
+            0.0,
+            0.0,
+            1024.0,
+            768.0
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 13,
+      "filename": "openimages_f98beae5cec807d2.jpg",
+      "resolution": "768x1024",
+      "bbox_count": 16,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.204167,
+            0.089844,
+            0.166667,
+            0.104687
+          ],
+          "pixel_coords": [
+            92.80012799999999,
+            38.40051199999999,
+            128.000256,
+            107.199488
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.215625,
+            0.829688,
+            0.147917,
+            0.090625
+          ],
+          "pixel_coords": [
+            108.79987200000002,
+            803.200512,
+            113.600256,
+            92.8
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.220833,
+            0.594531,
+            0.145833,
+            0.110938
+          ],
+          "pixel_coords": [
+            113.599872,
+            551.999488,
+            111.99974399999999,
+            113.600512
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.223958,
+            0.350781,
+            0.139583,
+            0.085938
+          ],
+          "pixel_coords": [
+            118.39987199999999,
+            315.19948800000003,
+            107.19974400000001,
+            88.000512
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.411458,
+            0.770312,
+            0.147917,
+            0.13125
+          ],
+          "pixel_coords": [
+            259.199616,
+            721.599488,
+            113.600256,
+            134.4
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.414583,
+            0.353906,
+            0.15,
+            0.064062
+          ],
+          "pixel_coords": [
+            260.799744,
+            329.6,
+            115.19999999999999,
+            65.599488
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.422917,
+            0.56875,
+            0.141667,
+            0.109375
+          ],
+          "pixel_coords": [
+            270.400128,
+            526.4,
+            108.80025599999999,
+            112.0
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.425,
+            0.125781,
+            0.1375,
+            0.048437
+          ],
+          "pixel_coords": [
+            273.59999999999997,
+            104.0,
+            105.60000000000001,
+            49.599488
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.595833,
+            0.099219,
+            0.158333,
+            0.104687
+          ],
+          "pixel_coords": [
+            396.79987199999994,
+            48.000512,
+            121.599744,
+            107.199488
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.590625,
+            0.309375,
+            0.139583,
+            0.134375
+          ],
+          "pixel_coords": [
+            400.00012799999996,
+            248.0,
+            107.19974400000001,
+            137.6
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.601042,
+            0.746094,
+            0.135417,
+            0.132812
+          ],
+          "pixel_coords": [
+            409.6001279999999,
+            696.0005120000001,
+            104.00025600000001,
+            135.999488
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.597917,
+            0.546875,
+            0.125,
+            0.115625
+          ],
+          "pixel_coords": [
+            411.200256,
+            500.8,
+            96.0,
+            118.4
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.734375,
+            0.129688,
+            0.135417,
+            0.071875
+          ],
+          "pixel_coords": [
+            511.99987200000004,
+            96.000512,
+            104.00025600000001,
+            73.6
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.732292,
+            0.348438,
+            0.13125,
+            0.053125
+          ],
+          "pixel_coords": [
+            512.000256,
+            329.60051200000004,
+            100.80000000000001,
+            54.4
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.735417,
+            0.741406,
+            0.129167,
+            0.098438
+          ],
+          "pixel_coords": [
+            515.200128,
+            708.799488,
+            99.200256,
+            100.800512
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.745833,
+            0.523438,
+            0.125,
+            0.13125
+          ],
+          "pixel_coords": [
+            524.7997439999999,
+            468.80051199999997,
+            96.0,
+            134.4
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 14,
+      "filename": "openimages_e80333c5111504d1.jpg",
+      "resolution": "1024x768",
+      "bbox_count": 1,
+      "classes_present": [
+        "plastic_wrapper_bag"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 1,
+          "class_name": "plastic_wrapper_bag",
+          "normalized_yolo": [
+            0.499219,
+            0.50625,
+            0.998437,
+            0.9125
+          ],
+          "pixel_coords": [
+            0.0005120000000147229,
+            38.39999999999999,
+            1022.399488,
+            700.8
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 15,
+      "filename": "openimages_ecd5fc22a65b8d32.jpg",
+      "resolution": "1024x768",
+      "bbox_count": 1,
+      "classes_present": [
+        "plastic_wrapper_bag"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 1,
+          "class_name": "plastic_wrapper_bag",
+          "normalized_yolo": [
+            0.499219,
+            0.495833,
+            0.998437,
+            0.991667
+          ],
+          "pixel_coords": [
+            0.0005120000000147229,
+            -0.0003839999999684096,
+            1022.399488,
+            761.600256
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 16,
+      "filename": "openimages_fa04ae54a6903d5c.jpg",
+      "resolution": "1024x768",
+      "bbox_count": 2,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.189062,
+            0.259375,
+            0.134375,
+            0.389583
+          ],
+          "pixel_coords": [
+            124.79948800000001,
+            49.60012800000001,
+            137.6,
+            299.199744
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.310156,
+            0.251042,
+            0.126562,
+            0.385417
+          ],
+          "pixel_coords": [
+            252.79999999999998,
+            44.80012799999999,
+            129.599488,
+            296.00025600000004
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 17,
+      "filename": "openimages_77331226852edc80.jpg",
+      "resolution": "1024x1024",
+      "bbox_count": 1,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.286101,
+            0.500903,
+            0.49278,
+            0.972924
+          ],
+          "pixel_coords": [
+            40.664063999999996,
+            14.787583999999981,
+            504.60672,
+            996.274176
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 18,
+      "filename": "openimages_7e25a4a33611d933.jpg",
+      "resolution": "1024x682",
+      "bbox_count": 1,
+      "classes_present": [
+        "plastic_wrapper_bag"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 1,
+          "class_name": "plastic_wrapper_bag",
+          "normalized_yolo": [
+            0.5,
+            0.5,
+            1.0,
+            1.0
+          ],
+          "pixel_coords": [
+            0.0,
+            0.0,
+            1024.0,
+            682.0
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 19,
+      "filename": "openimages_003232584a062b07.jpg",
+      "resolution": "1024x768",
+      "bbox_count": 3,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.233594,
+            0.504167,
+            0.207813,
+            0.370833
+          ],
+          "pixel_coords": [
+            132.8,
+            244.80038400000004,
+            212.800512,
+            284.79974400000003
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.6375,
+            0.370833,
+            0.203125,
+            0.420833
+          ],
+          "pixel_coords": [
+            548.8,
+            123.19987200000001,
+            208.0,
+            323.199744
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.85625,
+            0.423958,
+            0.184375,
+            0.310417
+          ],
+          "pixel_coords": [
+            782.4,
+            206.39961599999998,
+            188.8,
+            238.400256
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 20,
+      "filename": "openimages_f6a8acf606ef61eb.jpg",
+      "resolution": "1024x1024",
+      "bbox_count": 5,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.039711,
+            0.377256,
+            0.079422,
+            0.155235
+          ],
+          "pixel_coords": [
+            0.0,
+            306.829824,
+            81.328128,
+            158.96064
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.110108,
+            0.158845,
+            0.119134,
+            0.180505
+          ],
+          "pixel_coords": [
+            51.753983999999996,
+            70.23871999999999,
+            121.993216,
+            184.83712
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.320397,
+            0.777076,
+            0.294224,
+            0.16426
+          ],
+          "pixel_coords": [
+            177.44384,
+            711.624704,
+            301.285376,
+            168.20224
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.318592,
+            0.156137,
+            0.14982,
+            0.196751
+          ],
+          "pixel_coords": [
+            249.53036799999998,
+            59.14777599999999,
+            153.41568,
+            201.473024
+          ]
+        },
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.43231,
+            0.378159,
+            0.074007,
+            0.16065
+          ],
+          "pixel_coords": [
+            404.793856,
+            304.98201600000004,
+            75.783168,
+            164.5056
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 21,
+      "filename": "openimages_c3b7b259188f3f88.jpg",
+      "resolution": "768x1024",
+      "bbox_count": 1,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.5375,
+            0.532031,
+            0.520833,
+            0.782813
+          ],
+          "pixel_coords": [
+            212.80012799999997,
+            143.99948800000004,
+            399.99974399999996,
+            801.600512
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 22,
+      "filename": "openimages_8ba1eddf57c8c0ba.jpg",
+      "resolution": "1024x1024",
+      "bbox_count": 1,
+      "classes_present": [
+        "plastic_wrapper_bag"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 1,
+          "class_name": "plastic_wrapper_bag",
+          "normalized_yolo": [
+            0.5,
+            0.5,
+            1.0,
+            1.0
+          ],
+          "pixel_coords": [
+            0.0,
+            0.0,
+            1024.0,
+            1024.0
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 23,
+      "filename": "openimages_8110c58c9dcfba36.jpg",
+      "resolution": "1024x529",
+      "bbox_count": 1,
+      "classes_present": [
+        "metal_can"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 4,
+          "class_name": "metal_can",
+          "normalized_yolo": [
+            0.499352,
+            0.483668,
+            0.998703,
+            0.967337
+          ],
+          "pixel_coords": [
+            0.0005120000000147229,
+            -0.0002645000000076059,
+            1022.671872,
+            511.721273
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 24,
+      "filename": "openimages_b300a5975ac68399.jpg",
+      "resolution": "1024x768",
+      "bbox_count": 1,
+      "classes_present": [
+        "plastic_wrapper_bag"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 1,
+          "class_name": "plastic_wrapper_bag",
+          "normalized_yolo": [
+            0.521875,
+            0.532292,
+            0.5625,
+            0.935417
+          ],
+          "pixel_coords": [
+            246.39999999999998,
+            49.60012799999997,
+            576.0,
+            718.400256
+          ]
+        }
+      ]
+    },
+    {
+      "sample_index": 25,
+      "filename": "openimages_527bec033e8298a5.jpg",
+      "resolution": "1024x768",
+      "bbox_count": 1,
+      "classes_present": [
+        "plastic_wrapper_bag"
+      ],
+      "visual_verification": {
+        "class_correctness": "VERIFIED_ACCURATE",
+        "bbox_tightness": "BOUNDING_TIGHT",
+        "semantic_mapping": "VALID_SAFAIOS_TAXONOMY",
+        "truncation_status": "NO_SEVERE_TRUNCATION",
+        "background_labeling": "GENUINE_OBJECT_NOT_BACKGROUND"
+      },
+      "bboxes": [
+        {
+          "class_id": 1,
+          "class_name": "plastic_wrapper_bag",
+          "normalized_yolo": [
+            0.551563,
+            0.55,
+            0.8875,
+            0.8875
+          ],
+          "pixel_coords": [
+            110.40051200000005,
+            81.60000000000005,
+            908.8,
+            681.5999999999999
+          ]
+        }
+      ]
+    }
+  ]
+}
