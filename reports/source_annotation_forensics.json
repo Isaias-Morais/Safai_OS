@@ -1,0 +1,72 @@
+{
+  "forensic_audit_version": "1.0",
+  "audit_date": "2026-10-08",
+  "project": "SafaiOS",
+  "audited_sources": [
+    {
+      "source_name": "MJU-Waste",
+      "canonical_repository": "https://github.com/mju-waste/mju-waste",
+      "canonical_paper": "Sensors 2020 (Wang et al., 'A Multi-Level Approach to Waste Object Segmentation')",
+      "actual_annotation_type": "Binary Instance & Semantic Masks (COCO JSON / Pascal VOC XML)",
+      "exact_class_inventory": ["waste"],
+      "class_count": 1,
+      "is_multi_class": false,
+      "contains_material_labels": false,
+      "claimed_mappings_audited": {
+        "glass_bottle": "INVALID SOURCE CLAIM — Category 'glass_bottle' does NOT exist in canonical MJU-Waste annotations.",
+        "paper_box": "INVALID SOURCE CLAIM — Category 'paper_box' does NOT exist in canonical MJU-Waste annotations.",
+        "plastic_bottle": "INVALID SOURCE CLAIM — Category 'plastic_bottle' does NOT exist in canonical MJU-Waste annotations."
+      },
+      "code_license": "MIT",
+      "dataset_license": "CC BY 4.0 Academic",
+      "domain": "tabletop indoor consumer waste",
+      "safaios_training_eligibility": "NOT_ELIGIBLE_FOR_5_CLASS_DETECTOR",
+      "research_utility": "RESEARCH_USEFUL_FOR_GENERIC_WASTE_SEGMENTATION",
+      "final_approval_status": "VERIFIED_REJECTED",
+      "verdict": "MJU-Waste is a single-class binary waste dataset (waste vs background). Mapping generic 'waste' to material classes (plastic_bottle, glass_bottle_container, paper_cardboard) would be label fabrication. Explicitly rejected for 5-class SafaiOS detection training."
+    },
+    {
+      "source_name": "Open Images V7",
+      "canonical_repository": "https://storage.googleapis.com/openimages/web/index.html",
+      "canonical_paper": "Open Images V7 (Google Research)",
+      "actual_annotation_type": "Bounding Boxes (XMin, XMax, YMin, YMax)",
+      "exact_class_inventory": ["602 boxable classes"],
+      "class_count": 602,
+      "is_multi_class": true,
+      "contains_material_labels": true,
+      "approved_mappings": {
+        "/m/05gqfk (Plastic bag)": "plastic_wrapper_bag (HIGH confidence)",
+        "/m/02jnhm (Tin can)": "metal_can (HIGH confidence)"
+      },
+      "rejected_or_ambiguous_mappings": {
+        "/m/04dr76w (Bottle)": "NOT SUPPORTED — Generic 'Bottle' mixes plastic, glass, and metal without material sub-tags.",
+        "/m/025dyy (Box)": "NOT SUPPORTED — Generic 'Box' mixes wood, plastic, and cardboard without material sub-tags.",
+        "/m/02pv19 (Stop sign)": "VERIFIED_REJECTED — Stop sign is not paper/cardboard."
+      },
+      "code_license": "Apache 2.0",
+      "dataset_license": "CC BY 2.0 (Images) / CC BY 4.0 (Annotations)",
+      "domain": "real-world web outdoor/indoor scenes",
+      "safaios_training_eligibility": "ELIGIBLE_FOR_APPROVED_MIDS_ONLY",
+      "research_utility": "HIGH",
+      "final_approval_status": "VERIFIED_APPROVED",
+      "verdict": "Approved strictly for /m/05gqfk and /m/02jnhm. Ambiguous material classes rejected."
+    },
+    {
+      "source_name": "ZeroWaste Dataset",
+      "canonical_repository": "http://ai.bu.edu/zerowaste/",
+      "canonical_paper": "CVPR 2022 / Boston University",
+      "actual_annotation_type": "COCO Bounding Boxes & Instance Masks",
+      "exact_class_inventory": ["cardboard_paper", "glass_container", "plastic_bottle", "metal_can"],
+      "class_count": 4,
+      "is_multi_class": true,
+      "contains_material_labels": true,
+      "code_license": "MIT",
+      "dataset_license": "CC BY-NC 4.0 (Non-Commercial)",
+      "domain": "industrial conveyor belt sorting facility",
+      "safaios_training_eligibility": "REQUIRES_REVIEW_FOR_COMMERCIAL_USE",
+      "research_utility": "HIGH",
+      "final_approval_status": "REQUIRES_REVIEW",
+      "verdict": "CC BY-NC 4.0 Non-Commercial release requires review before production commercial ingestion."
+    }
+  ]
+}
