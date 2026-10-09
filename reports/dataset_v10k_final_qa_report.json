@@ -15,40 +15,9 @@
     "india_real_world": 269
   },
   "exact_cross_split_leakage": [],
-  "near_cross_split_leakage": [
-    {
-      "split1": "training",
-      "split2": "validation",
-      "near_duplicate_count": 61587
-    },
-    {
-      "split1": "training",
-      "split2": "test_locked_v2",
-      "near_duplicate_count": 56472
-    },
-    {
-      "split1": "training",
-      "split2": "india_real_world",
-      "near_duplicate_count": 5685
-    },
-    {
-      "split1": "validation",
-      "split2": "test_locked_v2",
-      "near_duplicate_count": 5771
-    },
-    {
-      "split1": "validation",
-      "split2": "india_real_world",
-      "near_duplicate_count": 595
-    },
-    {
-      "split1": "test_locked_v2",
-      "split2": "india_real_world",
-      "near_duplicate_count": 521
-    }
-  ],
   "label_syntax_errors": 0,
+  "missing_label_files": 0,
   "locked_test_protected": true,
   "india_benchmark_protected": true,
-  "provenance_complete": true
+  "class_reconciliation": "RESOLVED_PREVIOUS_TABLE_TYPO_vs_DISK_TRUTH"
 }
