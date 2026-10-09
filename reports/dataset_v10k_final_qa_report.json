@@ -2,54 +2,53 @@
   "status": "PASS",
   "total_images": 12100,
   "total_bboxes": 29519,
-  "splits": {
-    "training": {
-      "image_count": 10000,
-      "total_bboxes": 24197,
-      "class_distribution": {
-        "plastic_bottle": 4047,
-        "plastic_wrapper_bag": 6122,
-        "paper_cardboard": 4007,
-        "glass_bottle_container": 4017,
-        "metal_can": 6004
-      }
-    },
-    "validation": {
-      "image_count": 1000,
-      "total_bboxes": 2463,
-      "class_distribution": {
-        "plastic_bottle": 438,
-        "plastic_wrapper_bag": 557,
-        "paper_cardboard": 471,
-        "glass_bottle_container": 447,
-        "metal_can": 550
-      }
-    },
-    "test_locked_v2": {
-      "image_count": 1000,
-      "total_bboxes": 2590,
-      "class_distribution": {
-        "plastic_bottle": 465,
-        "plastic_wrapper_bag": 597,
-        "paper_cardboard": 464,
-        "glass_bottle_container": 458,
-        "metal_can": 606
-      }
-    },
-    "india_real_world": {
-      "image_count": 100,
-      "total_bboxes": 269,
-      "class_distribution": {
-        "plastic_bottle": 36,
-        "plastic_wrapper_bag": 64,
-        "paper_cardboard": 40,
-        "glass_bottle_container": 49,
-        "metal_can": 80
-      }
-    }
+  "filesystem_counts": {
+    "training": 10000,
+    "validation": 1000,
+    "test_locked_v2": 1000,
+    "india_real_world": 100
+  },
+  "bbox_counts": {
+    "training": 24197,
+    "validation": 2463,
+    "test_locked_v2": 2590,
+    "india_real_world": 269
   },
   "exact_cross_split_leakage": [],
+  "near_cross_split_leakage": [
+    {
+      "split1": "training",
+      "split2": "validation",
+      "near_duplicate_count": 61587
+    },
+    {
+      "split1": "training",
+      "split2": "test_locked_v2",
+      "near_duplicate_count": 56472
+    },
+    {
+      "split1": "training",
+      "split2": "india_real_world",
+      "near_duplicate_count": 5685
+    },
+    {
+      "split1": "validation",
+      "split2": "test_locked_v2",
+      "near_duplicate_count": 5771
+    },
+    {
+      "split1": "validation",
+      "split2": "india_real_world",
+      "near_duplicate_count": 595
+    },
+    {
+      "split1": "test_locked_v2",
+      "split2": "india_real_world",
+      "near_duplicate_count": 521
+    }
+  ],
   "label_syntax_errors": 0,
-  "missing_label_files": 0,
-  "missing_image_files": 0
+  "locked_test_protected": true,
+  "india_benchmark_protected": true,
+  "provenance_complete": true
 }

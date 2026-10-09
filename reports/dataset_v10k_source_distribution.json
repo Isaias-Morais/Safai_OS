@@ -1,0 +1,45 @@
+{
+  "dataset_name": "safaios_dataset_v10k",
+  "total_images": 12100,
+  "splits": {
+    "training": {
+      "total_images": 10000,
+      "by_source": {
+        "OpenImages_V7_Approved": 5009,
+        "TACO_Extended": 4991
+      },
+      "by_license": {
+        "CC BY 4.0": 10000
+      }
+    },
+    "validation": {
+      "total_images": 1000,
+      "by_source": {
+        "TACO_Extended": 515,
+        "OpenImages_V7_Approved": 485
+      },
+      "by_license": {
+        "CC BY 4.0": 1000
+      }
+    },
+    "test_locked_v2": {
+      "total_images": 1000,
+      "by_source": {
+        "OpenImages_V7_Approved": 515,
+        "TACO_Extended": 485
+      },
+      "by_license": {
+        "CC BY 4.0": 1000
+      }
+    },
+    "india_real_world": {
+      "total_images": 100,
+      "by_source": {
+        "WasteBags_Urban_India": 100
+      },
+      "by_license": {
+        "SafaiOS Proprietary": 100
+      }
+    }
+  }
+}

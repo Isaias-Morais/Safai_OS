@@ -1,0 +1,74 @@
+{
+  "dataset_name": "safaios_dataset_v10k",
+  "total_bboxes": 29519,
+  "splits": {
+    "training": {
+      "total_bboxes": 24197,
+      "by_class": {
+        "plastic_bottle": 4047,
+        "plastic_wrapper_bag": 6122,
+        "paper_cardboard": 4007,
+        "glass_bottle_container": 4017,
+        "metal_can": 6004
+      },
+      "percentage_by_class": {
+        "plastic_bottle": 16.73,
+        "plastic_wrapper_bag": 25.3,
+        "paper_cardboard": 16.56,
+        "glass_bottle_container": 16.6,
+        "metal_can": 24.81
+      }
+    },
+    "validation": {
+      "total_bboxes": 2463,
+      "by_class": {
+        "plastic_bottle": 438,
+        "plastic_wrapper_bag": 557,
+        "paper_cardboard": 471,
+        "glass_bottle_container": 447,
+        "metal_can": 550
+      },
+      "percentage_by_class": {
+        "plastic_bottle": 17.78,
+        "plastic_wrapper_bag": 22.61,
+        "paper_cardboard": 19.12,
+        "glass_bottle_container": 18.15,
+        "metal_can": 22.33
+      }
+    },
+    "test_locked_v2": {
+      "total_bboxes": 2590,
+      "by_class": {
+        "plastic_bottle": 465,
+        "plastic_wrapper_bag": 597,
+        "paper_cardboard": 464,
+        "glass_bottle_container": 458,
+        "metal_can": 606
+      },
+      "percentage_by_class": {
+        "plastic_bottle": 17.95,
+        "plastic_wrapper_bag": 23.05,
+        "paper_cardboard": 17.92,
+        "glass_bottle_container": 17.68,
+        "metal_can": 23.4
+      }
+    },
+    "india_real_world": {
+      "total_bboxes": 269,
+      "by_class": {
+        "plastic_bottle": 36,
+        "plastic_wrapper_bag": 64,
+        "paper_cardboard": 40,
+        "glass_bottle_container": 49,
+        "metal_can": 80
+      },
+      "percentage_by_class": {
+        "plastic_bottle": 13.38,
+        "plastic_wrapper_bag": 23.79,
+        "paper_cardboard": 14.87,
+        "glass_bottle_container": 18.22,
+        "metal_can": 29.74
+      }
+    }
+  }
+}
