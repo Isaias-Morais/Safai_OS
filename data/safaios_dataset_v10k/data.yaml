@@ -1,5 +1,5 @@
 # SafaiOS Dataset v10k — Official Benchmark Training Dataset Configuration
-path: c:/Users/Vicky Patel/Desktop/1st Year/Safai/data/safaios_dataset_v10k
+path: data/safaios_dataset_v10k
 train: training/images
 val: validation/images
 test: test_locked_v2/images
