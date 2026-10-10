@@ -1,105 +1,34 @@
 {
   "experiment_id": "SAFAIOS-E001-YOLO11S-V10K",
-  "experiment_name": "safaios_yolo11s_v10k_baseline",
+  "experiment_name": "safaios_yolo11s_v10k_img768",
   "dataset_version": "safaios_dataset_v10k",
   "dataset_config": "data/safaios_dataset_v10k/data.yaml",
   "model_initialization": "yolo11s.pt",
   "parameters": {
-    "imgsz": 640,
+    "imgsz": 768,
     "batch_size": 16,
     "epochs": 100,
     "seed": 42,
-    "optimizer": "auto (AdamW)",
     "device": "0",
-    "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU (8GB VRAM)"
-  },
-  "dataset_split_counts": {
-    "training": {
-      "images": 10000,
-      "bounding_boxes": 24197
-    },
-    "validation": {
-      "images": 1000,
-      "bounding_boxes": 2463
-    },
-    "locked_test": {
-      "images": 1000,
-      "bounding_boxes": 2590,
-      "evaluated": false
-    },
-    "india_real_world": {
-      "images": 100,
-      "bounding_boxes": 269,
-      "evaluated": false
-    }
+    "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU"
   },
   "execution": {
-    "total_completed_epochs": 100,
-    "best_epoch": 62,
-    "best_checkpoint": "runs/detect/runs/safaios/safaios_yolo11s_v10k_baseline/weights/best.pt",
-    "last_checkpoint": "runs/detect/runs/safaios/safaios_yolo11s_v10k_baseline/weights/last.pt",
-    "inference_speed_ms_per_image": {
-      "preprocess": 1.4,
-      "inference": 5.9,
-      "postprocess": 2.3,
-      "total_latency_ms": 9.6,
-      "throughput_fps": 104.2
-    }
+    "start_time": "2026-10-10 18:29:45",
+    "duration": "3h 15m 45s",
+    "completed_epochs": 100,
+    "best_epoch": 87,
+    "best_weights": "runs/detect/runs/detect/runs/safaios/safaios_yolo11s_v10k_img768/weights/best.pt",
+    "last_weights": "runs/detect/runs/detect/runs/safaios/safaios_yolo11s_v10k_img768/weights/last.pt"
   },
   "validation_metrics": {
-    "overall": {
-      "precision": 0.9822,
-      "recall": 0.9824,
-      "map50": 0.9944,
-      "map50_95": 0.9840
-    },
-    "per_class": {
-      "plastic_bottle": {
-        "class_id": 0,
-        "instances": 438,
-        "precision": 0.9840,
-        "recall": 0.9840,
-        "map50": 0.9950,
-        "map50_95": 0.9824
-      },
-      "plastic_wrapper_bag": {
-        "class_id": 1,
-        "instances": 557,
-        "precision": 0.9840,
-        "recall": 0.9800,
-        "map50": 0.9940,
-        "map50_95": 0.9859
-      },
-      "paper_cardboard": {
-        "class_id": 2,
-        "instances": 471,
-        "precision": 0.9760,
-        "recall": 0.9870,
-        "map50": 0.9940,
-        "map50_95": 0.9842
-      },
-      "glass_bottle_container": {
-        "class_id": 3,
-        "instances": 447,
-        "precision": 0.9910,
-        "recall": 0.9810,
-        "map50": 0.9950,
-        "map50_95": 0.9841
-      },
-      "metal_can": {
-        "class_id": 4,
-        "instances": 550,
-        "precision": 0.9760,
-        "recall": 0.9800,
-        "map50": 0.9940,
-        "map50_95": 0.9837
-      }
-    }
+    "precision": 0.9939,
+    "recall": 0.9928,
+    "map50": 0.9949,
+    "map50_95": 0.9887
   },
   "isolation_status": {
     "test_locked_v2_evaluated": false,
     "india_real_world_evaluated": false
   },
-  "status": "PHASE_3_EXPERIMENT_001_COMPLETE",
-  "result_tag": "YOLO11s BASELINE ESTABLISHED"
+  "status": "PHASE_3_EXPERIMENT_001_COMPLETE"
 }

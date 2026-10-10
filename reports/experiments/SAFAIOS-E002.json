@@ -1,0 +1,51 @@
+{
+  "experiment_id": "SAFAIOS-E002-YOLO11S-768",
+  "reference_experiment": "SAFAIOS-E001-YOLO11S-V10K",
+  "experiment_name": "safaios_yolo11s_v10k_img768",
+  "dataset_version": "safaios_dataset_v10k",
+  "dataset_config": "data/safaios_dataset_v10k/data.yaml",
+  "model_initialization": "yolo11s.pt",
+  "parameters": {
+    "imgsz": 768,
+    "batch_size": 16,
+    "epochs": 100,
+    "seed": 42,
+    "device": "0",
+    "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "workers": 4,
+    "optimizer_resolved": "MuSGD(lr=0.01, momentum=0.937)"
+  },
+  "execution": {
+    "duration": "3h 15m 45s",
+    "completed_epochs": 100,
+    "best_epoch": 87,
+    "best_weights": "runs/detect/runs/detect/runs/safaios/safaios_yolo11s_v10k_img768/weights/best.pt",
+    "best_weights_sha256": "8bd30b05a0b4a84d95c5e71f213b967d255144a8fe57791ef110b920fc86d073",
+    "last_weights": "runs/detect/runs/detect/runs/safaios/safaios_yolo11s_v10k_img768/weights/last.pt",
+    "last_weights_sha256": "38c7e9872d2622adb03a73980b00ca81435c27417eb434e7782091094efe742d"
+  },
+  "validation_metrics": {
+    "precision": 0.9940,
+    "recall": 0.9930,
+    "map50": 0.9950,
+    "map50_95": 0.9890,
+    "per_class": {
+      "plastic_bottle": {"precision": 0.995, "recall": 0.993, "map50": 0.995, "map50_95": 0.990},
+      "plastic_wrapper_bag": {"precision": 0.996, "recall": 0.987, "map50": 0.995, "map50_95": 0.988},
+      "paper_cardboard": {"precision": 0.997, "recall": 0.998, "map50": 0.995, "map50_95": 0.990},
+      "glass_bottle_container": {"precision": 0.989, "recall": 0.993, "map50": 0.995, "map50_95": 0.988},
+      "metal_can": {"precision": 0.992, "recall": 0.993, "map50": 0.995, "map50_95": 0.988}
+    }
+  },
+  "comparison_vs_e001_baseline": {
+    "e001_frozen_checkpoint": {"precision": 0.9822, "recall": 0.9824, "map50": 0.9944, "map50_95": 0.9840},
+    "e002_768px_checkpoint": {"precision": 0.9940, "recall": 0.9930, "map50": 0.9950, "map50_95": 0.9890},
+    "delta": {"precision": "+1.18%", "recall": "+1.06%", "map50": "+0.06%", "map50_95": "+0.50%"}
+  },
+  "isolation_status": {
+    "test_locked_v2_evaluated": false,
+    "india_real_world_evaluated": false
+  },
+  "recommendation": "RETAIN 768 Resolution for future controlled experiments",
+  "status": "EXPERIMENT 002 COMPLETE"
+}
