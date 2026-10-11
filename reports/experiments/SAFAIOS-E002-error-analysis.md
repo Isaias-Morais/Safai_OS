@@ -22,14 +22,18 @@ The analysis was conducted under strict protocol:
 
 ### Core Discoveries:
 1. **Dramatic False Positive Reduction:** E002 cut total operational false positives by **73.3%** (from 60 in E001 down to 16 in E002). Background false alarms (hallucinating trash on non-waste pavement, curbs, or foliage) dropped by **82.4%** (from 51 down to 9).
-2. **Evaluation of the Small-Object Hypothesis:**
+2. **Per-Class Precision Nuance:** Overall class-averaged precision improved by +1.17% (from 98.22% to 99.39%), with precision improving in 4 of 5 classes. However, `glass_bottle_container` precision slightly declined from **99.10%** in E001 to **98.91%** in E002 (-0.19%). Conversely, recall and mAP@50–95 improved across **all five classes**.
+3. **Evaluation of the Small-Object Hypothesis:**
    - Under standard COCO absolute small-object threshold (`area < 32^2 px` in 640x640 normalized space, or `area_norm < 0.0025`), the validation set contains **0** objects (minimum normalized area is 0.0083). Thus, under strict COCO terminology, the small-object claim cannot be established.
    - When stratified by dataset-relative tiers (`area_norm < 0.025`, lower quartile of SafaiOS dataset): E002 improved recall from **98.02% (494/504)** to **98.41% (496/504)** (+0.40%), recovering 4 small/distant items completely missed by E001.
-3. **Primary Root Failure Mode Identified: Overlapping Objects:**
-   - Isolated objects achieve near-perfect detection: **99.90% recall** (1,906 / 1,908 TP; only 2 FN).
-   - Overlapping objects (objects with pairwise IoU $\ge$ 0.1) suffer from reduced recall: **97.12% recall** (539 / 555 TP; **16 FN**).
-   - **Crucially: 16 out of 18 (88.9%) of all remaining False Negatives in E002 occur on overlapping objects.**
-   - In piles of street waste, overlapping items are partially occluded; without overlap/blend augmentation, standard convolutional heads fail to regress separate bounding boxes.
+4. **Ground-Truth Bounding-Box-Overlap Stratum (Geometric Proxy):**
+   - Objects with pairwise bounding-box IoU $< 0.1$ achieved near-perfect detection: **99.90% recall** (1,906 / 1,908 TP; only 2 FN).
+   - In contrast, objects in the **ground-truth bounding-box-overlap stratum** (pairwise IoU $\ge 0.1$) exhibited reduced recall: **97.12% recall** (539 / 555 TP; **16 FN**).
+   - **Crucially: 16 out of 18 (88.9%) of all remaining False Negatives in E002 occur within this overlapping-box stratum.**
+   - *Methodological Note:* Pairwise 2D bounding-box IoU $\ge 0.1$ serves strictly as a **geometric proxy**, not direct physical proof of 3D physical occlusion or mechanical causation.
+5. **Metric Provenance & Reconciliation:**
+   - The canonical official validation performance of the frozen E002 checkpoint (`best.pt`, SHA256: `8bd30b05a0b4a84d95c5e71f213b967d255144a8fe57791ef110b920fc86d073`) evaluated on the validation split is **mAP@50–95 = 98.81%** (exact float: `0.9880925887293113`), Precision = 99.39%, Recall = 99.28%, mAP@50 = 99.49%.
+   - E002's earlier 98.90% figure was rounded from an intermediate epoch log (epoch 87 logged `mAP50-95(B) = 0.98867`, displayed as `0.989` in earlier summary tables), whereas 98.81% (`0.9880925887293113`) is the directly validated metric obtained by running `model.val(data=..., split='val', imgsz=768)` on the frozen selected `best.pt` checkpoint. The difference reflects the distinction between an intermediate in-training epoch evaluation log and the standalone post-training validation of the saved checkpoint weights, rather than arithmetic rounding alone.
 
 ---
 
@@ -72,6 +76,15 @@ Both models evaluated on `data/safaios_dataset_v10k/validation/images` (`split='
 
 ## 3. Operational Threshold Error Matching (`conf=0.25`, `iou=0.6`)
 
+### 3.1 Methodological Distinction: Official vs. Operational Metrics
+- **Official Metrics (Section 2):** Derived from standard `model.val()`:
+  - **mAP (mAP@50 and mAP@50–95):** Area under the Precision-Recall curve computed across multi-threshold IoU levels (COCO standard IoU 0.50:0.95:0.05).
+  - **Official Summary Precision & Recall:** Point estimates evaluated at the optimal confidence threshold that maximizes the F1 score on the validation curve, macro-averaged across classes (`val.box.mp` and `val.box.mr`).
+- **Operational Metrics (Section 3):** Computed at a fixed operational deployment threshold (`conf=0.25`, NMS `iou=0.60`, matching threshold `iou=0.50`) via greedy bipartite one-to-one matching between predictions and ground-truth bounding boxes. Operational metrics reflect discrete deployment counts and operational rates:
+  - $\text{Operational Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}} = \frac{2445}{2445 + 16} = 99.35\%$
+  - $\text{Operational Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}} = \frac{2445}{2445 + 18} = 99.27\%$
+  - $\text{Operational F1} = 2 \times \frac{\text{Prec} \times \text{Rec}}{\text{Prec} + \text{Rec}} = 99.31\%$
+
 Using standard deployment inference parameters (`conf=0.25`, `iou=0.6`, matching threshold IoU = 0.5):
 
 | Error Category | E001 Baseline (640px) | E002 Ablation (768px) | Change | Interpretation |
@@ -84,8 +97,9 @@ Using standard deployment inference parameters (`conf=0.25`, `iou=0.6`, matching
 | ↳ **Class Confusion FP** | 0 | **1** | +1 | 1 metal can confused with plastic wrapper |
 | **Operational Precision** | 97.60% | **99.35%** | **+1.75%** | Much cleaner predictions |
 | **Operational Recall** | 99.15% | **99.27%** | **+0.12%** | Near complete coverage |
+| **Operational F1** | 98.37% | **99.31%** | **+0.94%** | Balanced operational gain |
 
-### 3.1 Confusion Matrix (E002 @ 768px)
+### 3.2 Confusion Matrix (E002 @ 768px)
 
 Columns = Predicted Classes (0..4, Background=5); Rows = Ground Truth Classes (0..4, Background=5):
 
@@ -133,19 +147,19 @@ We investigated object size using two distinct definitions:
 
 *Dense scenes exhibit almost double the miss rate of sparse scenes.*
 
-### 4.3 Object Overlap Stratification (The Critical Bottleneck)
+### 4.3 Ground-Truth Bounding-Box-Overlap Stratum (Geometric Proxy)
 
-We measured the maximum pairwise IoU of each ground-truth bounding box with all other ground-truth bounding boxes in the same image:
+We measured the maximum pairwise 2D IoU of each ground-truth bounding box with all other ground-truth bounding boxes within the same image:
 
-| Overlap Category | Pairwise IoU | Total GT Boxes | E001 Recall | E002 Recall | E002 Missed Objects |
+| Overlap Stratum | Pairwise IoU | Total GT Boxes | E001 Recall | E002 Recall | E002 Missed Objects |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **Isolated Objects** | $< 0.1$ | 1,908 | **100.0%** (1,908/1,908) | **99.90%** (1,906/1,908) | 2 |
-| **Overlapping Objects** | $\ge 0.1$ | 555 | 96.22% (534/555) | **97.12%** (539/555) | **16** |
+| **Ground-Truth Bounding-Box-Overlap Stratum** | $\ge 0.1$ | 555 | 96.22% (534/555) | **97.12%** (539/555) | **16** |
 
 > [!CRITICAL]
 > **Key Finding:**  
-> **16 out of 18 (88.9%) of all remaining False Negatives in E002 occur on overlapping objects.**  
-> When waste items overlap (cluttered piles, crushed cans beneath plastic wrappers), the model either merges adjacent boxes or standard NMS suppresses one of the instances.
+> **16 out of 18 (88.9%) of all remaining False Negatives in E002 occur within the ground-truth bounding-box-overlap stratum.**  
+> *Methodological Caveat:* Pairwise bounding-box IoU $\ge 0.1$ is an empirical **geometric proxy** based on planar bounding-box overlap, **not proof of physical 3D occlusion or mechanical causation**. While overlapping 2D boxes frequently correlate with visual clutter and partial occlusion in street scenes, the metric strictly measures bounding-box intersection.
 
 ---
 
@@ -168,27 +182,38 @@ Visualizations were rendered with fixed random seed `seed=42` and stored in `rep
 ## 6. Synthesis & Recommended Next Step (Experiment 003)
 
 ### Why 768px Must Be Retained
-E002 at 768px is strictly superior to E001 across every quantitative metric:
-- +1.17% Precision
-- +1.04% Recall
-- +0.41% mAP@50-95
+E002 at 768px demonstrated marked improvements over the E001 baseline:
+- +1.17% overall Precision (improving in 4 of 5 classes; glass container precision saw a minor shift from 99.10% to 98.91% while recall and mAP@50-95 improved across all 5 classes)
+- +1.04% overall Recall (improving across all 5 classes)
+- +0.41% mAP@50-95 (improving across all 5 classes)
 - 73.3% reduction in False Positives (82.4% reduction in background false alarms)
 - Better feature resolution for small/distant waste items (+0.40% recall in lower size tier).
 
 ### What Is the Remaining Bottleneck?
-The remaining error surface is **overwhelmingly dominated by overlapping/occluded waste objects (88.9% of all misses)**.
+The remaining error surface is **concentrated in the ground-truth bounding-box-overlap stratum (88.9% of all misses)**.
 Both E001 and E002 were trained with **`mixup: 0.0`** and **`copy_paste: 0.0`**. Mosaic augmentation stitches 4 distinct scenes into 4 quadrants, but does NOT blend or superimpose items.
 
 ### Recommended Single Controlled Intervention for Experiment 003:
-**Introduce MixUp Augmentation (`mixup: 0.15`)**
+**Test MixUp Augmentation (`mixup: 0.15`) as an Empirical Intervention**
 
-- **Hypothesis:** By blending image pairs during training, MixUp creates synthetic overlapping instances with semi-transparent boundaries. This directly penalizes the detector for suppressing overlapping features and forces the network to learn feature representations that resolve overlapping, co-located waste items.
+- **Empirical Hypothesis (Testable Intervention, Not a Guaranteed Fix):**  
+  MixUp is framed as a **testable empirical hypothesis**, not a guaranteed fix for overlap errors. By linearly blending training image pairs, MixUp creates synthetic overlapping instances with semi-transparent boundaries. Whether this synthetic augmentation translates to improved discrimination of real occluded waste instances requires rigorous empirical verification against the frozen validation split.
+- **Ultralytics Augmentation Semantics & Scheduling:**  
+  In the installed version (`ultralytics 8.4.174`):
+  - `mixup=0.15` indicates an independent **15% probability per sample batch** of applying MixUp with another randomly drawn training image.
+  - When combined with `close_mosaic=10` over 100 epochs, MixUp is active during **epochs 1 to 90**.
+  - In **epochs 91 to 100**, `close_mosaic` triggers `dataset.close_mosaic()`, which sets `hyp.mixup = 0.0` and `hyp.mosaic = 0.0`. Augmentations are disabled for the final 10 epochs, ensuring the network converges and calibrates on natural, unmixed imagery.
 - **Controlled Configuration:**
   - Hold resolution constant at **768px** (the validated E002 configuration).
   - Hold architecture constant at **YOLO11s** (`yolo11s.pt` initialization).
   - Hold batch size (`16`), epochs (`100`), seed (`42`), optimizer (`MuSGD`), and dataset constant.
   - Change **only one variable:** `mixup = 0.15` (from `0.0`).
-- **Success Criterion:** Reduce overlapping false negatives from 16 to $\le 10$, raising overlapping recall from 97.12% to $\ge 98.2\%$, while improving overall mAP@50-95 from 98.81% to $\ge 98.95\%$.
+- **Predefined Success Criteria:**
+  1. Overlapping-object recall: $\ge 98.20\%$ (from E002 baseline 97.12%)
+  2. Overlapping misses: $\le 10$ (from E002 baseline 16)
+  3. Validation mAP@50–95: $\ge 98.95\%$ (from E002 canonical baseline 98.81%)
+  4. Precision: $\ge 99.20\%$ (guarding against hallucinated blends)
+  5. No per-class mAP@50–95 drop $> 0.5\%$.
 
 ---
 

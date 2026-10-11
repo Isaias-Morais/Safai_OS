@@ -26,12 +26,17 @@ def main():
     parser.add_argument("--project", default="runs/safaios", help="Output project directory")
     parser.add_argument("--name", default="safaios_yolo11s_v10k_baseline", help="Experiment run name")
     parser.add_argument("--resume", action="store_true", help="Resume training from last checkpoint")
+    parser.add_argument("--mixup", type=float, default=0.0, help="MixUp augmentation probability")
+    parser.add_argument("--close_mosaic", type=int, default=10, help="Disable mosaic & mixup in last N epochs")
+    parser.add_argument("--exp_id", default=None, help="Experiment ID for reporting")
     args = parser.parse_args()
 
-    print("=== SAFAIOS MODEL TRAINING ENGINE (PHASE 3, EXPERIMENT 001) ===")
+    print("=== SAFAIOS MODEL TRAINING ENGINE ===")
+    print(f"Experiment ID: {args.exp_id or 'Baseline/Adhoc'}")
     print(f"Model Initialization: {args.model}")
     print(f"Dataset Configuration: {args.data}")
     print(f"Epochs: {args.epochs}, Batch: {args.batch}, ImgSz: {args.imgsz}, Seed: {args.seed}, Device: {args.device}")
+    print(f"MixUp: {args.mixup}, Close Mosaic: {args.close_mosaic}")
 
     # Import PyTorch and Ultralytics
     import torch
@@ -45,6 +50,11 @@ def main():
 
     save_dir = Path(args.project) / args.name
     last_weights = save_dir / "weights" / "last.pt"
+    if not last_weights.exists():
+        nested_last = Path("runs/detect") / args.project / args.name / "weights" / "last.pt"
+        if nested_last.exists():
+            last_weights = nested_last
+            save_dir = nested_last.parent.parent
 
     if args.resume and last_weights.exists():
         print(f"Resuming training from checkpoint: {last_weights}")
@@ -66,7 +76,9 @@ def main():
             workers=4,
             save=True,
             plots=True,
-            val=True
+            val=True,
+            mixup=args.mixup,
+            close_mosaic=args.close_mosaic
         )
 
     end_time = time.time()
@@ -75,7 +87,11 @@ def main():
 
     print(f"\nTraining completed in {duration_str}!")
     
-    save_dir = Path(args.project) / args.name
+    if not (save_dir / "weights" / "best.pt").exists():
+        nested_dir = Path("runs/detect") / args.project / args.name
+        if (nested_dir / "weights" / "best.pt").exists():
+            save_dir = nested_dir
+
     best_weights = save_dir / "weights" / "best.pt"
     last_weights = save_dir / "weights" / "last.pt"
     results_csv = save_dir / "results.csv"
@@ -126,8 +142,11 @@ def main():
     reports_exp_dir = Path("reports/experiments")
     reports_exp_dir.mkdir(parents=True, exist_ok=True)
 
+    exp_id = args.exp_id or "SAFAIOS-E001-YOLO11S-V10K"
+    exp_code = exp_id.split("-")[1] if "-" in exp_id else exp_id
+
     exp_data = {
-        "experiment_id": "SAFAIOS-E001-YOLO11S-V10K",
+        "experiment_id": exp_id,
         "experiment_name": args.name,
         "dataset_version": "safaios_dataset_v10k",
         "dataset_config": args.data,
@@ -138,7 +157,9 @@ def main():
             "epochs": args.epochs,
             "seed": args.seed,
             "device": args.device,
-            "gpu_name": device_name
+            "gpu_name": device_name,
+            "mixup": args.mixup,
+            "close_mosaic": args.close_mosaic
         },
         "execution": {
             "start_time": start_time_str,
@@ -158,23 +179,23 @@ def main():
             "test_locked_v2_evaluated": False,
             "india_real_world_evaluated": False
         },
-        "status": "PHASE_3_EXPERIMENT_001_COMPLETE"
+        "status": f"{exp_id}_COMPLETE"
     }
 
     # Save JSON report
-    json_path = reports_exp_dir / "SAFAIOS-E001.json"
+    json_path = reports_exp_dir / f"{exp_code}.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(exp_data, f, indent=2)
 
     # Save Markdown experiment report
-    md_path = reports_exp_dir / "SAFAIOS-E001.md"
-    md_content = f"""# SafaiOS Experiment Record: SAFAIOS-E001-YOLO11S-V10K
+    md_path = reports_exp_dir / f"{exp_code}.md"
+    md_content = f"""# SafaiOS Experiment Record: {exp_id}
 
-**Experiment ID:** SAFAIOS-E001-YOLO11S-V10K  
+**Experiment ID:** {exp_id}  
 **Experiment Name:** {args.name}  
 **Model Architecture:** YOLO11s (`{args.model}`)  
 **Dataset Version:** `safaios_dataset_v10k` (10,000 training images)  
-**Execution Status:** **PHASE 3 — EXPERIMENT 001 COMPLETE**
+**Execution Status:** **{exp_id} COMPLETE**
 
 ---
 
@@ -195,7 +216,9 @@ def main():
 - **Batch Size:** {args.batch}
 - **Random Seed:** {args.seed}
 - **Device Index:** {args.device}
-- **Optimizer:** `auto` (AdamW)
+- **MixUp:** {args.mixup}
+- **Close Mosaic:** {args.close_mosaic}
+- **Optimizer:** `auto`
 
 ---
 
@@ -218,20 +241,20 @@ def main():
 ## 5. Official Result Status
 
 ```
-PHASE 3 — EXPERIMENT 001 COMPLETE
-YOLO11s BASELINE ESTABLISHED
+{exp_id} COMPLETE
+LOCKED TEST AND INDIA BENCHMARK UNTOUCHED
 ```
 """
     md_path.write_text(md_content, encoding="utf-8")
 
-    # Save master Phase 3 baseline report
-    phase3_report_path = Path("reports/phase3_yolo11s_baseline_report.md")
-    phase3_report_path.write_text(md_content, encoding="utf-8")
+    # Only write phase3 report if this is explicitly E001
+    if exp_id == "SAFAIOS-E001-YOLO11S-V10K":
+        phase3_report_path = Path("reports/phase3_yolo11s_baseline_report.md")
+        phase3_report_path.write_text(md_content, encoding="utf-8")
 
     print(f"\nExperiment records saved to:")
     print(f" - {json_path}")
     print(f" - {md_path}")
-    print(f" - {phase3_report_path}")
 
 if __name__ == "__main__":
     main()

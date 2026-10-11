@@ -1,0 +1,651 @@
+{
+  "experiment_id": "SAFAIOS-E003-YOLO11S-MIXUP",
+  "experiment_name": "safaios_yolo11s_v10k_mixup15",
+  "phase": "Phase 4 - Model Optimization & Controlled Experiments",
+  "execution_date": "2026-10-12 01:01:43",
+  "reference_baseline_id": "SAFAIOS-E001-YOLO11S-V10K",
+  "immediate_predecessor_id": "SAFAIOS-E002-YOLO11S-768",
+  "dataset_split_evaluated": "data/safaios_dataset_v10k/validation",
+  "dataset_config": "data/safaios_dataset_v10k/data.yaml",
+  "environment": {
+    "python": "3.11.17",
+    "pytorch": "2.5.1+cu121",
+    "ultralytics": "8.4.174",
+    "device": "NVIDIA GeForce RTX 4060 Laptop GPU (8GB VRAM)"
+  },
+  "model_architecture": "YOLO11s",
+  "initialization_weights": {
+    "file": "yolo11s.pt",
+    "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5"
+  },
+  "resolved_training_arguments": {
+    "epochs": 100,
+    "batch": 16,
+    "imgsz": 768,
+    "seed": 42,
+    "deterministic": true,
+    "optimizer": "MuSGD",
+    "lr0": 0.01,
+    "momentum": 0.937,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 3,
+    "mixup": 0.15,
+    "close_mosaic": 10
+  },
+  "training_execution_history": {
+    "total_epochs_completed": 100,
+    "resumed_segments": [
+      {
+        "segment": 1,
+        "start_epoch": 1,
+        "end_epoch": 34,
+        "halt_reason": "Transient CUDNN execution failure"
+      },
+      {
+        "segment": 2,
+        "start_epoch": 34,
+        "end_epoch": 37,
+        "halt_reason": "IDE server restart"
+      },
+      {
+        "segment": 3,
+        "start_epoch": 38,
+        "end_epoch": 62,
+        "halt_reason": "CUDA memory pressure OOM"
+      },
+      {
+        "segment": 4,
+        "start_epoch": 63,
+        "end_epoch": 100,
+        "halt_reason": "Completed successfully (100/100 epochs)"
+      }
+    ],
+    "checkpoint_selection_rationale": "Global peak fitness across all 100 epochs occurred at Epoch 50 (fitness 0.98947, mAP50-95 0.98887). Preserved intact across resumes as confirmed by last.pt metadata and results.csv history."
+  },
+  "checkpoints": {
+    "best": {
+      "path": "runs/detect/runs/detect/runs/safaios/safaios_yolo11s_v10k_mixup15/weights/best.pt",
+      "sha256": "61e165e2283f55881293b42dad318b64a34fa87ae83740a09471029df1786952",
+      "size_bytes": 19195731,
+      "selected_epoch": 50,
+      "global_best_fitness": 0.98947
+    },
+    "last": {
+      "path": "runs/detect/runs/detect/runs/safaios/safaios_yolo11s_v10k_mixup15/weights/last.pt",
+      "sha256": "e9e27ad84778c069e5590a9cc0ad6d0450f210b8b03b3eb95c9f452510af4c0a",
+      "size_bytes": 19195731,
+      "final_epoch": 100
+    },
+    "reference_e002_best": {
+      "path": "runs/detect/runs/detect/runs/safaios/safaios_yolo11s_v10k_img768/weights/best.pt",
+      "sha256": "8bd30b05a0b4a84d95c5e71f213b967d255144a8fe57791ef110b920fc86d073",
+      "size_bytes": 19195731
+    },
+    "baseline_e001_best": {
+      "path": "runs/detect/runs/safaios/safaios_yolo11s_v10k_baseline/weights/best.pt",
+      "sha256": "49e9e047fbb04c66244b734623bb4e84abfbab5a3aa9797c375d926919a86737",
+      "size_bytes": 56957912
+    }
+  },
+  "official_metrics": {
+    "precision": 0.9931560083428789,
+    "recall": 0.9909314150295664,
+    "map50": 0.994885179064091,
+    "map50_95": 0.9890538791751358,
+    "per_class": {
+      "plastic_bottle": {
+        "precision": 0.9958314319412335,
+        "recall": 0.9908675799086758,
+        "map50": 0.9949770114942528,
+        "map50_95": 0.9898289505930056
+      },
+      "plastic_wrapper_bag": {
+        "precision": 0.9926337157846826,
+        "recall": 0.9856373429084381,
+        "map50": 0.9946989533850848,
+        "map50_95": 0.9885188232808609
+      },
+      "paper_cardboard": {
+        "precision": 0.9957531322960442,
+        "recall": 0.9956166628188022,
+        "map50": 0.9949576271186441,
+        "map50_95": 0.9886904170155452
+      },
+      "glass_bottle_container": {
+        "precision": 0.9888517063731838,
+        "recall": 0.9921693245542166,
+        "map50": 0.9948651630674642,
+        "map50_95": 0.9895824209488154
+      },
+      "metal_can": {
+        "precision": 0.9927100553192497,
+        "recall": 0.9903661649576998,
+        "map50": 0.9949271402550092,
+        "map50_95": 0.9886487840374514
+      }
+    }
+  },
+  "operational_metrics": {
+    "confidence_threshold": 0.25,
+    "nms_iou_threshold": 0.6,
+    "matching_iou_threshold": 0.5,
+    "ground_truth_count": 2463,
+    "predictions_count": 2460,
+    "tp": 2445,
+    "fn": 18,
+    "fp_total": 15,
+    "fp_background": 10,
+    "fp_localization": 4,
+    "fp_confusion": 1,
+    "precision_operational": 0.9939024390243902,
+    "recall_operational": 0.9926918392204629,
+    "f1_operational": 0.9932967702620353
+  },
+  "stratification": {
+    "by_overlap": {
+      "overlapping": {
+        "ground_truth": 555,
+        "tp": 539,
+        "fn_misses": 16,
+        "recall": 0.9711711711711711
+      },
+      "isolated": {
+        "ground_truth": 1908,
+        "tp": 1906,
+        "fn_misses": 2,
+        "recall": 0.9989517819706499
+      }
+    },
+    "by_dataset_size": {
+      "small_relative": {
+        "ground_truth": 504,
+        "tp": 494,
+        "fn_misses": 10,
+        "recall": 0.9801587301587301
+      },
+      "medium_relative": {
+        "ground_truth": 1196,
+        "tp": 1189,
+        "fn_misses": 7,
+        "recall": 0.9941471571906354
+      },
+      "large_relative": {
+        "ground_truth": 763,
+        "tp": 762,
+        "fn_misses": 1,
+        "recall": 0.9986893840104849
+      }
+    },
+    "by_scene_density": {
+      "single": {
+        "ground_truth": 261,
+        "tp": 261,
+        "fn_misses": 0,
+        "recall": 1.0
+      },
+      "sparse": {
+        "ground_truth": 1250,
+        "tp": 1242,
+        "fn_misses": 8,
+        "recall": 0.9936
+      },
+      "dense": {
+        "ground_truth": 952,
+        "tp": 942,
+        "fn_misses": 10,
+        "recall": 0.9894957983193278
+      }
+    },
+    "by_class": {
+      "plastic_bottle": {
+        "ground_truth": 438,
+        "tp": 436,
+        "fn_misses": 2,
+        "fp": 1,
+        "operational_precision": 0.9977116704805492,
+        "operational_recall": 0.9954337899543378
+      },
+      "plastic_wrapper_bag": {
+        "ground_truth": 557,
+        "tp": 550,
+        "fn_misses": 7,
+        "fp": 2,
+        "operational_precision": 0.9963768115942029,
+        "operational_recall": 0.9874326750448833
+      },
+      "paper_cardboard": {
+        "ground_truth": 471,
+        "tp": 470,
+        "fn_misses": 1,
+        "fp": 2,
+        "operational_precision": 0.9957627118644068,
+        "operational_recall": 0.9978768577494692
+      },
+      "glass_bottle_container": {
+        "ground_truth": 447,
+        "tp": 446,
+        "fn_misses": 1,
+        "fp": 5,
+        "operational_precision": 0.9889135254988913,
+        "operational_recall": 0.9977628635346756
+      },
+      "metal_can": {
+        "ground_truth": 550,
+        "tp": 543,
+        "fn_misses": 7,
+        "fp": 5,
+        "operational_precision": 0.9908759124087592,
+        "operational_recall": 0.9872727272727273
+      }
+    }
+  },
+  "comparison_vs_e002": {
+    "canonical_e002": {
+      "map50_95": 0.9880925887293113,
+      "map50": 0.9948974823781356,
+      "precision": 0.9938867079653775,
+      "recall": 0.9927715739207965,
+      "per_class": {
+        "plastic_bottle": {
+          "precision": 0.9954,
+          "recall": 0.9925,
+          "map50_95": 0.9889
+        },
+        "plastic_wrapper_bag": {
+          "precision": 0.9961,
+          "recall": 0.9874,
+          "map50_95": 0.9885
+        },
+        "paper_cardboard": {
+          "precision": 0.9971,
+          "recall": 0.9979,
+          "map50_95": 0.9886
+        },
+        "glass_bottle_container": {
+          "precision": 0.9891,
+          "recall": 0.9933,
+          "map50_95": 0.9866
+        },
+        "metal_can": {
+          "precision": 0.9917,
+          "recall": 0.9927,
+          "map50_95": 0.9878
+        }
+      },
+      "overlap_stratum": {
+        "gt": 555,
+        "tp": 539,
+        "fn": 16,
+        "recall": 0.9711711711711712
+      },
+      "isolated_stratum": {
+        "gt": 1908,
+        "tp": 1906,
+        "fn": 2,
+        "recall": 0.9989517819706499
+      },
+      "operational": {
+        "gt": 2463,
+        "tp": 2445,
+        "fn": 18,
+        "fp_total": 16,
+        "fp_background": 9,
+        "fp_localization": 6,
+        "fp_confusion": 1,
+        "precision": 0.9934985778138968,
+        "recall": 0.9926918392204629,
+        "f1": 0.9930950832994717
+      },
+      "size_strata": {
+        "small_relative": {
+          "gt": 504,
+          "tp": 496,
+          "fn": 8,
+          "recall": 0.9841269841269841
+        },
+        "medium_relative": {
+          "gt": 1196,
+          "tp": 1187,
+          "fn": 9,
+          "recall": 0.9924749163879598
+        },
+        "large_relative": {
+          "gt": 763,
+          "tp": 762,
+          "fn": 1,
+          "recall": 0.9986893840104849
+        }
+      }
+    },
+    "deltas": {
+      "map50_95_diff": 0.000961290445824492,
+      "map50_diff": -1.2303314044559421e-05,
+      "precision_diff": -0.0007306996224986095,
+      "recall_diff": -0.0018401588912301259,
+      "overlap_recall_diff": -1.1102230246251565e-16,
+      "overlap_misses_diff": 0,
+      "isolated_recall_diff": 0.0,
+      "operational_f1_diff": 0.00020168696256361862
+    },
+    "per_class_deltas": {
+      "plastic_bottle": {
+        "e002_ap": 0.9889,
+        "e003_ap": 0.9898289505930056,
+        "diff_pp": 0.0928950593005573,
+        "regressed": false
+      },
+      "plastic_wrapper_bag": {
+        "e002_ap": 0.9885,
+        "e003_ap": 0.9885188232808609,
+        "diff_pp": 0.0018823280860891245,
+        "regressed": false
+      },
+      "paper_cardboard": {
+        "e002_ap": 0.9886,
+        "e003_ap": 0.9886904170155452,
+        "diff_pp": 0.009041701554513004,
+        "regressed": false
+      },
+      "glass_bottle_container": {
+        "e002_ap": 0.9866,
+        "e003_ap": 0.9895824209488154,
+        "diff_pp": 0.2982420948815401,
+        "regressed": false
+      },
+      "metal_can": {
+        "e002_ap": 0.9878,
+        "e003_ap": 0.9886487840374514,
+        "diff_pp": 0.08487840374513667,
+        "regressed": false
+      }
+    }
+  },
+  "success_criteria_card": {
+    "criterion_1_overlapping_recall": {
+      "target": ">= 98.20%",
+      "e002_baseline": "97.12% (539/555)",
+      "e003_measured": "97.12% (539/555)",
+      "delta_pp": -1.1102230246251565e-14,
+      "status": "FAIL"
+    },
+    "criterion_2_overlapping_misses": {
+      "target": "<= 10 misses",
+      "e002_baseline": "16 misses",
+      "e003_measured": "16 misses",
+      "delta_misses": 0,
+      "status": "FAIL"
+    },
+    "criterion_3_val_map50_95": {
+      "target": ">= 98.95%",
+      "e002_baseline": "98.81%",
+      "e003_measured": "98.91%",
+      "delta_pp": 0.0961290445824492,
+      "status": "FAIL"
+    },
+    "criterion_4_val_precision": {
+      "target": ">= 99.20%",
+      "e002_baseline": "99.39%",
+      "e003_measured": "99.32%",
+      "delta_pp": -0.07306996224986095,
+      "status": "PASS"
+    },
+    "criterion_5_per_class_regression_guard": {
+      "target": "No per-class drop > 0.5 pp vs E002",
+      "regressions_detected": 0,
+      "regression_details": [],
+      "status": "PASS"
+    },
+    "overall_verdict": "MIXED RESULT"
+  },
+  "sample_error_cases": {
+    "overlapping_misses_sample": [
+      {
+        "stem": "safai_10k_val_00057",
+        "class_name": "plastic_wrapper_bag",
+        "class_id": 1,
+        "coco_size_cat": "medium",
+        "dataset_size_cat": "small_relative",
+        "area_px": 2900.00928,
+        "area_norm": 0.009440134375,
+        "scene_density": "dense",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          244.00032000000004,
+          221.99976,
+          302.00032,
+          271.99992
+        ]
+      },
+      {
+        "stem": "safai_10k_val_00092",
+        "class_name": "paper_cardboard",
+        "class_id": 2,
+        "coco_size_cat": "medium",
+        "dataset_size_cat": "small_relative",
+        "area_px": 4523.98752,
+        "area_norm": 0.014726521874999999,
+        "scene_density": "dense",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          477.0,
+          229.99992000000003,
+          555.0,
+          287.99976000000004
+        ]
+      },
+      {
+        "stem": "safai_10k_val_00139",
+        "class_name": "plastic_bottle",
+        "class_id": 0,
+        "coco_size_cat": "large",
+        "dataset_size_cat": "medium_relative",
+        "area_px": 12567.005599948798,
+        "area_norm": 0.040908221354,
+        "scene_density": "dense",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          136.0,
+          154.00008,
+          312.99968,
+          225.00024
+        ]
+      },
+      {
+        "stem": "safai_10k_val_00163",
+        "class_name": "plastic_wrapper_bag",
+        "class_id": 1,
+        "coco_size_cat": "large",
+        "dataset_size_cat": "small_relative",
+        "area_px": 7072.01088,
+        "area_norm": 0.02302086875,
+        "scene_density": "dense",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          254.99968,
+          175.00007999999997,
+          322.99968,
+          279.00024
+        ]
+      },
+      {
+        "stem": "safai_10k_val_00167",
+        "class_name": "metal_can",
+        "class_id": 4,
+        "coco_size_cat": "medium",
+        "dataset_size_cat": "small_relative",
+        "area_px": 2912.00832,
+        "area_norm": 0.009479193750000002,
+        "scene_density": "dense",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          350.0,
+          136.99992,
+          402.0,
+          193.00008
+        ]
+      }
+    ],
+    "class_confusion_sample": [
+      {
+        "stem": "safai_10k_val_00265",
+        "pred_class": "plastic_wrapper_bag",
+        "gt_class": "glass_bottle_container",
+        "pred_bbox": [
+          106.13471221923828,
+          281.86480712890625,
+          212.26524353027344,
+          412.99212646484375
+        ],
+        "gt_bbox": [
+          105.00031999999999,
+          281.99999999999994,
+          213.00032000000002,
+          414.0
+        ],
+        "confidence": 0.6884802579879761,
+        "iou": 0.9742063676646787
+      }
+    ],
+    "localization_error_sample": [
+      {
+        "stem": "safai_10k_val_00096",
+        "pred_class": "metal_can",
+        "gt_class": "metal_can",
+        "pred_bbox": [
+          394.2688293457031,
+          306.9369812011719,
+          535.2991943359375,
+          401.771484375
+        ],
+        "gt_bbox": [
+          393.0,
+          307.00008,
+          443.0,
+          402.00023999999996
+        ],
+        "confidence": 0.39593955874443054,
+        "iou": 0.3419400601026478
+      },
+      {
+        "stem": "safai_10k_val_00167",
+        "pred_class": "metal_can",
+        "gt_class": "metal_can",
+        "pred_bbox": [
+          313.3637390136719,
+          107.94275665283203,
+          403.2364807128906,
+          192.62237548828125
+        ],
+        "gt_bbox": [
+          350.0,
+          136.99992,
+          402.0,
+          193.00008
+        ],
+        "confidence": 0.3779255449771881,
+        "iou": 0.37907683590685337
+      },
+      {
+        "stem": "safai_10k_val_00167",
+        "pred_class": "metal_can",
+        "gt_class": "metal_can",
+        "pred_bbox": [
+          296.9065856933594,
+          135.9070587158203,
+          402.1073913574219,
+          193.05238342285156
+        ],
+        "gt_bbox": [
+          350.0,
+          136.99992,
+          402.0,
+          193.00008
+        ],
+        "confidence": 0.2782749831676483,
+        "iou": 0.48438740362624433
+      },
+      {
+        "stem": "safai_10k_val_00795",
+        "pred_class": "glass_bottle_container",
+        "gt_class": "glass_bottle_container",
+        "pred_bbox": [
+          287.80657958984375,
+          96.38851928710938,
+          452.3873291015625,
+          189.78494262695312
+        ],
+        "gt_bbox": [
+          385.99968,
+          96.00023999999999,
+          451.99968,
+          190.00008
+        ],
+        "confidence": 0.3654991388320923,
+        "iou": 0.3999826357781262
+      }
+    ],
+    "background_fp_sample": [
+      {
+        "stem": "safai_10k_val_00303",
+        "pred_class": "glass_bottle_container",
+        "pred_bbox": [
+          453.68682861328125,
+          226.31077575683594,
+          558.4284057617188,
+          386.6307067871094
+        ],
+        "confidence": 0.5951888561248779
+      },
+      {
+        "stem": "safai_10k_val_00383",
+        "pred_class": "glass_bottle_container",
+        "pred_bbox": [
+          305.0912780761719,
+          67.28441619873047,
+          403.86749267578125,
+          129.33270263671875
+        ],
+        "confidence": 0.3093847632408142
+      },
+      {
+        "stem": "safai_10k_val_00522",
+        "pred_class": "plastic_wrapper_bag",
+        "pred_bbox": [
+          321.82293701171875,
+          328.78448486328125,
+          394.1376953125,
+          399.96429443359375
+        ],
+        "confidence": 0.25628647208213806
+      },
+      {
+        "stem": "safai_10k_val_00528",
+        "pred_class": "paper_cardboard",
+        "pred_bbox": [
+          347.10113525390625,
+          167.14761352539062,
+          472.35076904296875,
+          292.0063171386719
+        ],
+        "confidence": 0.4283074140548706
+      },
+      {
+        "stem": "safai_10k_val_00528",
+        "pred_class": "paper_cardboard",
+        "pred_bbox": [
+          344.4095764160156,
+          185.1222381591797,
+          421.99462890625,
+          245.9530029296875
+        ],
+        "confidence": 0.27252039313316345
+      }
+    ]
+  },
+  "protected_benchmark_isolation": {
+    "test_locked_v2_accessed": false,
+    "india_real_world_accessed": false,
+    "inferences_on_protected_benchmarks": 0,
+    "evidence": "Strict path restriction enforced; only data/safaios_dataset_v10k/validation/ accessed."
+  }
+}
