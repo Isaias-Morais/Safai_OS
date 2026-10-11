@@ -1,0 +1,61 @@
+{
+  "experiment_id": "SAFAIOS-E003-YOLO11S-MIXUP",
+  "reference_experiment_id": "SAFAIOS-E002-YOLO11S-768",
+  "project": "SafaiOS",
+  "phase": "Phase 4 — Model Optimization & Experimentation",
+  "objective": "Evaluate whether introducing moderate MixUp augmentation (mixup=0.15) resolves overlapping and occluded waste object detection failures in the 768px YOLO11s detector.",
+  "hypothesis": "In SafaiOS validation error analysis, 88.9% (16 of 18) of all false negatives occurred on overlapping objects. Because E001 and E002 had mixup=0.0, the detector lacks training signal on overlapping co-located objects. Introducing mixup=0.15 will teach the feature backbone and detection head to disentangle overlapping features and independently regress overlapping bounding boxes, reducing overlapping-object false negatives and increasing overall validation mAP@50-95.",
+  "controlled_variables": {
+    "primary_variable_changed": {
+      "parameter": "mixup",
+      "baseline_value_e002": 0.0,
+      "experimental_value_e003": 0.15
+    },
+    "variables_held_constant": {
+      "model_initialization": "yolo11s.pt",
+      "dataset_config": "data/safaios_dataset_v10k/data.yaml",
+      "dataset_version": "safaios_dataset_v10k (10,000 train, 1,000 val)",
+      "imgsz": 768,
+      "batch_size": 16,
+      "epochs": 100,
+      "close_mosaic": 10,
+      "seed": 42,
+      "workers": 4,
+      "device": 0,
+      "optimizer": "auto (MuSGD, lr0=0.01, momentum=0.937)",
+      "mosaic": 1.0,
+      "scale": 0.5,
+      "fliplr": 0.5,
+      "hsv_h": 0.015,
+      "hsv_s": 0.7,
+      "hsv_v": 0.4
+    }
+  },
+  "expected_measurable_effects": {
+    "overlapping_recall_improvement": "From 97.12% (539/555) in E002 to >= 98.20% (>= 545/555) in E003",
+    "overlapping_false_negatives": "Reduction from 16 missed overlapping items in E002 to <= 10 in E003",
+    "overall_val_map50_95": "Improvement from 98.81% (E002) to >= 98.95% in E003",
+    "overall_val_precision": "Maintain >= 99.30% (no significant degradation from synthetic blends)"
+  },
+  "evaluation_protocol": {
+    "evaluation_split_only": "data/safaios_dataset_v10k/validation",
+    "evaluation_split_name": "val",
+    "protected_sets_policy": "STRICTLY PROHIBITED: test_locked_v2 and india_real_world must remain untouched",
+    "inference_image_size": 768,
+    "confidence_threshold": 0.25,
+    "nms_iou_threshold": 0.60
+  },
+  "success_criteria": {
+    "criterion_1_overlap_recall": "Recall on overlapping objects (max pairwise IoU >= 0.1) increases to >= 98.20%",
+    "criterion_2_map": "Validation mAP@50-95 strictly exceeds E002 baseline (target: >= 98.95%)",
+    "criterion_3_precision_retention": "Validation Precision remains >= 99.20% without excessive false alarm drift",
+    "criterion_4_no_per_class_regressions": "No individual class suffers a > 0.5% drop in mAP@50-95 compared to E002"
+  },
+  "resource_requirements": {
+    "hardware": "NVIDIA GeForce RTX 4060 Laptop GPU (8GB VRAM)",
+    "peak_vram_estimate": "5.70 GB VRAM",
+    "training_duration_estimate": "3.2 hours (100 epochs @ ~3.5 it/s)",
+    "disk_space": "1.5 GB in dedicated run directory runs/detect/runs/safaios/safaios_yolo11s_v10k_mixup15/"
+  },
+  "status": "E003 EXPERIMENT PROTOCOL READY"
+}

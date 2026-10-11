@@ -64,3 +64,4 @@ runs/
 .DS_Store
 Thumbs.db
 *.log
+reports/figures/
