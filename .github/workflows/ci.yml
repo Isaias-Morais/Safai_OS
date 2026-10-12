@@ -11,15 +11,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+
+    - name: Free disk space
+      run: |
+        sudo rm -rf /usr/share/dotnet
+        sudo rm -rf /usr/local/lib/android
+        sudo rm -rf /opt/ghc
+        sudo rm -rf /opt/hostedtoolcache/CodeQL
+
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.11'
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -e .
-        pip install pytest
+        # Install CPU-only PyTorch to avoid massive (>12 GB) CUDA/NVIDIA wheels in CI
+        pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu
+        pip install --no-cache-dir -e ".[dev]"
+
     - name: Run unit test suite
       run: |
         pytest tests/ -v
