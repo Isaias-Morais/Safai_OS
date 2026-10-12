@@ -1,0 +1,111 @@
+{
+  "experiment_id": "SAFAIOS-E004-YOLO11S-CUTMIX",
+  "proposed_name": "safaios_yolo11s_v10k_cutmix",
+  "project": "SafaiOS",
+  "phase": "Phase 4 — Model Optimization & Experimentation",
+  "status": "NOT READY FOR TRAINING",
+  "readiness_decision": "NOT READY FOR TRAINING (Native Ultralytics CutMix implementation limitation identified)",
+  "reference_experiment_id": "SAFAIOS-E002-YOLO11S-768",
+  "predecessor_experiment_id": "SAFAIOS-E003-YOLO11S-MIXUP",
+  "objective": "Design a controlled experiment to evaluate whether rectangular patch augmentation and partial visibility improve detection on dense and overlapping waste scenes without degrading precision.",
+  "implementation_feasibility_audit": {
+    "ultralytics_version": "8.4.174",
+    "cutmix_parameter_declared": true,
+    "cutmix_parameter_declaration_source": "ultralytics/cfg/default.yaml:128 (cutmix: 0.0)",
+    "cutmix_transform_instantiated": true,
+    "cutmix_transform_source": "ultralytics/data/augment.py:2906 (CutMix(dataset, pre_transform=pre_transform, p=hyp.cutmix))",
+    "critical_implementation_limitation": {
+      "code_location": "ultralytics/data/augment.py:968-981",
+      "mechanism": "CutMix.get_params() calculates ioa1 = bbox_ioa(cut_areas, labels['instances'].bboxes) and strictly enforces idx = np.nonzero(ioa1.sum(axis=1) <= 0)[0]. If all num_areas (default 3) candidate cut rectangles intersect any existing bounding box in image 1, params['skip'] is set to True and CutMix is completely bypassed.",
+      "empirical_skip_rate_in_multiobject_scenes": "99.0% skip rate (99 out of 100 trials skipped on 3-object synthetic waste scenes)",
+      "occlusion_failure": "In the rare (<1%) cases where a cut area is accepted, it is strictly placed in empty background space with zero intersection with Image 1's bounding boxes. Consequently, primary objects in Image 1 are NEVER cut or partially occluded, and newly pasted instances from Image 2 do not overlap with existing instances.",
+      "scientific_verdict": "Native CutMix in Ultralytics 8.4.174 is structurally incapable of testing partial-visibility occlusion on primary objects or creating co-located overlapping object pairs. Passing cutmix > 0.0 results in a near-zero effective intervention rate and fails the core experimental hypothesis."
+    },
+    "interaction_with_mosaic_and_mixup": "CutMix is ordered after Mosaic and MixUp in v8_transforms. MixUp is held at 0.0 to isolate the intervention. CutMix uses pre_transform (Mosaic + Affine) when sampling secondary images.",
+    "close_mosaic_behavior": "ultralytics/data/dataset.py:384-394 explicitly zeroes hyp.cutmix = 0.0 when close_mosaic=10 is triggered, actively disabling CutMix for epochs 91-100.",
+    "segmentation_mask_requirement": "CutMix operates on bounding boxes and does not strictly require masks, but copy_paste does require polygon segments.",
+    "gpu_memory_estimate": "6.2 GB to 7.0 GB peak VRAM on RTX 4060 Laptop GPU (identical to E002/E003)",
+    "training_time_estimate": "~3.25 hours (100 epochs @ 768px, batch=16, workers=4)"
+  },
+  "proposed_alternative_for_approval": {
+    "candidate": "CoarseDropout / RandomErasing via Albumentations pipeline",
+    "mechanism": "Albumentations CoarseDropout randomly erases rectangular patches within or across bounding boxes without altering box labels, forcing the detection head to identify objects under genuine rectangular partial occlusion.",
+    "implementation_path": "Supported natively in Ultralytics v8_transforms (line 2907: Albumentations(p=1.0, transforms=getattr(hyp, 'augmentations', None))) or as a custom pre-transform hook.",
+    "approval_required": true
+  },
+  "hypothesis": "Dense waste scenes in SafaiOS validation suffer from missed detections on overlapping objects (16/18 false negatives in E002/E003). While MixUp blended full images transparently (disproven in E003), genuine rectangular patch occlusion (if properly implemented) forces the detector's deep feature pyramid to rely on partial local features rather than global unoccluded boundaries, thereby increasing overlap-stratum recall beyond 98.20% and reducing misses to <= 10.",
+  "controlled_variables": {
+    "primary_variable": "cutmix (or approved CoarseDropout alternative)",
+    "baseline_e002_value": 0.0,
+    "proposed_experimental_value": 0.15,
+    "variables_held_constant": {
+      "model_initialization": "yolo11s.pt",
+      "model_initialization_sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+      "dataset_config": "data/safaios_dataset_v10k/data.yaml",
+      "dataset_version": "safaios_dataset_v10k (10,000 train, 1,000 val)",
+      "imgsz": 768,
+      "batch_size": 16,
+      "epochs": 100,
+      "close_mosaic": 10,
+      "seed": 42,
+      "deterministic": true,
+      "workers": 4,
+      "device": 0,
+      "optimizer": "auto (MuSGD, lr0=0.01, momentum=0.937, weight_decay=0.0005)",
+      "mixup": 0.0,
+      "mosaic": 1.0,
+      "scale": 0.5,
+      "fliplr": 0.5,
+      "hsv_h": 0.015,
+      "hsv_s": 0.7,
+      "hsv_v": 0.4
+    }
+  },
+  "predeclared_success_criteria": {
+    "criterion_1_overlap_recall": {
+      "target": ">= 98.20% (>= 545 / 555)",
+      "e002_baseline": "97.12% (539 / 555)",
+      "governing_protocol": "Operational greedy bipartite matching (conf=0.25, NMS iou=0.60, match_iou=0.50) on pairwise ground-truth IoU >= 0.1 stratum"
+    },
+    "criterion_2_overlap_misses": {
+      "target": "<= 10 misses",
+      "e002_baseline": "16 misses",
+      "governing_protocol": "Operational greedy bipartite matching on pairwise ground-truth IoU >= 0.1 stratum"
+    },
+    "criterion_3_val_map50_95": {
+      "target": ">= 98.95%",
+      "e002_baseline": "98.81% (exact canonical float: 0.9880925887293113)",
+      "governing_protocol": "Official Ultralytics model.val(data=..., split='val', imgsz=768) COCO mAP@50-95"
+    },
+    "criterion_4_precision_retention": {
+      "target": ">= 99.20%",
+      "e002_baseline": "99.39% (exact: 0.9938867079653775)",
+      "governing_protocol": "Official Ultralytics model.val() summary precision (val.box.mp) at optimal F1 threshold"
+    },
+    "criterion_5_per_class_regression_guard": {
+      "target": "No per-class mAP@50-95 drop > 0.5 percentage points vs canonical E002",
+      "e002_per_class_baselines": {
+        "plastic_bottle": 0.9889,
+        "plastic_wrapper_bag": 0.9885,
+        "paper_cardboard": 0.9886,
+        "glass_bottle_container": 0.9866,
+        "metal_can": 0.9878
+      },
+      "governing_protocol": "Official Ultralytics model.val() per-class mAP@50-95"
+    }
+  },
+  "operational_metrics_protocol": {
+    "confidence_threshold": 0.25,
+    "nms_iou_threshold": 0.60,
+    "bipartite_matching_iou": 0.50,
+    "stratification_dimensions": {
+      "overlap": "Pairwise IoU >= 0.1 (geometric proxy for co-located clutter)",
+      "scale_relative": "Small (<0.025 normalized area), Medium (0.025-0.050), Large (>0.050)"
+    }
+  },
+  "protected_benchmark_isolation": {
+    "test_locked_v2_status": "LOCKED & PROTECTED (0 accesses, 0 inferences, 0 file reads)",
+    "india_real_world_status": "SACRED BENCHMARK (0 accesses, 0 inferences, 0 file reads)",
+    "governing_split": "data/safaios_dataset_v10k/validation only"
+  }
+}
