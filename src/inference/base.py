@@ -1,8 +1,7 @@
 """Abstract Base Detector interface and configuration schemas."""
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
-from typing import List, Optional, Union
-import numpy as np
+from typing import List, Optional, Any
 from src.detection.boxes import Prediction
 
 @dataclass
@@ -24,6 +23,6 @@ class BaseDetector(ABC):
         pass
 
     @abstractmethod
-    def predict(self, image: Union[str, np.ndarray]) -> List[Prediction]:
+    def predict(self, image: Any) -> List[Prediction]:
         """Performs detection on a single image and returns predictions."""
         pass
