@@ -65,3 +65,4 @@ runs/
 Thumbs.db
 *.log
 reports/figures/
+scratch/
