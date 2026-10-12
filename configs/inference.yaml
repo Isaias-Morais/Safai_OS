@@ -1,0 +1,18 @@
+# SafaiOS Inference Configuration
+model:
+  weights: "runs/detect/runs/detect/runs/safaios/safaios_yolo11s_v10k_img768/weights/best.pt"
+  imgsz: 768
+  device: "0"
+  half: false
+
+thresholds:
+  confidence: 0.25
+  iou_nms: 0.60
+  greedy_matching_iou: 0.50
+
+taxonomy:
+  0: "plastic_bottle"
+  1: "plastic_wrapper_bag"
+  2: "paper_cardboard"
+  3: "glass_bottle_container"
+  4: "metal_can"
