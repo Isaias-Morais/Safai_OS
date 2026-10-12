@@ -45,17 +45,22 @@ Because criteria 1, 2, and 3 failed, the experiment is objectively classified as
 |---|---|---|---|---|
 | **E001 Baseline Best** | `runs/detect/runs/safaios/safaios_yolo11s_v10k_baseline/weights/best.pt` | 56,957,912 B | `49e9e047fbb04c66244b734623bb4e84abfbab5a3aa9797c375d926919a86737` | **Preserved (Exact Match)** |
 | **E002 Reference Best** | `runs/detect/runs/detect/runs/safaios/safaios_yolo11s_v10k_img768/weights/best.pt` | 19,195,731 B | `8bd30b05a0b4a84d95c5e71f213b967d255144a8fe57791ef110b920fc86d073` | **Preserved (Exact Match)** |
-| **E003 Selected Best** | `runs/detect/runs/detect/runs/safaios/safaios_yolo11s_v10k_mixup15/weights/best.pt` | 19,195,731 B | `61e165e2283f55881293b42dad318b64a34fa87ae83740a09471029df1786952` | **Global Best Checkpoint across all 100 epochs (Epoch 50, peak fitness = 0.98947)** |
+| **E003 Selected Best** | `runs/detect/runs/detect/runs/safaios/safaios_yolo11s_v10k_mixup15/weights/best.pt` | 19,195,731 B | `61e165e2283f55881293b42dad318b64a34fa87ae83740a09471029df1786952` | **Demonstrably Epoch 50 Checkpoint** (Native Ultralytics fitness = 0.98887; legacy composite formula = 0.98947). Globally valid peak across all 100 epochs. |
 | **E003 Final Last** | `runs/detect/runs/detect/runs/safaios/safaios_yolo11s_v10k_mixup15/weights/last.pt` | 19,195,731 B | `e9e27ad84778c069e5590a9cc0ad6d0450f210b8b03b3eb95c9f452510af4c0a` | **Final epoch 100 checkpoint** |
 | **Pretrained Init** | `yolo11s.pt` | 19,252,999 B | `85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5` | **Fresh verified COCO pretrained initialization** |
 
-### Resume History Verification
+### Resume History & Checkpoint Provenance Reconciliation
 Training progressed across 100 completed epochs:
 - **Segment 1 (Epochs 1–34):** Initiated from fresh `yolo11s.pt`. Halted at epoch 34 due to a transient CUDA execution failure.
 - **Segment 2 (Epochs 34–37):** Resumed from `last.pt`. Halted at epoch 37 due to an IDE server restart.
 - **Segment 3 (Epochs 38–62):** Resumed from `last.pt`. Halted at epoch 62 due to a VRAM memory pressure spike.
 - **Segment 4 (Epochs 63–100):** Resumed from `last.pt` with cleared CUDA memory and completed through epoch 100 with `close_mosaic=10` actively disabling MixUp and Mosaic for the final 10 epochs.
-- **Global Best Validation:** Verification of `results.csv` and checkpoint state confirmed that `best.pt` preserves the global peak fitness across the entire 100-epoch history (Epoch 50).
+
+**Detailed Provenance Verification of `best.pt`:**
+1. **Ultralytics Native Fitness Definition:** In Ultralytics 8.4.174 detection, model fitness is defined as $w = [0.0, 0.0, 0.0, 1.0]$, which is **strictly and exclusively $1.0 \times \text{mAP@50–95}$** (not the legacy $0.1 \times \text{mAP@50} + 0.9 \times \text{mAP@50–95}$ composite).
+2. **Epoch 50 Peak:** In `results.csv`, Epoch 50 achieved `mAP50-95(B) = 0.98887` and `mAP50(B) = 0.99488`. Its native fitness was **0.98887** (the previously cited 0.98947 was from the legacy composite formula: $0.1 \times 0.99488 + 0.9 \times 0.98887 = 0.98947$).
+3. **Resumed Tracking in Segment 4:** Prior to launching Segment 4 (Epoch 63), inspection of the unstripped `best.pt` verified `epoch = 49` (0-indexed = Epoch 50) and `best_fitness = 0.98887`. The trainer loaded `last.pt` which carried `best_fitness = 0.98887`. In Segment 4, the highest validation performance occurred at Epoch 87 with native fitness `0.98873` (legacy composite formula: `0.98935`). Because $0.98873 < 0.98887$ (and legacy $0.98935 < 0.98947$), the trainer never updated `best.pt` during Segment 4.
+4. **Conclusion:** The final `best.pt` on disk (stripped to 19,195,731 bytes, SHA256: `61e165e2283f55881293b42dad318b64a34fa87ae83740a09471029df1786952`) is **demonstrably and conclusively the Epoch 50 checkpoint**, and its selection was globally valid across the entire 100-epoch training history.
 
 ---
 
@@ -69,6 +74,17 @@ Evaluated on `data/safaios_dataset_v10k/validation/` (1,000 images, 2,463 instan
 - **Recall (`val.box.mr`):** 99.09% (E002: 99.28%, Delta: -0.18 pp)
 - **mAP@50:** 99.49% (E002: 99.49%, Delta: -0.00 pp)
 - **mAP@50–95:** 98.91% (E002: 98.81%, Delta: +0.10 pp)
+
+### Multi-Experiment Progression Summary
+
+| Experiment ID | Configuration Description | Evaluation Imgsz | Validation Precision | Validation Recall | Validation mAP@50 | Validation mAP@50–95 | Canonical Evidence Source |
+|---|---|:---:|:---:|:---:|:---:|:---:|---|
+| **E001 Baseline** | YOLO11s Baseline (MixUp 0.0) | 640px | 98.22% | 98.24% | 99.44% | **98.40%** (exact: 0.98405) | `SAFAIOS-E001-verification.md` (`49e9e047...`) |
+| **E002 Predecessor** | 768px Resolution Ablation | 768px | 99.39% | 99.28% | 99.49% | **98.81%** (exact: 0.98809) | `SAFAIOS-E002.md` (`8bd30b05...`) |
+| **E003 Intervention** | 768px + MixUp 0.15 | 768px | 99.32% | 99.09% | 99.49% | **98.91%** (exact: 0.98905) | `SAFAIOS-E003.json` (`61e165e2...`) |
+
+> **E001 Baseline Metric Reconciliation Note:**  
+> A transcription error in earlier draft reporting erroneously referenced 98.66% as E001 mAP@50–95. Cross-referencing proves that 98.66% was the per-class mAP@50–95 of `glass_bottle_container` under E002. The canonical, reproducible direct validation of the frozen E001 baseline checkpoint (`best.pt`, 56,957,912 bytes, SHA256: `49e9e047...`) at 640px is **98.40%** (exact unrounded: `0.9840467317218876`). E001's historical audit records remain fully preserved.
 
 ### Per-Class Detailed Metrics
 
