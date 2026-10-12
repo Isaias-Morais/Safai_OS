@@ -1,0 +1,53 @@
+{
+  "Conservative (5-12%)": {
+    "images_tested": 100,
+    "images_with_holes": 100,
+    "images_application_rate_pct": 100.0,
+    "total_boxes": 239,
+    "affected_boxes": 29,
+    "affected_pct": 12.133891213389122,
+    "meaningful_partial_boxes_15_to_75_pct": 6,
+    "meaningful_partial_pct": 2.510460251046025,
+    "severe_boxes_gt_75_pct": 0,
+    "severe_pct": 0.0,
+    "obliterated_boxes_gt_90_pct": 0,
+    "obliterated_pct": 0.0,
+    "mean_coverage_when_affected": 0.1019171528106121,
+    "p50_coverage_when_affected": 0.08302200083022,
+    "p90_coverage_when_affected": 0.1763023088023088
+  },
+  "Moderate (8-18%)": {
+    "images_tested": 100,
+    "images_with_holes": 100,
+    "images_application_rate_pct": 100.0,
+    "total_boxes": 239,
+    "affected_boxes": 41,
+    "affected_pct": 17.154811715481173,
+    "meaningful_partial_boxes_15_to_75_pct": 24,
+    "meaningful_partial_pct": 10.0418410041841,
+    "severe_boxes_gt_75_pct": 0,
+    "severe_pct": 0.0,
+    "obliterated_boxes_gt_90_pct": 0,
+    "obliterated_pct": 0.0,
+    "mean_coverage_when_affected": 0.21178881111867115,
+    "p50_coverage_when_affected": 0.18238336267605634,
+    "p90_coverage_when_affected": 0.4168249660786974
+  },
+  "Aggressive (10-25%)": {
+    "images_tested": 100,
+    "images_with_holes": 100,
+    "images_application_rate_pct": 100.0,
+    "total_boxes": 239,
+    "affected_boxes": 103,
+    "affected_pct": 43.09623430962343,
+    "meaningful_partial_boxes_15_to_75_pct": 54,
+    "meaningful_partial_pct": 22.594142259414227,
+    "severe_boxes_gt_75_pct": 5,
+    "severe_pct": 2.092050209205021,
+    "obliterated_boxes_gt_90_pct": 2,
+    "obliterated_pct": 0.8368200836820083,
+    "mean_coverage_when_affected": 0.2784049426522302,
+    "p50_coverage_when_affected": 0.24324324324324326,
+    "p90_coverage_when_affected": 0.5864243943191312
+  }
+}
