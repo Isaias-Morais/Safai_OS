@@ -1,21 +1,24 @@
-"""Pydantic request and response schemas for SafaiOS detection API."""
+"""Lightweight dataclass request and response schemas for SafaiOS detection API."""
+from dataclasses import dataclass, field
 from typing import List, Optional
-from pydantic import BaseModel, Field
 
-class DetectionBoxSchema(BaseModel):
-    xmin: float = Field(..., ge=0.0, le=1.0)
-    ymin: float = Field(..., ge=0.0, le=1.0)
-    xmax: float = Field(..., ge=0.0, le=1.0)
-    ymax: float = Field(..., ge=0.0, le=1.0)
+@dataclass
+class DetectionBoxSchema:
+    xmin: float
+    ymin: float
+    xmax: float
+    ymax: float
 
-class DetectionItemSchema(BaseModel):
-    class_id: int = Field(..., ge=0, le=4)
+@dataclass
+class DetectionItemSchema:
+    class_id: int
     class_name: str
-    confidence: float = Field(..., ge=0.0, le=1.0)
+    confidence: float
     box: DetectionBoxSchema
 
-class DetectionResponseSchema(BaseModel):
-    status: str = "success"
+@dataclass
+class DetectionResponseSchema:
     num_detections: int
     inference_time_ms: float
-    detections: List[DetectionItemSchema]
+    detections: List[DetectionItemSchema] = field(default_factory=list)
+    status: str = "success"
