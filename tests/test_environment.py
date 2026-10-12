@@ -9,4 +9,4 @@ def test_environment_inspection():
     assert "os" in report
     assert "python" in report
     assert "disk_space" in report
-    assert report["os"]["system"] == "Windows"
+    assert report["os"]["system"] in ["Windows", "Linux", "Darwin"]
