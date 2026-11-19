@@ -1,0 +1,472 @@
+{
+  "benchmark": "india_real_world",
+  "images": 100,
+  "ground_truth": 269,
+  "official": {
+    "precision": 0.9926874483930153,
+    "recall": 0.9876591981279226,
+    "map50": 0.9925084302325582,
+    "map50_95": 0.9755850548928825,
+    "per_class": {
+      "plastic_bottle": {
+        "precision": 0.9946808819901637,
+        "recall": 1.0,
+        "map50": 0.995,
+        "map50_95": 0.970945945945946
+      },
+      "plastic_wrapper_bag": {
+        "precision": 0.9991462536297802,
+        "recall": 0.96875,
+        "map50": 0.9846874999999999,
+        "map50_95": 0.9587379807692308
+      },
+      "paper_cardboard": {
+        "precision": 0.9749157583886481,
+        "recall": 0.9717145771572773,
+        "map50": 0.9928546511627907,
+        "map50_95": 0.9849847419171864
+      },
+      "glass_bottle_container": {
+        "precision": 0.9946943479564844,
+        "recall": 1.0,
+        "map50": 0.995,
+        "map50_95": 0.9887599999999999
+      },
+      "metal_can": {
+        "precision": 1.0,
+        "recall": 0.997831413482336,
+        "map50": 0.995,
+        "map50_95": 0.974496605832049
+      }
+    }
+  },
+  "operational": {
+    "total_gt": 269,
+    "total_preds": 269,
+    "tp": 266,
+    "fn": 3,
+    "fp_total": 3,
+    "fp_confusion": 0,
+    "fp_localization": 3,
+    "fp_background": 0,
+    "precision_op": 0.9888475836431226,
+    "recall_op": 0.9888475836431226,
+    "f1_op": 0.9888475836431226,
+    "by_class": {
+      "0": {
+        "gt": 36,
+        "tp": 36,
+        "fn": 0,
+        "fp": 0
+      },
+      "1": {
+        "gt": 64,
+        "tp": 62,
+        "fn": 2,
+        "fp": 1
+      },
+      "2": {
+        "gt": 40,
+        "tp": 39,
+        "fn": 1,
+        "fp": 1
+      },
+      "3": {
+        "gt": 49,
+        "tp": 49,
+        "fn": 0,
+        "fp": 1
+      },
+      "4": {
+        "gt": 80,
+        "tp": 80,
+        "fn": 0,
+        "fp": 0
+      }
+    },
+    "by_coco_size": {
+      "small": {
+        "gt": 0,
+        "tp": 0,
+        "fn": 0
+      },
+      "medium": {
+        "gt": 43,
+        "tp": 41,
+        "fn": 2
+      },
+      "large": {
+        "gt": 226,
+        "tp": 225,
+        "fn": 1
+      }
+    },
+    "by_dataset_size": {
+      "small_relative": {
+        "gt": 57,
+        "tp": 55,
+        "fn": 2
+      },
+      "medium_relative": {
+        "gt": 122,
+        "tp": 121,
+        "fn": 1
+      },
+      "large_relative": {
+        "gt": 90,
+        "tp": 90,
+        "fn": 0
+      }
+    },
+    "by_density": {
+      "single": {
+        "gt": 19,
+        "tp": 19,
+        "fn": 0
+      },
+      "sparse": {
+        "gt": 134,
+        "tp": 133,
+        "fn": 1
+      },
+      "dense": {
+        "gt": 116,
+        "tp": 114,
+        "fn": 2
+      }
+    },
+    "by_overlap": {
+      "isolated": {
+        "gt": 188,
+        "tp": 186,
+        "fn": 2
+      },
+      "overlapping": {
+        "gt": 81,
+        "tp": 80,
+        "fn": 1
+      }
+    },
+    "confusion_matrix": [
+      [
+        36,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        62,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        39,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        49,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        80,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "failure_cases": {
+      "false_negatives": [
+        {
+          "stem": "india_rw_00041",
+          "class_name": "paper_cardboard",
+          "class_id": 2,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 3126.9895999488,
+          "area_norm": 0.010179002603999999,
+          "scene_density": "dense",
+          "overlap_cat": "isolated",
+          "gt_bbox": [
+            104.0,
+            202.00008,
+            156.99968,
+            261.00024
+          ]
+        },
+        {
+          "stem": "india_rw_00088",
+          "class_name": "plastic_wrapper_bag",
+          "class_id": 1,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 3420.0192,
+          "area_norm": 0.011132875,
+          "scene_density": "dense",
+          "overlap_cat": "isolated",
+          "gt_bbox": [
+            105.99968000000001,
+            219.99984,
+            163.0,
+            279.99984
+          ]
+        },
+        {
+          "stem": "india_rw_00093",
+          "class_name": "plastic_wrapper_bag",
+          "class_id": 1,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 8316.03456,
+          "area_norm": 0.027070425000000002,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            487.0,
+            156.0,
+            564.00032,
+            264.0
+          ]
+        }
+      ],
+      "false_positives_background": [],
+      "class_confusions": [],
+      "localization_errors": [
+        {
+          "stem": "india_rw_00041",
+          "pred_class": "paper_cardboard",
+          "gt_class": "paper_cardboard",
+          "pred_bbox": [
+            103.99742126464844,
+            89.91510772705078,
+            157.20703125,
+            261.3892822265625
+          ],
+          "gt_bbox": [
+            104.0,
+            202.00008,
+            156.99968,
+            261.00024
+          ],
+          "confidence": 0.519306480884552,
+          "iou": 0.34271857263324845
+        },
+        {
+          "stem": "india_rw_00073",
+          "pred_class": "glass_bottle_container",
+          "gt_class": "glass_bottle_container",
+          "pred_bbox": [
+            108.18458557128906,
+            168.9374542236328,
+            204.143310546875,
+            366.8694763183594
+          ],
+          "gt_bbox": [
+            108.00031999999999,
+            280.00007999999997,
+            202.00032,
+            364.99992000000003
+          ],
+          "confidence": 0.5485528111457825,
+          "iou": 0.4195031959999609
+        },
+        {
+          "stem": "india_rw_00088",
+          "pred_class": "plastic_wrapper_bag",
+          "gt_class": "plastic_wrapper_bag",
+          "pred_bbox": [
+            106.70010375976562,
+            220.25872802734375,
+            163.54440307617188,
+            369.85772705078125
+          ],
+          "gt_bbox": [
+            105.99968000000001,
+            219.99984,
+            163.0,
+            279.99984
+          ],
+          "confidence": 0.4476674795150757,
+          "iou": 0.39290200677715204
+        }
+      ],
+      "overlapping_misses": [
+        {
+          "stem": "india_rw_00093",
+          "class_name": "plastic_wrapper_bag",
+          "class_id": 1,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 8316.03456,
+          "area_norm": 0.027070425000000002,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            487.0,
+            156.0,
+            564.00032,
+            264.0
+          ]
+        }
+      ]
+    }
+  },
+  "representative_successes": [],
+  "representative_failures": {
+    "false_negatives": [
+      {
+        "stem": "india_rw_00041",
+        "class_name": "paper_cardboard",
+        "class_id": 2,
+        "coco_size_cat": "medium",
+        "dataset_size_cat": "small_relative",
+        "area_px": 3126.9895999488,
+        "area_norm": 0.010179002603999999,
+        "scene_density": "dense",
+        "overlap_cat": "isolated",
+        "gt_bbox": [
+          104.0,
+          202.00008,
+          156.99968,
+          261.00024
+        ]
+      },
+      {
+        "stem": "india_rw_00088",
+        "class_name": "plastic_wrapper_bag",
+        "class_id": 1,
+        "coco_size_cat": "medium",
+        "dataset_size_cat": "small_relative",
+        "area_px": 3420.0192,
+        "area_norm": 0.011132875,
+        "scene_density": "dense",
+        "overlap_cat": "isolated",
+        "gt_bbox": [
+          105.99968000000001,
+          219.99984,
+          163.0,
+          279.99984
+        ]
+      },
+      {
+        "stem": "india_rw_00093",
+        "class_name": "plastic_wrapper_bag",
+        "class_id": 1,
+        "coco_size_cat": "large",
+        "dataset_size_cat": "medium_relative",
+        "area_px": 8316.03456,
+        "area_norm": 0.027070425000000002,
+        "scene_density": "sparse",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          487.0,
+          156.0,
+          564.00032,
+          264.0
+        ]
+      }
+    ],
+    "false_positives_background": [],
+    "class_confusions": [],
+    "localization_errors": [
+      {
+        "stem": "india_rw_00041",
+        "pred_class": "paper_cardboard",
+        "gt_class": "paper_cardboard",
+        "pred_bbox": [
+          103.99742126464844,
+          89.91510772705078,
+          157.20703125,
+          261.3892822265625
+        ],
+        "gt_bbox": [
+          104.0,
+          202.00008,
+          156.99968,
+          261.00024
+        ],
+        "confidence": 0.519306480884552,
+        "iou": 0.34271857263324845
+      },
+      {
+        "stem": "india_rw_00073",
+        "pred_class": "glass_bottle_container",
+        "gt_class": "glass_bottle_container",
+        "pred_bbox": [
+          108.18458557128906,
+          168.9374542236328,
+          204.143310546875,
+          366.8694763183594
+        ],
+        "gt_bbox": [
+          108.00031999999999,
+          280.00007999999997,
+          202.00032,
+          364.99992000000003
+        ],
+        "confidence": 0.5485528111457825,
+        "iou": 0.4195031959999609
+      },
+      {
+        "stem": "india_rw_00088",
+        "pred_class": "plastic_wrapper_bag",
+        "gt_class": "plastic_wrapper_bag",
+        "pred_bbox": [
+          106.70010375976562,
+          220.25872802734375,
+          163.54440307617188,
+          369.85772705078125
+        ],
+        "gt_bbox": [
+          105.99968000000001,
+          219.99984,
+          163.0,
+          279.99984
+        ],
+        "confidence": 0.4476674795150757,
+        "iou": 0.39290200677715204
+      }
+    ],
+    "overlapping_misses": [
+      {
+        "stem": "india_rw_00093",
+        "class_name": "plastic_wrapper_bag",
+        "class_id": 1,
+        "coco_size_cat": "large",
+        "dataset_size_cat": "medium_relative",
+        "area_px": 8316.03456,
+        "area_norm": 0.027070425000000002,
+        "scene_density": "sparse",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          487.0,
+          156.0,
+          564.00032,
+          264.0
+        ]
+      }
+    ]
+  }
+}
