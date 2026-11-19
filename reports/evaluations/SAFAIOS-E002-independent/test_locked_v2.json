@@ -1,0 +1,1329 @@
+{
+  "benchmark": "test_locked_v2",
+  "images": 1000,
+  "ground_truth": 2590,
+  "official": {
+    "precision": 0.9943464587970382,
+    "recall": 0.9901650345089236,
+    "map50": 0.9948912641683808,
+    "map50_95": 0.9878998973126728,
+    "per_class": {
+      "plastic_bottle": {
+        "precision": 0.994295213237974,
+        "recall": 0.9913978494623656,
+        "map50": 0.9949568034557236,
+        "map50_95": 0.9874651039648554
+      },
+      "plastic_wrapper_bag": {
+        "precision": 0.9949282883631352,
+        "recall": 0.9857901207073253,
+        "map50": 0.9948652263134415,
+        "map50_95": 0.9874493394399326
+      },
+      "paper_cardboard": {
+        "precision": 0.9929821020527188,
+        "recall": 0.9913793103448276,
+        "map50": 0.9949349708262752,
+        "map50_95": 0.9863704058630018
+      },
+      "glass_bottle_container": {
+        "precision": 0.9978088738274175,
+        "recall": 0.9942943987842201,
+        "map50": 0.995,
+        "map50_95": 0.992799622370397
+      },
+      "metal_can": {
+        "precision": 0.9917178165039455,
+        "recall": 0.9879634932458794,
+        "map50": 0.9946993202464642,
+        "map50_95": 0.9854150149251766
+      }
+    }
+  },
+  "operational": {
+    "total_gt": 2590,
+    "total_preds": 2579,
+    "tp": 2570,
+    "fn": 20,
+    "fp_total": 9,
+    "fp_confusion": 0,
+    "fp_localization": 7,
+    "fp_background": 2,
+    "precision_op": 0.9965102753005041,
+    "recall_op": 0.9922779922779923,
+    "f1_op": 0.9943896304894564,
+    "by_class": {
+      "0": {
+        "gt": 465,
+        "tp": 464,
+        "fn": 1,
+        "fp": 0
+      },
+      "1": {
+        "gt": 597,
+        "tp": 591,
+        "fn": 6,
+        "fp": 2
+      },
+      "2": {
+        "gt": 464,
+        "tp": 462,
+        "fn": 2,
+        "fp": 1
+      },
+      "3": {
+        "gt": 458,
+        "tp": 455,
+        "fn": 3,
+        "fp": 1
+      },
+      "4": {
+        "gt": 606,
+        "tp": 598,
+        "fn": 8,
+        "fp": 5
+      }
+    },
+    "by_coco_size": {
+      "small": {
+        "gt": 0,
+        "tp": 0,
+        "fn": 0
+      },
+      "medium": {
+        "gt": 386,
+        "tp": 378,
+        "fn": 8
+      },
+      "large": {
+        "gt": 2204,
+        "tp": 2192,
+        "fn": 12
+      }
+    },
+    "by_dataset_size": {
+      "small_relative": {
+        "gt": 510,
+        "tp": 499,
+        "fn": 11
+      },
+      "medium_relative": {
+        "gt": 1226,
+        "tp": 1217,
+        "fn": 9
+      },
+      "large_relative": {
+        "gt": 854,
+        "tp": 854,
+        "fn": 0
+      }
+    },
+    "by_density": {
+      "single": {
+        "gt": 234,
+        "tp": 234,
+        "fn": 0
+      },
+      "sparse": {
+        "gt": 1176,
+        "tp": 1169,
+        "fn": 7
+      },
+      "dense": {
+        "gt": 1180,
+        "tp": 1167,
+        "fn": 13
+      }
+    },
+    "by_overlap": {
+      "isolated": {
+        "gt": 1934,
+        "tp": 1933,
+        "fn": 1
+      },
+      "overlapping": {
+        "gt": 656,
+        "tp": 637,
+        "fn": 19
+      }
+    },
+    "confusion_matrix": [
+      [
+        464,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        591,
+        0,
+        0,
+        0,
+        6
+      ],
+      [
+        0,
+        0,
+        462,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        455,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        598,
+        8
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    ],
+    "failure_cases": {
+      "false_negatives": [
+        {
+          "stem": "safai_10k_test_00005",
+          "class_name": "metal_can",
+          "class_id": 4,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 11220.0,
+          "area_norm": 0.036523437500000006,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            373.99968,
+            90.99983999999999,
+            543.99968,
+            156.99984
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00061",
+          "class_name": "metal_can",
+          "class_id": 4,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 4968.02304,
+          "area_norm": 0.01617195,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            155.00000000000003,
+            150.99984,
+            224.00032000000004,
+            222.99984
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00195",
+          "class_name": "metal_can",
+          "class_id": 4,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 12221.97984,
+          "area_norm": 0.039785090625,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            212.00032,
+            102.00023999999999,
+            338.00032,
+            199.00008
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00265",
+          "class_name": "plastic_wrapper_bag",
+          "class_id": 1,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "small_relative",
+          "area_px": 7236.0,
+          "area_norm": 0.0235546875,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            275.99968,
+            339.99984,
+            409.99968,
+            393.99984
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00277",
+          "class_name": "glass_bottle_container",
+          "class_id": 3,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 13800.0,
+          "area_norm": 0.044921875,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            344.0,
+            113.00016,
+            444.0,
+            251.00016
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00336",
+          "class_name": "plastic_wrapper_bag",
+          "class_id": 1,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "small_relative",
+          "area_px": 7000.0224,
+          "area_norm": 0.02278653125,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            214.0,
+            311.99976000000004,
+            354.0,
+            361.99992
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00501",
+          "class_name": "paper_cardboard",
+          "class_id": 2,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 9870.0,
+          "area_norm": 0.03212890625,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            201.99967999999998,
+            87.0,
+            271.99968,
+            228.0
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00597",
+          "class_name": "plastic_wrapper_bag",
+          "class_id": 1,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 6692.97792,
+          "area_norm": 0.0217870375,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            303.00032,
+            180.0,
+            400.0,
+            249.00000000000003
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00607",
+          "class_name": "glass_bottle_container",
+          "class_id": 3,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 3974.9759999999997,
+          "area_norm": 0.012939375,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            370.0,
+            81.0,
+            422.99968000000007,
+            156.0
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00710",
+          "class_name": "metal_can",
+          "class_id": 4,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 12193.971679948801,
+          "area_norm": 0.039693918229,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            140.00032,
+            149.99976,
+            231.0,
+            283.99992
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00722",
+          "class_name": "plastic_bottle",
+          "class_id": 0,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 12599.961600000002,
+          "area_norm": 0.0410155,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            394.00000000000006,
+            192.99983999999998,
+            498.99968,
+            312.99984
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00740",
+          "class_name": "metal_can",
+          "class_id": 4,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 3136.00896,
+          "area_norm": 0.0102083625,
+          "scene_density": "dense",
+          "overlap_cat": "isolated",
+          "gt_bbox": [
+            66.0,
+            109.00007999999998,
+            122.0,
+            165.00024
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00741",
+          "class_name": "metal_can",
+          "class_id": 4,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 6239.9808,
+          "area_norm": 0.0203124375,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            468.0,
+            205.00008,
+            588.0,
+            256.99992
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00762",
+          "class_name": "paper_cardboard",
+          "class_id": 2,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 10608.0,
+          "area_norm": 0.03453125,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            66.0,
+            47.99999999999999,
+            202.0,
+            126.0
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00770",
+          "class_name": "metal_can",
+          "class_id": 4,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 8635.998559948799,
+          "area_norm": 0.028111974478999997,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            285.0,
+            148.99992,
+            411.99968,
+            217.00008
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00789",
+          "class_name": "plastic_wrapper_bag",
+          "class_id": 1,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 4182.0,
+          "area_norm": 0.013613281249999998,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            109.0,
+            338.00016,
+            191.0,
+            389.00016
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00830",
+          "class_name": "plastic_wrapper_bag",
+          "class_id": 1,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "small_relative",
+          "area_px": 7378.0099199999995,
+          "area_norm": 0.024016959375,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            192.00032,
+            187.00008000000003,
+            254.00032000000004,
+            306.00024
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00861",
+          "class_name": "plastic_wrapper_bag",
+          "class_id": 1,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 12314.015040000002,
+          "area_norm": 0.040084684375000006,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            219.99967999999998,
+            59.99976000000001,
+            313.99967999999996,
+            190.99992
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00862",
+          "class_name": "metal_can",
+          "class_id": 4,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 5558.9569600512,
+          "area_norm": 0.018095563021,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            147.0,
+            192.00024000000002,
+            197.99968,
+            301.00008
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00900",
+          "class_name": "glass_bottle_container",
+          "class_id": 3,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 6633.03168,
+          "area_norm": 0.0215919,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            388.0,
+            77.00016000000001,
+            455.00032000000004,
+            176.00016
+          ]
+        }
+      ],
+      "false_positives_background": [
+        {
+          "stem": "safai_10k_test_00309",
+          "pred_class": "metal_can",
+          "pred_bbox": [
+            457.82672119140625,
+            231.28189086914062,
+            530.7539672851562,
+            344.2559814453125
+          ],
+          "confidence": 0.2817310392856598
+        },
+        {
+          "stem": "safai_10k_test_00964",
+          "pred_class": "paper_cardboard",
+          "pred_bbox": [
+            29.004108428955078,
+            96.9327163696289,
+            132.07875061035156,
+            358.06573486328125
+          ],
+          "confidence": 0.32965341210365295
+        }
+      ],
+      "class_confusions": [],
+      "localization_errors": [
+        {
+          "stem": "safai_10k_test_00061",
+          "pred_class": "metal_can",
+          "gt_class": "metal_can",
+          "pred_bbox": [
+            155.40328979492188,
+            151.32102966308594,
+            311.38427734375,
+            224.13392639160156
+          ],
+          "gt_bbox": [
+            155.00000000000003,
+            150.99984,
+            224.00032000000004,
+            222.99984
+          ],
+          "confidence": 0.5184152126312256,
+          "iou": 0.43099047067936835
+        },
+        {
+          "stem": "safai_10k_test_00597",
+          "pred_class": "plastic_wrapper_bag",
+          "gt_class": "plastic_wrapper_bag",
+          "pred_bbox": [
+            303.7049255371094,
+            179.84361267089844,
+            400.3410339355469,
+            358.87066650390625
+          ],
+          "gt_bbox": [
+            303.00032,
+            180.0,
+            400.0,
+            249.00000000000003
+          ],
+          "confidence": 0.4010680913925171,
+          "iou": 0.38298020285815676
+        },
+        {
+          "stem": "safai_10k_test_00710",
+          "pred_class": "metal_can",
+          "gt_class": "metal_can",
+          "pred_bbox": [
+            140.24468994140625,
+            148.9374237060547,
+            235.07476806640625,
+            215.4840545654297
+          ],
+          "gt_bbox": [
+            140.00032,
+            149.99976,
+            231.0,
+            283.99992
+          ],
+          "confidence": 0.7237684726715088,
+          "iou": 0.47311431695476514
+        },
+        {
+          "stem": "safai_10k_test_00740",
+          "pred_class": "metal_can",
+          "gt_class": "metal_can",
+          "pred_bbox": [
+            66.65211486816406,
+            109.31478881835938,
+            227.93350219726562,
+            164.75042724609375
+          ],
+          "gt_bbox": [
+            66.0,
+            109.00007999999998,
+            122.0,
+            165.00024
+          ],
+          "confidence": 0.33882200717926025,
+          "iou": 0.3405944664232314
+        },
+        {
+          "stem": "safai_10k_test_00830",
+          "pred_class": "plastic_wrapper_bag",
+          "gt_class": "plastic_wrapper_bag",
+          "pred_bbox": [
+            192.23977661132812,
+            186.66932678222656,
+            345.3163146972656,
+            306.13250732421875
+          ],
+          "gt_bbox": [
+            192.00032,
+            187.00008000000003,
+            254.00032000000004,
+            306.00024
+          ],
+          "confidence": 0.4734720289707184,
+          "iou": 0.4012728205889285
+        },
+        {
+          "stem": "safai_10k_test_00862",
+          "pred_class": "metal_can",
+          "gt_class": "metal_can",
+          "pred_bbox": [
+            101.09263610839844,
+            160.16183471679688,
+            198.28500366210938,
+            302.0634765625
+          ],
+          "gt_bbox": [
+            147.0,
+            192.00024000000002,
+            197.99968,
+            301.00008
+          ],
+          "confidence": 0.6658851504325867,
+          "iou": 0.4030637393909879
+        },
+        {
+          "stem": "safai_10k_test_00900",
+          "pred_class": "glass_bottle_container",
+          "gt_class": "glass_bottle_container",
+          "pred_bbox": [
+            388.9894104003906,
+            76.89266967773438,
+            564.4152221679688,
+            177.88156127929688
+          ],
+          "gt_bbox": [
+            388.0,
+            77.00016000000001,
+            455.00032000000004,
+            176.00016
+          ],
+          "confidence": 0.3459312617778778,
+          "iou": 0.3668505900869269
+        }
+      ],
+      "overlapping_misses": [
+        {
+          "stem": "safai_10k_test_00005",
+          "class_name": "metal_can",
+          "class_id": 4,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 11220.0,
+          "area_norm": 0.036523437500000006,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            373.99968,
+            90.99983999999999,
+            543.99968,
+            156.99984
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00061",
+          "class_name": "metal_can",
+          "class_id": 4,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 4968.02304,
+          "area_norm": 0.01617195,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            155.00000000000003,
+            150.99984,
+            224.00032000000004,
+            222.99984
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00195",
+          "class_name": "metal_can",
+          "class_id": 4,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 12221.97984,
+          "area_norm": 0.039785090625,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            212.00032,
+            102.00023999999999,
+            338.00032,
+            199.00008
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00265",
+          "class_name": "plastic_wrapper_bag",
+          "class_id": 1,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "small_relative",
+          "area_px": 7236.0,
+          "area_norm": 0.0235546875,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            275.99968,
+            339.99984,
+            409.99968,
+            393.99984
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00277",
+          "class_name": "glass_bottle_container",
+          "class_id": 3,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 13800.0,
+          "area_norm": 0.044921875,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            344.0,
+            113.00016,
+            444.0,
+            251.00016
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00336",
+          "class_name": "plastic_wrapper_bag",
+          "class_id": 1,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "small_relative",
+          "area_px": 7000.0224,
+          "area_norm": 0.02278653125,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            214.0,
+            311.99976000000004,
+            354.0,
+            361.99992
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00501",
+          "class_name": "paper_cardboard",
+          "class_id": 2,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 9870.0,
+          "area_norm": 0.03212890625,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            201.99967999999998,
+            87.0,
+            271.99968,
+            228.0
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00597",
+          "class_name": "plastic_wrapper_bag",
+          "class_id": 1,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 6692.97792,
+          "area_norm": 0.0217870375,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            303.00032,
+            180.0,
+            400.0,
+            249.00000000000003
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00607",
+          "class_name": "glass_bottle_container",
+          "class_id": 3,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 3974.9759999999997,
+          "area_norm": 0.012939375,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            370.0,
+            81.0,
+            422.99968000000007,
+            156.0
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00710",
+          "class_name": "metal_can",
+          "class_id": 4,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 12193.971679948801,
+          "area_norm": 0.039693918229,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            140.00032,
+            149.99976,
+            231.0,
+            283.99992
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00722",
+          "class_name": "plastic_bottle",
+          "class_id": 0,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 12599.961600000002,
+          "area_norm": 0.0410155,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            394.00000000000006,
+            192.99983999999998,
+            498.99968,
+            312.99984
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00741",
+          "class_name": "metal_can",
+          "class_id": 4,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 6239.9808,
+          "area_norm": 0.0203124375,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            468.0,
+            205.00008,
+            588.0,
+            256.99992
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00762",
+          "class_name": "paper_cardboard",
+          "class_id": 2,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 10608.0,
+          "area_norm": 0.03453125,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            66.0,
+            47.99999999999999,
+            202.0,
+            126.0
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00770",
+          "class_name": "metal_can",
+          "class_id": 4,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 8635.998559948799,
+          "area_norm": 0.028111974478999997,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            285.0,
+            148.99992,
+            411.99968,
+            217.00008
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00789",
+          "class_name": "plastic_wrapper_bag",
+          "class_id": 1,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 4182.0,
+          "area_norm": 0.013613281249999998,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            109.0,
+            338.00016,
+            191.0,
+            389.00016
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00830",
+          "class_name": "plastic_wrapper_bag",
+          "class_id": 1,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "small_relative",
+          "area_px": 7378.0099199999995,
+          "area_norm": 0.024016959375,
+          "scene_density": "sparse",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            192.00032,
+            187.00008000000003,
+            254.00032000000004,
+            306.00024
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00861",
+          "class_name": "plastic_wrapper_bag",
+          "class_id": 1,
+          "coco_size_cat": "large",
+          "dataset_size_cat": "medium_relative",
+          "area_px": 12314.015040000002,
+          "area_norm": 0.040084684375000006,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            219.99967999999998,
+            59.99976000000001,
+            313.99967999999996,
+            190.99992
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00862",
+          "class_name": "metal_can",
+          "class_id": 4,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 5558.9569600512,
+          "area_norm": 0.018095563021,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            147.0,
+            192.00024000000002,
+            197.99968,
+            301.00008
+          ]
+        },
+        {
+          "stem": "safai_10k_test_00900",
+          "class_name": "glass_bottle_container",
+          "class_id": 3,
+          "coco_size_cat": "medium",
+          "dataset_size_cat": "small_relative",
+          "area_px": 6633.03168,
+          "area_norm": 0.0215919,
+          "scene_density": "dense",
+          "overlap_cat": "overlapping",
+          "gt_bbox": [
+            388.0,
+            77.00016000000001,
+            455.00032000000004,
+            176.00016
+          ]
+        }
+      ]
+    }
+  },
+  "representative_successes": [],
+  "representative_failures": {
+    "false_negatives": [
+      {
+        "stem": "safai_10k_test_00005",
+        "class_name": "metal_can",
+        "class_id": 4,
+        "coco_size_cat": "large",
+        "dataset_size_cat": "medium_relative",
+        "area_px": 11220.0,
+        "area_norm": 0.036523437500000006,
+        "scene_density": "dense",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          373.99968,
+          90.99983999999999,
+          543.99968,
+          156.99984
+        ]
+      },
+      {
+        "stem": "safai_10k_test_00061",
+        "class_name": "metal_can",
+        "class_id": 4,
+        "coco_size_cat": "medium",
+        "dataset_size_cat": "small_relative",
+        "area_px": 4968.02304,
+        "area_norm": 0.01617195,
+        "scene_density": "dense",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          155.00000000000003,
+          150.99984,
+          224.00032000000004,
+          222.99984
+        ]
+      },
+      {
+        "stem": "safai_10k_test_00195",
+        "class_name": "metal_can",
+        "class_id": 4,
+        "coco_size_cat": "large",
+        "dataset_size_cat": "medium_relative",
+        "area_px": 12221.97984,
+        "area_norm": 0.039785090625,
+        "scene_density": "dense",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          212.00032,
+          102.00023999999999,
+          338.00032,
+          199.00008
+        ]
+      },
+      {
+        "stem": "safai_10k_test_00265",
+        "class_name": "plastic_wrapper_bag",
+        "class_id": 1,
+        "coco_size_cat": "large",
+        "dataset_size_cat": "small_relative",
+        "area_px": 7236.0,
+        "area_norm": 0.0235546875,
+        "scene_density": "dense",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          275.99968,
+          339.99984,
+          409.99968,
+          393.99984
+        ]
+      },
+      {
+        "stem": "safai_10k_test_00277",
+        "class_name": "glass_bottle_container",
+        "class_id": 3,
+        "coco_size_cat": "large",
+        "dataset_size_cat": "medium_relative",
+        "area_px": 13800.0,
+        "area_norm": 0.044921875,
+        "scene_density": "dense",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          344.0,
+          113.00016,
+          444.0,
+          251.00016
+        ]
+      }
+    ],
+    "false_positives_background": [
+      {
+        "stem": "safai_10k_test_00309",
+        "pred_class": "metal_can",
+        "pred_bbox": [
+          457.82672119140625,
+          231.28189086914062,
+          530.7539672851562,
+          344.2559814453125
+        ],
+        "confidence": 0.2817310392856598
+      },
+      {
+        "stem": "safai_10k_test_00964",
+        "pred_class": "paper_cardboard",
+        "pred_bbox": [
+          29.004108428955078,
+          96.9327163696289,
+          132.07875061035156,
+          358.06573486328125
+        ],
+        "confidence": 0.32965341210365295
+      }
+    ],
+    "class_confusions": [],
+    "localization_errors": [
+      {
+        "stem": "safai_10k_test_00061",
+        "pred_class": "metal_can",
+        "gt_class": "metal_can",
+        "pred_bbox": [
+          155.40328979492188,
+          151.32102966308594,
+          311.38427734375,
+          224.13392639160156
+        ],
+        "gt_bbox": [
+          155.00000000000003,
+          150.99984,
+          224.00032000000004,
+          222.99984
+        ],
+        "confidence": 0.5184152126312256,
+        "iou": 0.43099047067936835
+      },
+      {
+        "stem": "safai_10k_test_00597",
+        "pred_class": "plastic_wrapper_bag",
+        "gt_class": "plastic_wrapper_bag",
+        "pred_bbox": [
+          303.7049255371094,
+          179.84361267089844,
+          400.3410339355469,
+          358.87066650390625
+        ],
+        "gt_bbox": [
+          303.00032,
+          180.0,
+          400.0,
+          249.00000000000003
+        ],
+        "confidence": 0.4010680913925171,
+        "iou": 0.38298020285815676
+      },
+      {
+        "stem": "safai_10k_test_00710",
+        "pred_class": "metal_can",
+        "gt_class": "metal_can",
+        "pred_bbox": [
+          140.24468994140625,
+          148.9374237060547,
+          235.07476806640625,
+          215.4840545654297
+        ],
+        "gt_bbox": [
+          140.00032,
+          149.99976,
+          231.0,
+          283.99992
+        ],
+        "confidence": 0.7237684726715088,
+        "iou": 0.47311431695476514
+      },
+      {
+        "stem": "safai_10k_test_00740",
+        "pred_class": "metal_can",
+        "gt_class": "metal_can",
+        "pred_bbox": [
+          66.65211486816406,
+          109.31478881835938,
+          227.93350219726562,
+          164.75042724609375
+        ],
+        "gt_bbox": [
+          66.0,
+          109.00007999999998,
+          122.0,
+          165.00024
+        ],
+        "confidence": 0.33882200717926025,
+        "iou": 0.3405944664232314
+      },
+      {
+        "stem": "safai_10k_test_00830",
+        "pred_class": "plastic_wrapper_bag",
+        "gt_class": "plastic_wrapper_bag",
+        "pred_bbox": [
+          192.23977661132812,
+          186.66932678222656,
+          345.3163146972656,
+          306.13250732421875
+        ],
+        "gt_bbox": [
+          192.00032,
+          187.00008000000003,
+          254.00032000000004,
+          306.00024
+        ],
+        "confidence": 0.4734720289707184,
+        "iou": 0.4012728205889285
+      }
+    ],
+    "overlapping_misses": [
+      {
+        "stem": "safai_10k_test_00005",
+        "class_name": "metal_can",
+        "class_id": 4,
+        "coco_size_cat": "large",
+        "dataset_size_cat": "medium_relative",
+        "area_px": 11220.0,
+        "area_norm": 0.036523437500000006,
+        "scene_density": "dense",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          373.99968,
+          90.99983999999999,
+          543.99968,
+          156.99984
+        ]
+      },
+      {
+        "stem": "safai_10k_test_00061",
+        "class_name": "metal_can",
+        "class_id": 4,
+        "coco_size_cat": "medium",
+        "dataset_size_cat": "small_relative",
+        "area_px": 4968.02304,
+        "area_norm": 0.01617195,
+        "scene_density": "dense",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          155.00000000000003,
+          150.99984,
+          224.00032000000004,
+          222.99984
+        ]
+      },
+      {
+        "stem": "safai_10k_test_00195",
+        "class_name": "metal_can",
+        "class_id": 4,
+        "coco_size_cat": "large",
+        "dataset_size_cat": "medium_relative",
+        "area_px": 12221.97984,
+        "area_norm": 0.039785090625,
+        "scene_density": "dense",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          212.00032,
+          102.00023999999999,
+          338.00032,
+          199.00008
+        ]
+      },
+      {
+        "stem": "safai_10k_test_00265",
+        "class_name": "plastic_wrapper_bag",
+        "class_id": 1,
+        "coco_size_cat": "large",
+        "dataset_size_cat": "small_relative",
+        "area_px": 7236.0,
+        "area_norm": 0.0235546875,
+        "scene_density": "dense",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          275.99968,
+          339.99984,
+          409.99968,
+          393.99984
+        ]
+      },
+      {
+        "stem": "safai_10k_test_00277",
+        "class_name": "glass_bottle_container",
+        "class_id": 3,
+        "coco_size_cat": "large",
+        "dataset_size_cat": "medium_relative",
+        "area_px": 13800.0,
+        "area_norm": 0.044921875,
+        "scene_density": "dense",
+        "overlap_cat": "overlapping",
+        "gt_bbox": [
+          344.0,
+          113.00016,
+          444.0,
+          251.00016
+        ]
+      }
+    ]
+  }
+}
