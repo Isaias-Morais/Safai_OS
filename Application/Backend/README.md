@@ -1,0 +1,3 @@
+# Backend
+
+Owns authentication/session verification, role authorization, incident state transitions, storage authorization, duplicate assessment, audit records, rewards ledger, and AI orchestration. It enforces reporter-versus-cleanup-performer verification eligibility and performs idempotent rewards only after authorized closure. The database migration/RLS foundation is documented in `Documentation/DATABASE_FOUNDATION.md`; backend commands must enforce the workflow decisions that intentionally remain outside direct client database access. Browser clients must never receive service-role or AI-provider credentials.
