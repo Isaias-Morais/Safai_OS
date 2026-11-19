@@ -1,0 +1,10 @@
+names:
+  0: plastic_bottle
+  1: plastic_wrapper_bag
+  2: paper_cardboard
+  3: glass_bottle_container
+  4: metal_can
+nc: 5
+path: C:\Users\Vicky Patel\Desktop\1st Year\Safai\data\india_real_world
+train: images
+val: images
