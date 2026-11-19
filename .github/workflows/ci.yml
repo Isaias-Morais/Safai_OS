@@ -7,6 +7,21 @@ on:
     branches: [ main ]
 
 jobs:
+  database:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Supabase CLI
+      uses: supabase/setup-cli@v1
+
+    - name: Validate migrations and database policies locally
+      run: |
+        supabase start
+        supabase db reset
+        supabase test db
+        supabase db lint --level error --fail-on error
+
   test:
     runs-on: ubuntu-latest
     steps:
