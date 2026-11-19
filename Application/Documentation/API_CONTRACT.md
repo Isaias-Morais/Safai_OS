@@ -1,0 +1,11 @@
+# API Contract (Foundation)
+
+All endpoints are authenticated server APIs. Suggested resources: `POST /incidents/drafts/analyze`, `POST /incidents`, `GET /incidents/{id}`, assignment/status/evidence operations, verification decisions, notifications, and ledger reads. Each mutating request requires authorization, current-state validation, audit write, and idempotency protection.
+
+Status changes are commands, not generic client updates. Examples are submit report, assign driver, accept assignment, submit evidence, decide verification, and resolve admin review. The server derives the actor from the authenticated session, performs the role/ownership/assignment/conflict checks, writes the separate status history, and returns a new read model. It must reject direct lifecycle, role, balance, verification-actor, and audit-field edits.
+
+The verification command permits the reporting citizen to approve or deny evidence submitted by an assigned driver. It must reject a decision if the actor performed that cleanup, regardless of role; where reporter and cleanup performer are the same person, only an authorized Admin may verify. Citizen approval closes the incident and invokes the idempotent reward operation; denial or seven-day expiry moves it to `AWAITING_ADMIN_REVIEW`. Authorized Admin approval is the other closure path. An Admin evidence rejection records a reason and moves the incident to `RESOLUTION_REQUIRED`; proposed follow-up commands for reassignment, rework, escalation, or permitted auditable cancellation remain subject to final business-policy approval.
+
+`POST /incidents/drafts/analyze` is server-to-detector orchestration only: it may attach an AI analysis to a draft but cannot submit an incident, assign a driver, determine a reward, or convert a prediction into an administrative decision. Duplicate detection is a recorded backend assessment, not an unreviewed client-side determination or automatic closure. It may use location, time, image similarity, category, and context, but spatial proximity or an AI similarity score alone may not merge, delete, or close an incident.
+
+Detector response follows `src/api/schemas.py`: `status`, `num_detections`, `inference_time_ms`, and detections containing class, confidence, and normalized box. It is evidence only; incident priority and rewards are separate reviewed fields.
