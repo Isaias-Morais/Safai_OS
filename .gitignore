@@ -66,3 +66,10 @@ Thumbs.db
 *.log
 reports/figures/
 scratch/
+
+# Local environment and Supabase state
+.env
+.env.*
+!.env.example
+supabase/.temp/
+supabase/.branches/
